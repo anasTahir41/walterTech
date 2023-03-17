@@ -1,7 +1,550 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Header Starts Here -->
+    <header class="c-site-header">
+        <div class="c-site-header__top">
+            <div class="c-site-header__top__main container">
+                <div class="c-site-header__top__left">
+                    <div class="dropdown c-site-header__top__left__dropdown language">
+                        <button class="dropdown-toggle c-site-header__top__left__btn" type="button" id="languageDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-us"></span> en-US
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdownButton">
+                            <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-fr"> </span> fr-FR</a>
+                            <a class="dropdown-item" href="#it"><span class="flag-icon flag-icon-it"> </span> it-IT</a>
+                            <a class="dropdown-item" href="#ru"><span class="flag-icon flag-icon-ru"> </span> ru-RU</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-site-header__top__right d-none d-lg-flex">
+                    <div class="c-site-header__top__menu">
+                        <ul class="c-site-header__top__items">
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">E-Catalog</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">SDS Search</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Parts List</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-site-header__top__search">
+                        <div class="c-site-header__top__search__wrap" data-test="hdr-searchForm">
+                            <form class="c-site-header__top__search__wrap__form">
+                                <input class="c-site-header__top__search__wrap__search-field"
+                                    type="search"
+                                    name="q"
+                                    value=""
+                                    autocomplete="off"
+                                    placeholder="What are you looking for?"
+                                    aria-label="What are you looking for?" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="c-site-header__navbar navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
+                    <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
+                </a>
+                <div class="c-site-header__search">
+                    <a href="#" class="c-site-header__search--wrapper js-search-box-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px"
+                            height="30px" fill-rule="nonzero">
+                            <g fill="#a9a9a9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(4,4)">
+                                    <path
+                                        d="M27,9c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c4.12921,0 7.9263,-1.41263 10.9668,-3.75977l13.08203,13.08203c0.904,0.904 2.36944,0.904 3.27344,0c0.904,-0.904 0.904,-2.36944 0,-3.27344l-13.08203,-13.08203c2.34713,-3.0405 3.75977,-6.83758 3.75977,-10.9668c0,-9.925 -8.075,-18 -18,-18zM27,13c7.719,0 14,6.281 14,14c0,7.719 -6.281,14 -14,14c-7.719,0 -14,-6.281 -14,-14c0,-7.719 6.281,-14 14,-14z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <form class="c-site-header__search__form js-search-box">
+                        <input class="c-site-header__search__form__input"
+                            type="search"
+                            name="search"
+                            value=""
+                            autocomplete="off"
+                            placeholder="What are you looking for?"
+                            aria-label="What are you looking for?">
+                    </form>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-center mt-2 mt-lg-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="industryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Industry
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="industryDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Brands
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="brandsDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourceDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <div class="quick-links d-lg-none">
+                            <h4 class="quick-links__heading">Quick Links</h4>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ECatalogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Parts List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SDS Search</a>
+                            </li>
+                            <li class="nav-item btn-buy">
+                                <a href="#" class="btn-primary">Where to Buy</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends Here -->
+
+    <div class="position-relative">
+        <section class="main-banner js-main-banner">
+            <div class="main-banner__wrap">
+                <figure class="main-banner__wrap__image-holder">
+                    <img class="main-banner__wrap__image"
+                        src="./assets/images/banner1.jpg">
+                </figure>
+                <div class="main-banner__wrap__text-holder">
+                    <div class="container">
+                        <p class="main-banner__wrap__heading">Work Smarter</p>
+                        <h2 class="main-banner__wrap__heading-main">Complete Solutions to Maximize Efficiency</h2>
+                        <a href="#" class="main-banner__wrap__btn btn-primary">See our Promotions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-banner__wrap">
+                <figure class="main-banner__wrap__image-holder">
+                    <img class="main-banner__wrap__image"
+                        src="./assets/images/banner2.jpg">
+                </figure>
+                <div class="main-banner__wrap__text-holder">
+                    <div class="container">
+                        <p class="main-banner__wrap__heading">Work Smarter</p>
+                        <h2 class="main-banner__wrap__heading-main">Complete Solutions to Maximize Efficiency</h2>
+                        <a href="#" class="main-banner__wrap__btn btn-primary">See our Promotions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-banner__wrap">
+                <figure class="main-banner__wrap__image-holder">
+                    <img class="main-banner__wrap__image"
+                        src="./assets/images/banner3.jpg">
+                </figure>
+                <div class="main-banner__wrap__text-holder">
+                    <div class="container">
+                        <p class="main-banner__wrap__heading">Work Smarter</p>
+                        <h2 class="main-banner__wrap__heading-main">Complete Solutions to Maximize Efficiency</h2>
+                        <a href="#" class="main-banner__wrap__btn btn-primary">See our Promotions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-banner__wrap">
+                <figure class="main-banner__wrap__image-holder">
+                    <img class="main-banner__wrap__image"
+                        src="./assets/images/banner2.jpg">
+                </figure>
+                <div class="main-banner__wrap__text-holder">
+                    <div class="container">
+                        <p class="main-banner__wrap__heading">Work Smarter</p>
+                        <h2 class="main-banner__wrap__heading-main">Complete Solutions to Maximize Efficiency</h2>
+                        <a href="#" class="main-banner__wrap__btn btn-primary">See our Promotions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slick-dots--wrapper">
+            <div class="container js-slick-dots"></div>
+        </div>
+    </div>
+
+    <section class="categories container">
+        <div class="categories__intro">
+            <h1 class="categories__intro__heading">Industries We Help</h1>
+            <p class="categories__intro__para">At Walter, we descover and innovate in nearly every industry to help
+                solve problems around the world.</p>
+        </div>
+        <div class="categories__wrap">
+            <div class="row categories__wrap__f-line">
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/1.jpg">
+                            <figcaption class="categories__item__heading">Automotive Aftermarket</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/2.jpg">
+                            <figcaption class="categories__item__heading">Oil & Gas</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/3.jpg">
+                            <figcaption class="categories__item__heading">Transportation</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/4.jpg">
+                            <figcaption class="categories__item__heading">Food & Beverages</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/5.jpg">
+                            <figcaption class="categories__item__heading">Metal fabrication</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/6.jpg">
+                            <figcaption class="categories__item__heading">Construction</figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <div class="categories__item">
+                    <a href="#" class="categories__item__wrap">
+                        <figure>
+                            <img class="categories__item__image" src="./assets/images/7.jpg">
+                            <figcaption class="categories__item__heading">Shipbuilding</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-wrap container-fluid">
+        <div class="slider container">
+            <div class="slider__intro">
+                <h2 class="slider__intro__text">Featured Products</h2>
+            </div>
+            <div class="slider__wrapper">
+                <div class="slider__wrap">
+                    <figure class="slider__wrap__image-holder">
+                        <img class="slider__wrap__image" src="./assets/images/XCAVATOR.jpg">
+                        <figcaption class="slider__wrap__badge badge">New</figcaption>
+                    </figure>
+                    <div class="slider__wrap__text-holder">
+                        <h3 class="slider__wrap__heading">XCAVATOR XX</h3>
+                        <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
+                        <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider__wrap">
+                    <figure class="slider__wrap__image-holder">
+                        <img class="slider__wrap__image" src="./assets/images/icecut.jpg">
+                        <figcaption class="slider__wrap__badge badge">New</figcaption>
+                    </figure>
+                    <div class="slider__wrap__text-holder">
+                        <h3 class="slider__wrap__heading">Icecut 200PM</h3>
+                        <p class="slider__wrap__heading-main">Drill unit with permanent magnet base for maximun safety on worksites </p>
+                        <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider__wrap">
+                    <figure class="slider__wrap__image-holder">
+                        <img class="slider__wrap__image" src="./assets/images/e-weld pre coated.jpg">
+                        <figcaption class="slider__wrap__badge badge">New</figcaption>
+                    </figure>
+                    <div class="slider__wrap__text-holder">
+                        <h3 class="slider__wrap__heading">E-weld pre-coated nozzles</h3>
+                        <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
+                        <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider__wrap">
+                    <figure class="slider__wrap__image-holder">
+                        <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
+                        <figcaption class="slider__wrap__badge badge">New</figcaption>
+                    </figure>
+                    <div class="slider__wrap__text-holder">
+                        <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
+                        <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate in the industry</p>
+                        <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="slider__wrap">
+                    <figure class="slider__wrap__image-holder">
+                        <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
+                        <figcaption class="slider__wrap__badge badge">New</figcaption>
+                    </figure>
+                    <div class="slider__wrap__text-holder">
+                        <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
+                        <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate</p>
+                        <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel container">
+        <div class="carousel__intro">
+            <h2 class="carousel__intro__text">Achieve Greatness with WALTER</h2>
+        </div>
+        <div class="carousel__wrapper">
+            <div class="carousel__wrap">
+                <figure class="carousel__wrap__image-holder">
+                    <img class="carousel__wrap__image" src="./assets/images/tooling.jpg">
+                </figure>
+                <div class="carousel__wrap__text-holder">
+                    <h3 class="carousel__wrap__heading">Tooling Infographic</h3>
+                    <p class="carousel__wrap__heading-main">Drill Better Twist Drill Explained</p>
+                </div>
+            </div>
+            <div class="carousel__wrap">
+                <figure class="carousel__wrap__image-holder">
+                    <img class="carousel__wrap__image" src="./assets/images/tooling.jpg">
+                </figure>
+                <div class="carousel__wrap__text-holder">
+                    <h3 class="carousel__wrap__heading">Flap Disc Infographic</h3>
+                    <p class="carousel__wrap__heading-main">How to get the most out of your flap discs of news</p>
+                </div>
+            </div>
+            <div class="carousel__wrap">
+                <figure class="carousel__wrap__image-holder">
+                    <img class="carousel__wrap__image" src="./assets/images/tooling.jpg">
+                </figure>
+                <div class="carousel__wrap__text-holder">
+                    <h3 class="carousel__wrap__heading">News Title</h3>
+                    <p class="carousel__wrap__heading-main">Subscription of news</p>
+                </div>
+            </div>
+            <div class="carousel__wrap">
+                <figure class="carousel__wrap__image-holder">
+                    <img class="carousel__wrap__image" src="./assets/images/tooling.jpg">
+                </figure>
+                <div class="carousel__wrap__text-holder">
+                    <h3 class="carousel__wrap__heading">News Title</h3>
+                    <p class="carousel__wrap__heading-main">Subscription of news</p>
+                </div>
+            </div>
+            <div class="carousel__wrap">
+                <figure class="carousel__wrap__image-holder">
+                    <img class="carousel__wrap__image" src="./assets/images/tooling.jpg">
+                </figure>
+                <div class="carousel__wrap__text-holder">
+                    <h3 class="carousel__wrap__heading">News Title</h3>
+                    <p class="carousel__wrap__heading-main">Subscription of news</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Starts Here -->
+    <footer class="c-site-footer">
+        <div class="container c-site-footer__container">
+            <div class="row justify-content-between">
+                <div class="col-lg-2">
+                    <div class="c-site-footer__logo">
+                        <a href="#">
+                            <img src="assets/images/logo.svg" alt="logo" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">About Us</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Our Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">History</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Pillars</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Management Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Where to Buy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">Careers</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Benefits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Job Opportunities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hiring Process</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">In the know</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Apps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Become a Distributor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News & Press Release</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Promotions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Videos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="c-site-footer__newsletter">
+                        <div class="c-site-footer__newsletter__social">
+                            <h4 class="c-site-footer__heading">Stay In Touch</h4>
+                            <p class="c-site-footer__text">Receive updates, promotions, and more.</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/linkedin.svg" alt="linkedin"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/instagram.svg" alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/facebook.svg" alt="facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="c-site-footer__newsletter__subscribe">
+                            <a href="#" class="c-site-footer__newsletter__btn btn-primary">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container c-site-footer__bottom">
+            <div class="c-site-footer__bottom__list">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-lg-center mt-3 mt-lg-0">
+                        <p class="c-site-footer__bottom__text">&copy; 2019 RyPen Inc. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
+
 </html>
