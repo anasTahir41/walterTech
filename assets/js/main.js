@@ -113,4 +113,17 @@ $(document).ready(function () {
     $('.js-search-box-toggle').click(function () {
         $('.js-search-box').toggle();
     });
+
+    $('#list-view').click(function(){
+        if ($('.c-products .c-products__list').hasClass('grid-view')) {
+            $('.c-products .c-products__list').removeClass('grid-view');
+            $('.c-products .c-products__list').addClass('list-view');
+        }
+    });
+    $('#grid-view').click(function(){
+        if ($('.c-products .c-products__list').hasClass('list-view')) {
+            $('.c-products .c-products__list').removeClass('list-view');
+            $('.c-products .c-products__list').addClass('grid-view');
+        }
+    });
 });
