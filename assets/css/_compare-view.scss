@@ -42,6 +42,7 @@
 
 .compare-view {
     border: 1px solid $grey3;
+    border-radius: 5px;
     display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -67,6 +68,10 @@
                 margin-right: 10px;
                 width: 70px;
             }
+
+            @media only screen and (max-width: 576.98px) {
+                width: 60px;
+            }
         }
         &__text {
             font-size: 22px;
@@ -76,11 +81,16 @@
                 font-size: 14px;
                 font-weight: 700;
             }
+
+            @media only screen and (max-width: 576.98px) {
+                font-size: 10px;
+            }
         }
 
         &__btn {
             font-size: 14px;
             font-weight: 700;
+            width: 125px;
         }
     }
 
@@ -107,24 +117,61 @@
             font-size: 16px;
             font-weight: $font600;
             margin-bottom: 7px;
+            margin-left: 26px;
+            text-indent: -30px;
 
             @media only screen and (max-width: 1199.98px) {
                 font-size: 14px;
                 font-weight: $font600;
             }
+
+            @media only screen and (max-width: 576.98px) {
+                font-size: 12px;
+            }
         }
         &__image {
-            margin-right: 10px;
+            margin-right: 6px;
         }
     }
 
     &__list-wrapper {
         display: flex;
             justify-content: space-between;
+
+        @media only screen and (max-width: 1199.98px) {
+            display: inline-grid;
+                grid-template-columns: 203px 10fr;
+        }
+
+        @media only screen and (max-width: 991.98px) {
+            display: flex;
+                justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 576.98px) {
+            display: inline-grid;
+                grid-template-columns: 203px 10fr;
+        }
     }
 
     &__list {
         margin-right: 10px;
+
+        @media only screen and (max-width: 1199.98px) {
+            margin-bottom: 15px;
+        }
+
+        @media only screen and (max-width: 991.98px) {
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 576.98px) {
+            margin-bottom: 15px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         &__heading {
             font-size: 18px;
@@ -146,10 +193,17 @@
             font-size: 14px;
             font-weight: $font600;
             margin-bottom: 7px;
+            margin-left: 27px;
+            text-indent: -30px;
 
             @media only screen and (max-width: 767.98px) {
                 font-size: 12px;
                 font-weight: $font600;
+            }
+
+            @media only screen and (max-width: 576.98px) {
+                margin-left: 19px;
+                text-indent: -21px;
             }
         }
 
