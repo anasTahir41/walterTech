@@ -113,7 +113,6 @@ label {
 .back-btn {
   display: flex;
   align-items: center;
-  margin-top: 15px;
   margin-bottom: 10px;
 }
 .back-btn__image {
@@ -1612,6 +1611,7 @@ label input[type=checkbox]:checked + span {
 
 .compare-view-page {
   background-color: #fff;
+  padding-top: 20px;
 }
 
 .compare {
