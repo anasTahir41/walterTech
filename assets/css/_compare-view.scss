@@ -1,38 +1,9 @@
 .compare-view-page {
     background-color: $white;
 }
-.back-btn {
-    display: flex;
-        align-items: center;
-    margin-top: 15px;
-
-    &__image {
-        height: 19px;
-        margin-right: 10px;
-        width: 15px;
-    }
-
-    &__link {
-        font-weight: $font700;
-    }
-}
-
-.heading {
-    margin-bottom: 20px;
-
-    &__text {
-        font-size: 33px;
-        font-weight: $font700;
-
-        @media only screen and (max-width: 767.98px) {
-            font-size: 26px;
-            font-weight: $font700;
-        }
-    }
-}
 
 .compare {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     .compare-mb {
         @media only screen and (max-width: 991.98px) {
             margin-bottom: 30px;
@@ -63,6 +34,7 @@
         &__image {
             margin-right: 15px;
             width: 90px;
+            min-width: 90px;
 
             @media only screen and (max-width: 767.98px) {
                 margin-right: 10px;

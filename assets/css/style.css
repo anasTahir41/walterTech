@@ -96,6 +96,35 @@ label {
   cursor: pointer;
 }
 
+.heading {
+  margin-bottom: 20px;
+}
+.heading__text {
+  font-size: 33px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 767.98px) {
+  .heading__text {
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.back-btn__image {
+  height: 19px;
+  margin-right: 10px;
+  width: 15px;
+}
+.back-btn__link {
+  font-weight: 700;
+}
+
 .slick-slider {
   position: relative;
   display: block;
@@ -1585,36 +1614,8 @@ label input[type=checkbox]:checked + span {
   background-color: #fff;
 }
 
-.back-btn {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-}
-.back-btn__image {
-  height: 19px;
-  margin-right: 10px;
-  width: 15px;
-}
-.back-btn__link {
-  font-weight: 700;
-}
-
-.heading {
-  margin-bottom: 20px;
-}
-.heading__text {
-  font-size: 33px;
-  font-weight: 700;
-}
-@media only screen and (max-width: 767.98px) {
-  .heading__text {
-    font-size: 26px;
-    font-weight: 700;
-  }
-}
-
 .compare {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 @media only screen and (max-width: 991.98px) {
   .compare .compare-mb {
@@ -1645,6 +1646,7 @@ label input[type=checkbox]:checked + span {
 .compare-view__main__image {
   margin-right: 15px;
   width: 90px;
+  min-width: 90px;
 }
 @media only screen and (max-width: 767.98px) {
   .compare-view__main__image {
