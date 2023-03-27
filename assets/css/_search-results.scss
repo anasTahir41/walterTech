@@ -10,21 +10,25 @@ $ns: s-result;
         }
         &__search {
             background-color: #130b0385;
-            padding: 25px;
+            padding: 35px;
             position: absolute;
                 top: 50%;
                 left: 50%;
             transform: translate(-50%, -50%);
             width: 60%;
 
+            @media only screen and (max-width: 991.98px) {
+                padding: 20px;
+            }
+
             @media only screen and (max-width: 767.98px) {
-                padding: 5px 20px 5px 13px;
+                padding: 5px 20px 10px 13px;
             }
 
             &__text {
                 color: $white;
-                font-size: 28px;
-                margin-bottom: 15px;
+                font-size: 38px;
+                margin-bottom: 20px;
                 text-align: center;
 
                 @media only screen and (max-width: 991.98px) {
@@ -42,7 +46,7 @@ $ns: s-result;
                 width: 94%;
 
                 @media only screen and (max-width: 991.98px) {
-                    width: 92%;
+                    width: 90%;
                 }
 
                 @media only screen and (max-width: 767.98px) {
@@ -51,7 +55,7 @@ $ns: s-result;
 
                 &__search-field {
                     background-color: transparent;
-                    background: transparent url(../images/search-grey.png) no-repeat left/18px;
+                    background: $search-bg-color url(../images/search-grey.png) no-repeat left/18px;
                     background-position: 13px 15px;
                     border: 2px solid $grey3;
                     padding: 10px;
@@ -91,20 +95,26 @@ $ns: s-result;
     }
 }
 
-.p-search {
+.search-result {
     margin-bottom: 0;
 
     &__main {
-        display: flex;
-            justify-content: center;
-        list-style: none;
         padding: 15px 0 15px 0;
 
         &__btn-holder {
             border-bottom: 2px solid $grey2;
-            display: inline-block;
+            display: inline-flex;
+            margin-bottom: 20px;
             margin-left: 185px;
-            overflow-x: auto;
+            width: max-content;
+
+            @media only screen and (max-width: 1199.98px) {
+                margin-left: 145px;
+            }
+
+            @media only screen and (max-width: 991.98px) {
+                margin-left: 70px;
+            }
 
             @media only screen and (max-width: 767.98px) {
                 overflow-x: auto;
@@ -114,19 +124,36 @@ $ns: s-result;
 
         &__link {
             font-weight: $font700;
-            padding: 15px;
+            padding: 10px 15px;
 
             &:hover {
                 text-decoration: none;
             }
 
-            &:active,
-            &:focus {
-                border-bottom: 2px solid $primary;
-                box-shadow: none;
-                color: $primary;
-                text-decoration: none;
+            a {
+                color: $grey10;
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
+
+            &.active {
+                border-bottom: 3px solid $primary;
+
+                a {
+                    box-shadow: none;
+                    color: $primary;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+
+    &__btn-wrap {
+        @media only screen and (max-width: 767.98px) {
+            overflow-x: scroll;
         }
     }
 
@@ -146,6 +173,7 @@ $ns: s-result;
 
         &__heading {
             border: 0 !important;
+            color: $grey10;
             padding: 15px;
         }
     }
@@ -153,9 +181,10 @@ $ns: s-result;
     &__detail {
         font-size: 14px;
 
-            @media only screen and (max-width: 767.98px) {
-                font-size: 12px;
-            }
+        @media only screen and (max-width: 767.98px) {
+            font-size: 12px;
+        }
+
         &__img {
             margin-right: 20px;
             width: 38px;
@@ -177,18 +206,22 @@ $ns: s-result;
                 }
             }
         }
-    }
-}
-.c-card-body {
-    border: 0;
-    padding: 0;
-    text-align: left;
 
-    @media only screen and (max-width: 767.98px) {
-        overflow-x: auto;
+        &__text {
+            color: $grey10;
+            font-weight: 500;
+        }
     }
-
     &__table {
         margin: 0;
+    }
+}
+
+.tab-content {
+    @media only screen and (max-width: 991.98px) {
+        overflow-x: scroll;
+    }
+    .tab-pane  {
+        width: 700px;
     }
 }
