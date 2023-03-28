@@ -4,15 +4,6 @@
     background-color: $white;
 }
 
-.breadcrumb-wrap {
-    background-color: $grey1;
-
-    &__breadcrumb {
-        background-color: $grey1;
-        padding: 0 0 0 15px;
-    }
-}
-
 .c-products {
     text-align: -webkit-center;
 
@@ -655,6 +646,7 @@ label {
             color: $black;
             font-size: 14px;
             font-weight: 700;
+            margin-right: 15px;
 
             &:hover,
             &:focus {

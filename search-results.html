@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search Results</title>
+    <link rel="icon" type="image/x-icon" href="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header Starts Here -->
+    <header class="c-site-header">
+        <div class="c-site-header__top">
+            <div class="c-site-header__top__main container">
+                <div class="c-site-header__top__left">
+                    <div class="dropdown c-site-header__top__left__dropdown language">
+                        <button class="dropdown-toggle c-site-header__top__left__btn" type="button" id="languageDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-us"></span> en-US
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdownButton">
+                            <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-fr"> </span> fr-FR</a>
+                            <a class="dropdown-item" href="#it"><span class="flag-icon flag-icon-it"> </span> it-IT</a>
+                            <a class="dropdown-item" href="#ru"><span class="flag-icon flag-icon-ru"> </span> ru-RU</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-site-header__top__right d-none d-lg-flex">
+                    <div class="c-site-header__top__menu">
+                        <ul class="c-site-header__top__items">
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">E-Catalog</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">SDS Search</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Parts List</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-site-header__top__search">
+                        <div class="c-site-header__top__search__wrap" data-test="hdr-searchForm">
+                            <form class="c-site-header__top__search__wrap__form">
+                                <input class="c-site-header__top__search__wrap__search-field"
+                                    type="search"
+                                    name="q"
+                                    value=""
+                                    autocomplete="off"
+                                    placeholder="What are you looking for?"
+                                    aria-label="What are you looking for?" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="c-site-header__navbar navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
+                    <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
+                </a>
+                <div class="c-site-header__search">
+                    <a href="#" class="c-site-header__search--wrapper js-search-box-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px"
+                            height="30px" fill-rule="nonzero">
+                            <g fill="#a9a9a9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <g transform="scale(4,4)">
+                                    <path
+                                        d="M27,9c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c4.12921,0 7.9263,-1.41263 10.9668,-3.75977l13.08203,13.08203c0.904,0.904 2.36944,0.904 3.27344,0c0.904,-0.904 0.904,-2.36944 0,-3.27344l-13.08203,-13.08203c2.34713,-3.0405 3.75977,-6.83758 3.75977,-10.9668c0,-9.925 -8.075,-18 -18,-18zM27,13c7.719,0 14,6.281 14,14c0,7.719 -6.281,14 -14,14c-7.719,0 -14,-6.281 -14,-14c0,-7.719 6.281,-14 14,-14z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+
+                    <form class="c-site-header__search__form js-search-box">
+                        <input class="c-site-header__search__form__input"
+                            type="search"
+                            name="search"
+                            value=""
+                            autocomplete="off"
+                            placeholder="What are you looking for?"
+                            aria-label="What are you looking for?">
+                    </form>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-center mt-2 mt-lg-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <a class="dropdown-item" href="plp.html">Products</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="industryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Industry
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="industryDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Brands
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="brandsDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourceDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <div class="quick-links d-lg-none">
+                            <h4 class="quick-links__heading">Quick Links</h4>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ECatalogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Parts List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SDS Search</a>
+                            </li>
+                            <li class="nav-item btn-buy">
+                                <a href="#" class="btn-primary">Where to Buy</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends Here -->
+    <nav aria-label="breadcrumb" class="breadcrumb-wrap container-fluid">
+        <ol class="breadcrumb-wrap__breadcrumb breadcrumb container">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Search</li>
+        </ol>
+    </nav>
+    <div class="s-result">
+        <section class="s-result__banner">
+            <figure class="s-result__banner__image">
+                <img class="s-result__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
+            </figure>
+            <div class="s-result__banner__search">
+                <h2 class="s-result__banner__search__text">Search Results</h2>
+                <div class="s-result__banner__search__wrap" data-test="hdr-searchForm">
+                    <form class="s-result__banner__search__wrap__form">
+                        <input class="s-result__banner__search__wrap__search-field"
+                            type="search"
+                            name="q"
+                            value=""
+                            autocomplete="off"
+                            placeholder="Search"
+                            aria-label="search" />
+                    </form>
+                    <a href="#" class="s-result__banner__search-btn">
+                        <img class="s-result__banner__search-btn__img" src="./assets/images/search-white.png">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="filter d-none d-lg-block">
+                                <h2 class="filter__title">
+                                    Filters
+                                </h2>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card__card-header card-header" id="headingOne">
+                                        <h2 class="mb-0 panel-title">
+                                            <button class="card__card-header__btn btn btn-link btn-block text-left"
+                                                type="button" data-toggle="collapse" data-target="#collapseOne"
+                                                aria-expanded="true" aria-controls="collapseOne">
+                                                Industry
+                                            </button>
+                                        </h2>
+                                        <a class="card__card-header__sellect-btn" href="#">Select All</a>
+                                        <a class="card__card-header__clear-btn" href="#">Clear</a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="card-body__list values content">
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Automotive Aftermarket</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Construction</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Food & Beverages</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Material Fabrication</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Shipbuilding</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__card-header card-header" id="headingTwo">
+                                        <h2 class="mb-0 panel-title">
+                                            <button
+                                                class="card__card-header__btn btn btn-link btn-block text-left collapsed"
+                                                type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Type
+                                            </button>
+                                        </h2>
+                                        <a href="#" class="card__card-header__sellect-btn" href="#">Select All</a>
+                                        <a href="#" class="card__card-header__clear-btn" href="#">Clear</a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="card-body__list values content">
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <form class="card-body__list__form">
+                                                        <input
+                                                            class="card-body__list__input"
+                                                            type="search" name="q" value="" autocomplete="off"
+                                                            placeholder="Search" aria-label="search" />
+                                                    </form>
+                                                </li>
+                                                <li>
+                                                    <nav class="nav" role="navigation">
+                                                        <ul class="nav__list">
+                                                          <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                            <input id="group-1" type="checkbox" hidden />
+                                                            <label for="group-1"><input type="checkbox">Abrasives<img class="card-body__list__list-item__image" src="./assets/images/arrow.png"> </label>
+                                                            <ul class="group-list">
+                                                              <li ><label><input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                                </label<a href="#">Brushing</a></li>
+                                                              <li>
+                                                                <input id="sub-group-1" type="checkbox" hidden />
+                                                                <label for="sub-group-1"><input type="checkbox">Power Brushes</label>
+                                                              </li>
+                                                              <li ><label><input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                                </label<a href="#">Cutting</a></li>
+                                                            </ul>
+                                                          </li>
+                                                        </ul>
+                                                    </nav>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Angle Grinder Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Angle Grinder Cut & Grind Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Chop saw Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Gas Saw Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Rail Saw Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Stationary Saw Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Straight Grinder Cut-off Wheels</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card__card-header card-header" id="headingThree">
+                                        <h2 class="mb-0 panel-title">
+                                            <button
+                                                class="card__card-header__btn btn btn-link btn-block text-left collapsed"
+                                                type="button" data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Material
+                                            </button>
+                                        </h2>
+                                        <a href="#" class="card__card-header__sellect-btn" href="#">Select All</a>
+                                        <a href="#" class="card__card-header__clear-btn" href="#">Clear</a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="card-body__list values content">
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Automotive Aftermarket</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Construction</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Food & Beverages</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Material Fabrication</span>
+                                                    </label>
+                                                </li>
+                                                <li class="col-xs-4 col-md-12 card-body__list__list-item">
+                                                    <label><input type="checkbox">
+                                                        <span class="checkmark">Shipbuilding</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-9">
+                            <div class="container search-result">
+                                <div id="exTab1" class="container search-result__main">
+                                    <div class="search-result__btn-wrap">
+                                        <ul  class="nav nav-pills search-result__main__btn-holder">
+                                            <li class="search-result__main__link active">
+                                                <a  href="#1a" data-toggle="tab">Products</a>
+                                            </li>
+                                            <li class="search-result__main__link"><a href="#2a" data-toggle="tab">Documents</a>
+                                            </li>
+                                            <li class="search-result__main__link"><a href="#3a" data-toggle="tab">Pages</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content clearfix">
+                                        <div class="tab-pane active" id="1a">
+                                            <table class="table search-result__table">
+                                                <thead>
+                                                  <tr class="search-result__item">
+                                                    <th class="search-result__item__heading" scope="col"></th>
+                                                    <th class="search-result__item__heading" scope="col">Title</th>
+                                                    <th class="search-result__item__heading" scope="col">CATEGORY</th>
+                                                    <th class="search-result__item__heading" scope="col">description</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr class="search-result__item">
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#"><img class="search-result__detail__img" src="./assets/images/E-Weld_Nozzle_can.jpg"></a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">E-Weld NOZZLE</a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">Product</a></td>
+                                                    <td class="search-result__detail">Total nozzle protection for best efficiency</td>
+                                                  </tr>
+                                                  <tr class="search-result__item">
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#"><img class="search-result__detail__img" src="./assets/images/E-Weld_Nozzle.jpg"></a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">E-Weld NOZZLE kit</a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">Product</a></td>
+                                                    <td class="search-result__detail">Total nozzle protection for best efficiency</td>
+                                                  </tr>
+                                                  <tr class="search-result__item">
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#"><img class="search-result__detail__img" src="./assets/images/FT200.jpg"></a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">FT 200</a></td>
+                                                    <td class="search-result__detail"><a class="search-result__detail__text" href="#">Product</a></td>
+                                                    <td class="search-result__detail">Surface prepareation cleaner</td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane" id="2a">
+                                            <h5>Content for Documents</h5>
+                                        </div>
+                                        <div class="tab-pane" id="3a">
+                                            <h5>Content for Pages</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom d-none d-md-flex">
+                                <div class="bottom__left">
+                                    <div class="dropdown bottom__dropdown">
+                                        <button class="bottom__dropdown__btn btn btn-secondary dropdown-toggle"
+                                            type="button" data-toggle="dropdown" aria-expanded="false">
+                                            Show 10 items
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item" href="#">Show 10 items</a>
+                                            <a href="#" class="dropdown-item" href="#">Show 20 items</a>
+                                            <a href="#" class="dropdown-item" href="#">Show 30 items</a>
+                                        </div>
+                                    </div>
+                                    <p class="bottom__para">
+                                        Showing 1 to 10 of 95 entries
+                                    </p>
+                                </div>
+                                <div class="bottom__right">
+                                    <ul class="bottom__right__num">
+                                        <li class="bottom__right__list">
+                                            <a href="#" class="bottom__right__link"><
+                                                </a>
+                                        </li>
+                                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">1</a></li>
+                                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">2</a></li>
+                                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">3</a></li>
+                                        <li class="bottom__right__list">...</li>
+                                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">9</a></li>
+                                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer Starts Here -->
+    <footer class="c-site-footer">
+        <div class="container c-site-footer__container">
+            <div class="row justify-content-between">
+                <div class="col-lg-2">
+                    <div class="c-site-footer__logo">
+                        <a href="#">
+                            <img src="assets/images/logo.svg" alt="logo" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">About Us</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Our Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">History</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Pillars</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Management Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Where to Buy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">Careers</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Benefits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Job Opportunities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hiring Process</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">In the know</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Apps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Become a Distributor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News & Press Release</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Promotions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Videos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="c-site-footer__newsletter">
+                        <div class="c-site-footer__newsletter__social">
+                            <h4 class="c-site-footer__heading">Stay In Touch</h4>
+                            <p class="c-site-footer__text">Receive updates, promotions, and more.</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/linkedin.svg" alt="linkedin"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/instagram.svg"
+                                            alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/facebook.svg" alt="facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="c-site-footer__newsletter__subscribe">
+                            <a href="#" class="c-site-footer__newsletter__btn btn-primary">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container c-site-footer__bottom">
+            <div class="c-site-footer__bottom__list">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-lg-center mt-3 mt-lg-0">
+                        <p class="c-site-footer__bottom__text">&copy; 2019 RyPen Inc. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
