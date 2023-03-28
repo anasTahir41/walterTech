@@ -1869,24 +1869,23 @@ label input[type=checkbox]:checked + span {
   background: rgba(243, 243, 243, 0.1098039216) url(../images/search-grey.png) no-repeat left/18px;
   background-position: 13px 15px;
   border: 2px solid #a4a4a4;
-  padding: 10px;
+  color: #d1d1d1;
+  padding: 10px 10px 10px 40px;
   width: 100%;
 }
 @media only screen and (max-width: 767.98px) {
   .s-result__banner__search__wrap__search-field {
     background-position: 7px 7px;
-    padding: 2px;
+    padding: 2px 2px 2px 30px;
   }
 }
 .s-result__banner__search__wrap__search-field::-moz-placeholder {
   color: #fff;
   font-size: 14px;
-  padding-left: 30px;
 }
 .s-result__banner__search__wrap__search-field::placeholder {
   color: #fff;
   font-size: 14px;
-  padding-left: 30px;
 }
 .s-result__banner__search-btn {
   background-color: #f9a13b;
@@ -2025,4 +2024,8 @@ label input[type=checkbox]:checked + span {
   .tab-content .tab-pane {
     width: 700px;
   }
+}
+
+.search-result__item td.search-result__detail:not(:first-child):not(:last-child) {
+  width: 220px;
 }/*# sourceMappingURL=style.css.map */
