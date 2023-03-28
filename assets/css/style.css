@@ -1856,32 +1856,19 @@ label input[type=checkbox]:checked + span {
   }
 }
 .s-result__banner__search__wrap {
-  display: inline-block;
-  width: 94%;
-}
-@media only screen and (max-width: 991.98px) {
-  .s-result__banner__search__wrap {
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .s-result__banner__search__wrap {
-    width: 90%;
-  }
+  display: flex;
 }
 .s-result__banner__search__wrap__search-field {
-  background-color: transparent;
-  background: rgba(243, 243, 243, 0.1098039216) url(../images/search-grey.png) no-repeat left/18px;
-  background-position: 13px 15px;
+  background: rgba(243, 243, 243, 0.1) url(../images/search-grey.png) no-repeat left 13px center/18px;
   border: 2px solid #a4a4a4;
   color: #d1d1d1;
-  padding: 10px 10px 10px 40px;
+  height: 100%;
+  padding: 9px 10px 10px 40px;
   width: 100%;
 }
 @media only screen and (max-width: 767.98px) {
   .s-result__banner__search__wrap__search-field {
-    background-position: 7px 7px;
-    padding: 2px 2px 2px 30px;
+    padding: 2px 2px 2px 35px;
   }
 }
 .s-result__banner__search__wrap__search-field::-moz-placeholder {
@@ -1892,14 +1879,16 @@ label input[type=checkbox]:checked + span {
   color: #fff;
   font-size: 14px;
 }
+.s-result__banner__search__wrap__form {
+  width: 100%;
+}
 .s-result__banner__search-btn {
   background-color: #f9a13b;
   padding: 11px;
-  position: absolute;
 }
 @media only screen and (max-width: 767.98px) {
   .s-result__banner__search-btn {
-    padding: 4px;
+    padding: 3px;
   }
 }
 .s-result__banner__search-btn__img {
