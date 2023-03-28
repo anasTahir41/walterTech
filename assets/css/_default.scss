@@ -127,3 +127,13 @@ label {
         font-weight: $font700;
     }
 }
+
+.breadcrumb-wrap {
+    background-color: $grey1;
+
+    &__breadcrumb {
+        background-color: $grey1;
+        padding: 0 0 0 15px;
+        margin-bottom: 0;
+    }
+}

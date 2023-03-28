@@ -124,6 +124,15 @@ label {
   font-weight: 700;
 }
 
+.breadcrumb-wrap {
+  background-color: #f7f7f7;
+}
+.breadcrumb-wrap__breadcrumb {
+  background-color: #f7f7f7;
+  padding: 0 0 0 15px;
+  margin-bottom: 0;
+}
+
 .slick-slider {
   position: relative;
   display: block;
@@ -961,15 +970,6 @@ label {
 
 .plp {
   background-color: #fff;
-}
-
-.breadcrumb-wrap {
-  background-color: #f7f7f7;
-}
-.breadcrumb-wrap__breadcrumb {
-  background-color: #f7f7f7;
-  padding: 0 0 0 15px;
-  margin-bottom: 0;
 }
 
 .c-products {
