@@ -1586,6 +1586,7 @@ label input[type=checkbox]:checked + span {
   color: #000;
   font-size: 14px;
   font-weight: 700;
+  margin-right: 15px;
 }
 .bottom__dropdown__btn:hover, .bottom__dropdown__btn:focus {
   background-color: transparent;
@@ -1911,7 +1912,6 @@ label input[type=checkbox]:checked + span {
   padding: 15px 0 15px 0;
 }
 .search-result__main__btn-holder {
-  border-bottom: 2px solid #d1d1d1;
   display: inline-flex;
   margin-bottom: 20px;
   margin-left: 185px;
@@ -1935,6 +1935,7 @@ label input[type=checkbox]:checked + span {
   }
 }
 .search-result__main__link {
+  border-bottom: 2px solid #d1d1d1;
   font-weight: 700;
   padding: 10px 15px;
 }
@@ -1962,21 +1963,25 @@ label input[type=checkbox]:checked + span {
 }
 .search-result__item {
   border-bottom: 1px solid #d1d1d1;
-  padding-top: 16px;
 }
 .search-result__item:last-child {
   border: 0;
-}
-.search-result__item__head:first-child {
-  padding-left: 69px;
 }
 .search-result__item__heading {
   border: 0 !important;
   color: #757575;
   padding: 15px;
 }
+.search-result__item__heading:first-child {
+  width: 70px;
+}
+.search-result__item td {
+  vertical-align: baseline;
+}
 .search-result__detail {
+  color: #757575;
   font-size: 14px;
+  font-weight: 500;
 }
 @media only screen and (max-width: 767.98px) {
   .search-result__detail {
@@ -1984,8 +1989,7 @@ label input[type=checkbox]:checked + span {
   }
 }
 .search-result__detail__img {
-  margin-right: 20px;
-  width: 38px;
+  max-width: 100%;
 }
 @media only screen and (max-width: 767.98px) {
   .search-result__detail__img {
@@ -2017,6 +2021,8 @@ label input[type=checkbox]:checked + span {
     overflow-x: scroll;
   }
 }
-.tab-content .tab-pane {
-  width: 700px;
+@media only screen and (max-width: 991.98px) {
+  .tab-content .tab-pane {
+    width: 700px;
+  }
 }/*# sourceMappingURL=style.css.map */
