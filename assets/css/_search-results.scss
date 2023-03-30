@@ -94,6 +94,7 @@ $ns: s-result;
         padding: 15px 0 15px 0;
 
         &__btn-holder {
+            border-bottom: none;
             display: inline-flex;
             margin-bottom: 20px;
             margin-left: 185px;
@@ -115,6 +116,8 @@ $ns: s-result;
 
         &__link {
             border-bottom: 2px solid $grey2;
+            color: $grey10;
+            display: block;
             font-weight: $font700;
             padding: 10px 15px;
 
@@ -122,24 +125,12 @@ $ns: s-result;
                 text-decoration: none;
             }
 
-            a {
-                color: $grey10;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-
             &.active {
                 border-bottom: 3px solid $primary;
-
-                a {
-                    box-shadow: none;
-                    color: $primary;
-                    text-decoration: none;
-                }
+                box-shadow: none;
+                color: $primary;
+                text-decoration: none;
             }
-
         }
     }
 

@@ -1,0 +1,144 @@
+.c-site-header {
+    &.search-active {
+        &::before {
+            background-color: rgba($black, 0.4);
+            content: '';
+            display: block;
+            height: 100%;
+            position: fixed;
+                left: 0;
+                top: 0;
+            width: 100%;
+            z-index: 101;
+        }
+    }
+}
+
+.search-suggestions {
+    background-color: $white;
+    display: none;
+    padding: 40px 0;
+    position: fixed;
+        left: 0;
+        top: 64px;
+    width: 100%;
+    z-index: 102;
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__form {
+        text-align: center;
+    }
+
+    &__input {
+        background: $grey1 url('../images/search-yellow.svg') no-repeat right 20px center;
+        max-width: 600px;
+        padding: 16px 50px 16px 24px;
+        width: 100%;
+        border: none;
+        color: $secondary;
+        font-size: 20px;
+        font-weight: $font500;
+
+        &::placeholder {
+            color: $secondary;
+        }
+    }
+
+    &__wrapper {
+        margin-top: 40px;
+        max-height: calc(100vh - 240px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &__heading {
+        color: $primary;
+        font-size: 16px;
+        font-weight: $font700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                margin-bottom: 10px;
+
+                a {
+                    font-size: 14px;
+                    font-weight: $font500;
+                }
+            }
+        }
+    }
+
+    &__products {
+        font-size: 16px;
+        font-weight: $font500;
+
+        &__list {
+            display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+            padding: 12px 0 12px;
+
+            @media only screen and (min-width: 768px) {
+                padding: 12px 35px 12px 20px;
+            }
+
+            @media only screen and (min-width: 992px) {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $border-color;
+            }
+        }
+
+        &__left {
+            display: flex;
+            align-items: center;
+
+            @media only screen and (min-width: 992px) {
+                flex: 0 0 50%;
+            }
+
+            @media only screen and (min-width: 1200px) {
+                flex: none;
+            }
+        }
+
+        &__right {
+            margin-left: 70px;
+
+            @media only screen and (min-width: 992px) {
+                margin-left: 0;
+            }
+        }
+
+        &__image {
+            img {
+                max-width: 50px;
+            }
+        }
+
+        &__name {
+            margin-left: 20px;
+        }
+
+        &__descp {
+            margin-bottom: 0;
+        }
+    }
+}
