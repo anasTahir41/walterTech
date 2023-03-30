@@ -128,11 +128,13 @@ $(document).ready(function () {
         $(document).on('click', '.js-search-suggestions-field', function () {
             searchSuggestions.show();
             $('.c-site-header').addClass('search-active');
+            $('.js-search-input').focus();
         });
         $(document).on('mouseup', function (e) {
             if (!searchSuggestions.is(e.target) && searchSuggestions.has(e.target).length === 0) {
                 searchSuggestions.hide();
                 $('.c-site-header').removeClass('search-active');
+                $('.js-search-input').val('');
             }
         });
     }
