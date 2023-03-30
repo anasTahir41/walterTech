@@ -1905,7 +1905,6 @@ label input[type=checkbox]:checked + span {
   padding: 15px 0 15px 0;
 }
 .search-result__main__btn-holder {
-  border-bottom: none;
   display: inline-flex;
   margin-bottom: 20px;
   margin-left: 185px;
@@ -1930,16 +1929,22 @@ label input[type=checkbox]:checked + span {
 }
 .search-result__main__link {
   border-bottom: 2px solid #d1d1d1;
-  color: #757575;
-  display: block;
   font-weight: 700;
   padding: 10px 15px;
 }
 .search-result__main__link:hover {
   text-decoration: none;
 }
+.search-result__main__link a {
+  color: #757575;
+}
+.search-result__main__link a:hover {
+  text-decoration: none;
+}
 .search-result__main__link.active {
   border-bottom: 3px solid #f9a13b;
+}
+.search-result__main__link.active a {
   box-shadow: none;
   color: #f9a13b;
   text-decoration: none;
