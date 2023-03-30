@@ -110,10 +110,6 @@ $(document).ready(function () {
         ]
     });
 
-    $('.js-search-box-toggle').click(function () {
-        $('.js-search-box').toggle();
-    });
-
     $('#list-view').click(function(){
         if ($('.c-products .c-products__list').hasClass('grid-view')) {
             $('.c-products .c-products__list').removeClass('grid-view');
@@ -126,4 +122,20 @@ $(document).ready(function () {
             $('.c-products .c-products__list').addClass('grid-view');
         }
     });
+
+    function searchSuggestionsShow() {
+        var searchSuggestions = $('#js-search-suggestions');
+        $(document).on('click', '.js-search-suggestions-field', function () {
+            searchSuggestions.show();
+            $('.c-site-header').addClass('search-active');
+        });
+        $(document).on('mouseup', function (e) {
+            if (!searchSuggestions.is(e.target) && searchSuggestions.has(e.target).length === 0) {
+                searchSuggestions.hide();
+                $('.c-site-header').removeClass('search-active');
+            }
+        });
+    }
+
+    searchSuggestionsShow();
 });

@@ -49,7 +49,7 @@
                     <div class="c-site-header__top__search">
                         <div class="c-site-header__top__search__wrap" data-test="hdr-searchForm">
                             <form class="c-site-header__top__search__wrap__form">
-                                <input class="c-site-header__top__search__wrap__search-field"
+                                <input class="c-site-header__top__search__wrap__search-field js-search-suggestions-field"
                                     type="search"
                                     name="q"
                                     value=""
@@ -74,8 +74,8 @@
                     <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
                     <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
                 </a>
-                <div class="c-site-header__search">
-                    <a href="#" class="c-site-header__search--wrapper js-search-box-toggle">
+                <div class="c-site-header__search d-lg-none">
+                    <a href="#" class="c-site-header__search--wrapper js-search-suggestions-field">
                         <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px"
                             height="30px" fill-rule="nonzero">
                             <g fill="#a9a9a9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
@@ -88,16 +88,6 @@
                             </g>
                         </svg>
                     </a>
-
-                    <form class="c-site-header__search__form js-search-box">
-                        <input class="c-site-header__search__form__input"
-                            type="search"
-                            name="search"
-                            value=""
-                            autocomplete="off"
-                            placeholder="What are you looking for?"
-                            aria-label="What are you looking for?">
-                    </form>
                 </div>
                 <div class="collapse navbar-collapse justify-content-lg-center mt-2 mt-lg-0" id="navbarSupportedContent">
                     <ul class="navbar-nav">
@@ -164,6 +154,100 @@
                 <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
             </div>
         </nav>
+
+        <div id="js-search-suggestions" class="search-suggestions">
+            <div class="search-suggestions__container">
+                <form action="" class="search-suggestions__form">
+                    <input
+                        type="search"
+                        name="query"
+                        id="search-suggestions-input"
+                        class="search-suggestions__input"
+                        placeholder="Search..."
+                        autofocus>
+                </form>
+
+                <div class="search-suggestions__wrapper">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="search-suggestions__list">
+                                <h4 class="search-suggestions__heading">Search Suggestions</h4>
+                                <ul>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle, Total Nozzle Protection for the best efficiency</a></li>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle Kit, Total Nozzle Protection for the best efficiency</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="best-matches">
+                                <h4 class="search-suggestions__heading">Best Product Matches</h4>
+                                <div class="search-suggestions__products">
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- Header Ends Here -->
 
