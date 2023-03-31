@@ -2337,7 +2337,7 @@ label input[type=checkbox]:checked + span {
   margin: 0;
 }
 .product-detail__wrap__play-image {
-  width: 62%;
+  max-width: 100%;
 }
 .product-detail__bottom {
   background-color: #fff;
@@ -2550,13 +2550,9 @@ label input[type=checkbox]:checked + span {
   }
 }
 
-.pdp-slider div {
+.pdp-slider {
   background: transparent;
   text-align: center;
-}
-
-.slider-thumb div {
-  font-size: 25px;
 }
 
 .product-carousel {

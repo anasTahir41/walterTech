@@ -222,7 +222,7 @@ $ns: product-detail;
         }
 
         &__play-image {
-            width: 62%;
+            max-width: 100%;
         }
     }
 
@@ -462,11 +462,7 @@ $ns: product-detail;
     }
 }
 
-.pdp-slider div {
-	background: transparent;
-	text-align: center;
-}
-
-.slider-thumb div {
-    font-size: 25px;
+.pdp-slider {
+    background: transparent;
+    text-align: center;
 }
