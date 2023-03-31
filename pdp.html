@@ -49,7 +49,7 @@
                     <div class="c-site-header__top__search">
                         <div class="c-site-header__top__search__wrap" data-test="hdr-searchForm">
                             <form class="c-site-header__top__search__wrap__form">
-                                <input class="c-site-header__top__search__wrap__search-field"
+                                <input class="c-site-header__top__search__wrap__search-field js-search-suggestions-field"
                                     type="search"
                                     name="q"
                                     value=""
@@ -74,8 +74,8 @@
                     <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
                     <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
                 </a>
-                <div class="c-site-header__search">
-                    <a href="#" class="c-site-header__search--wrapper js-search-box-toggle">
+                <div class="c-site-header__search d-lg-none">
+                    <a href="#" class="c-site-header__search--wrapper js-search-suggestions-field">
                         <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px"
                             height="30px" fill-rule="nonzero">
                             <g fill="#a9a9a9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
@@ -88,16 +88,6 @@
                             </g>
                         </svg>
                     </a>
-
-                    <form class="c-site-header__search__form js-search-box">
-                        <input class="c-site-header__search__form__input"
-                            type="search"
-                            name="search"
-                            value=""
-                            autocomplete="off"
-                            placeholder="What are you looking for?"
-                            aria-label="What are you looking for?">
-                    </form>
                 </div>
                 <div class="collapse navbar-collapse justify-content-lg-center mt-2 mt-lg-0" id="navbarSupportedContent">
                     <ul class="navbar-nav">
@@ -164,134 +154,636 @@
                 <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
             </div>
         </nav>
+
+        <div id="js-search-suggestions" class="search-suggestions">
+            <div class="search-suggestions__container">
+                <form action="" class="search-suggestions__form">
+                    <input
+                        type="search"
+                        name="query"
+                        id="search-suggestions-input"
+                        class="search-suggestions__input js-search-input"
+                        placeholder="Search..."
+                        autofocus>
+                </form>
+
+                <div class="search-suggestions__wrapper">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="search-suggestions__list">
+                                <h4 class="search-suggestions__heading">Search Suggestions</h4>
+                                <ul>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle, Total Nozzle Protection for the best efficiency</a></li>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle Kit, Total Nozzle Protection for the best efficiency</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="best-matches">
+                                <h4 class="search-suggestions__heading">Best Product Matches</h4>
+                                <div class="search-suggestions__products">
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg" alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for the best efficiency</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- Header Ends Here -->
-    <nav aria-label="breadcrumb" class="breadcrumb-wrap container-fluid">
-        <ol class="breadcrumb-wrap__breadcrumb breadcrumb container">
-            <li class="breadcrumb-item"><a href="#">...</a></li>
-            <li class="breadcrumb-item"><a href="#">Page Link</a></li>
-            <li class="breadcrumb-item"><a href="#">Page Link</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Page Link</li>
-        </ol>
-    </nav>
-    <div class="s-result">
-        <section class="s-result__banner">
-            <figure class="s-result__banner__image">
-                <img class="s-result__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
-            </figure>
-            <div class="s-result__banner__search">
-                <h2 class="s-result__banner__search__text">Search Results</h2>
-            </div>
-        </section>
-        <section class="container">
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card__card-header card-header" id="headingOne">
-                        <h2 class="mb-0 panel-title">
-                            <button class="card__card-header__btn btn btn-link btn-block text-left"
-                                type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                Overview
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                        data-parent="#accordionExample">
-                        <div class="card-body row">
-                            <div class="col-md-6 col-sm-12">
-                                <p class="">The ENDURO-FLEX one-step finishing discs not only meet but surpass the challenges that the metal fabricating and finishing industry faces on a daily basis. With the new ultra sharp and refined zirconium grain, the ENDURO-FLEX finishing disc will stay sharper for a longer period of time while removing more material faster.</p>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <p class=""> In addition, a special top coat continuously cools and lubricates the disc for smooth, vibration-free grinding and sanding from start to finish. Moreover, there is no need to discard the disc when the flap overhang is worn down to the backing because the ENDURO-FLEX disc can be restored to like-new performance by reducing the diameter of the ECO-TRIM backing.</p>
+    <div class="product-detail">
+        <nav aria-label="breadcrumb" class="breadcrumb-wrap container-fluid">
+            <ol class="breadcrumb-wrap__breadcrumb breadcrumb container">
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">...</a></li>
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Page Link</a></li>
+                <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Page Link</a></li>
+                <li class="breadcrumb-item active breadcrumb-link" aria-current="page">Page Link</li>
+            </ol>
+        </nav>
+        <section class="product-detail__top">
+            <div class="container">
+                <div class="product-detail__wrap">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 p-0">
+                            <div class="product-detail__wrap__slider-wrap">
+                                <div class="pdp-slider product-detail__wrap__slider-content slider-content">
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/ENDURO-flex.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/enduro-flex-alu.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/Quality.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/Enduro-Flex-Stainless.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <video class="product-detail__wrap__video-wrap" width="320" height="240" controls>
+                                            <source src=”#” type=video/ogg>
+                                            <source src="#" type=video/mp4>
+                                          </video>
+                                    </div>
+                                </div>
+                                <div class="pdp-slider product-detail__wrap__slider-thumb slider-thumb">
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/ENDURO-flex.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/enduro-flex-alu.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/Quality.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__image"
+                                                src="./assets/images/Enduro-Flex-Stainless.jpg">
+                                        </figure>
+                                    </div>
+                                    <div class="product-detail__wrap__slider">
+                                        <figure class="product-detail__wrap__image-holder">
+                                            <img class="product-detail__wrap__play-image" src="./assets/images/play-icon.png">
+                                        </figure>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__card-header card-header" id="headingTwo">
-                        <h2 class="mb-0 panel-title">
-                            <button
-                                class="card__card-header__btn btn btn-link btn-block text-left collapsed"
-                                type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
-                                Features
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                        data-parent="#accordionExample">
-                        <div class="card-body row">
-                            <ul class="compare-view__features__list col-md-6 col-sm-12">
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">With integral thread 5/8"-11
-                                </li>
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">One step finishing solution to reduce cost
-                                </li>
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">Eco-Trim™ trimmable backing extends disc life by up to 3 times
-                                </li>
-                            </ul>
-                            <ul class="compare-view__features__list col-md-6 col-sm-12">
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">Safe and easy to trim
-                                </li>
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">Quiet, vibration-free grinding
-                                </li>
-                                <li class="compare-view__features__list-item"><img class="compare-view__features__image"
-                                    src="./assets/images/check-mark.png">Raised hub fits all standard grinder back flanges
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__card-header card-header" id="headingThree">
-                        <h2 class="mb-0 panel-title">
-                            <button
-                                class="card__card-header__btn btn btn-link btn-block text-left collapsed"
-                                type="button" data-toggle="collapse" data-target="#collapseThree"
-                                aria-expanded="false" aria-controls="collapseThree">
-                                Material
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree"
-                        data-parent="#accordionExample">
-                        <div class="card-body">
-                            <figure class="card-body__list values content">
-                                <img class="" src="">
-                                <figcaption>Steel, stainless steel</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__card-header card-header" id="headingFour">
-                        <h2 class="mb-0 panel-title">
-                            <button class="card__card-header__btn btn btn-link btn-block text-left"
-                                type="button" data-toggle="collapse" data-target="#collapseFour"
-                                aria-expanded="true" aria-controls="collapseFour">
-                                Detailed Information
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour"
-                        data-parent="#accordionExample">
-                        <div class="card-body row">
-                            <div class="col-md-6 col-sm-12">
-                                <p class="">The ENDURO-FLEX one-step finishing discs not only meet but surpass the challenges that the metal fabricating and finishing industry faces on a daily basis. With the new ultra sharp and refined zirconium grain, the ENDURO-FLEX finishing disc will stay sharper for a longer period of time while removing more material faster.</p>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                                <p class=""> In addition, a special top coat continuously cools and lubricates the disc for smooth, vibration-free grinding and sanding from start to finish. Moreover, there is no need to discard the disc when the flap overhang is worn down to the backing because the ENDURO-FLEX disc can be restored to like-new performance by reducing the diameter of the ECO-TRIM backing.</p>
+                        <div class="col-lg-6 col-md-12 p-0">
+                            <div class="product-detail__wrap__detail-wrap">
+                                <div class="product-detail__wrap__content">
+                                    <div class="product-detail__wrap__top-content">
+                                        <h3 class="product-detail__wrap__top-content__text">
+                                            BESTSELLER
+                                        </h3>
+                                        <h3 class="product-detail__wrap__top-content__main-heading">
+                                            ENDURO-FLEX™
+                                        </h3>
+                                        <p class="product-detail__wrap__top-content__para">The longest life and highest overall material removal flap disc in the industry
+                                        </p>
+                                    </div>
+                                    <div class="product-detail__wrap__bottom-content">
+                                        <h3 class="product-detail__wrap__bottom-content__heading">
+                                            DOWNLOAD RESOURCES
+                                        </h3>
+                                        <div class="product-detail__wrap__bottom-content__btn-holder">
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">(M)SDS</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Product Sheet</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Part List</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Manuals</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Technical Datasheets</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Process Sheet</a>
+                                            <a href="#" class="product-detail__wrap__bottom-content__btn">Linecard</a>
+                                        </div>
+                                        <a href="#" class="product-detail__wrap__bottom-content__button btn-primary">Request Demo</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <section class="product-detail__bottom">
+            <div class="container">
+                <div class="accordion" id="accordionExample">
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingOne">
+                            <h2 class="mb-0 c-card__card-header__text">
+                                <button class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Overview
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                            <div class="c-card__card-body">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <p class="c-card__card-body__text">The ENDURO-FLEX one-step finishing discs not only meet but surpass the challenges that the metal fabricating and finishing industry faces on a daily basis. With the new ultra sharp and refined zirconium grain, the ENDURO-FLEX finishing disc will stay sharper for a longer period of time while removing more material faster.</p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <p class="c-card__card-body__text"> In addition, a special top coat continuously cools and lubricates the disc for smooth, vibration-free grinding and sanding from start to finish. Moreover, there is no need to discard the disc when the flap overhang is worn down to the backing because the ENDURO-FLEX disc can be restored to like-new performance by reducing the diameter of the ECO-TRIM backing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Features
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                            <div class="c-card__card-body">
+                                <ul class="c-card__card-body__features">
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">With integral thread 5/8"-11
+                                    </li>
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">One step finishing solution to reduce cost
+                                    </li>
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">Eco-Trim™ trimmable backing extends disc life by up to 3 times
+                                    </li>
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">Safe and easy to trim
+                                    </li>
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">Quiet, vibration-free grinding
+                                    </li>
+                                    <li class="c-card__card-body__features__list-item"><img class="c-card__card-body__features__image"
+                                        src="./assets/images/check-mark.png">Raised hub fits all standard grinder back flanges
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Materials
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+                            <div class="c-card__card-body">
+                                <div class="c-card__card-body__list">
+                                    <img class="c-card__card-body__list__img" src="./assets/images/steel.png">
+                                    <p class="c-card__card-body__list__text">Steel, stainless steel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseFour"
+                                    aria-expanded="true" aria-controls="collapseFour">
+                                    Detailed Information
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+                            <div class="c-card__card-body c-table">
+                                <div class="c-table__wrap">
+                                    <table class="table c-card__card-body__table">
+                                        <div class="c-card__card-body__table__heading">
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <p class="c-card__card-body__table__heading-title">TYPE:</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/steel.png">
+                                                <p class="c-card__card-body__table__heading-text">27</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/angle grinder.png">
+                                                <p class="c-card__card-body__table__heading-text">ANGLE GRINDER</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/inox.png">
+                                                <p class="c-card__card-body__table__heading-text">INOX</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/steel.png">
+                                                <p class="c-card__card-body__table__heading-text">STEEL</p>
+                                            </div>
+                                        </div>
+                                        <thead>
+                                          <tr class="c-card__card-body__table__item">
+                                            <th class="c-card__card-body__table__item__heading" scope="col">DIA.</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">ARBOR</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">GRIT</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">ORDER NO</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">MAX RPM</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">STD PKG</th>
+                                            <th class="c-card__card-body__table__item__heading c-card__card-body__table__item__list-price" scope="col">LIST PRICE($)</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="c-card__card-body c-table">
+                                <div class="c-table__wrap">
+                                    <table class="table c-card__card-body__table">
+                                        <div class="c-card__card-body__table__heading">
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <p class="c-card__card-body__table__heading-title">TYPE:</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/steel.png">
+                                                <p class="c-card__card-body__table__heading-text">27</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/angle grinder.png">
+                                                <p class="c-card__card-body__table__heading-text">ANGLE GRINDER</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/inox.png">
+                                                <p class="c-card__card-body__table__heading-text">INOX</p>
+                                            </div>
+                                            <div class="c-card__card-body__table__heading-wrap">
+                                                <img class="c-card__card-body__table__img" src="./assets/images/steel.png">
+                                                <p class="c-card__card-body__table__heading-text">STEEL</p>
+                                            </div>
+                                        </div>
+                                        <thead>
+                                          <tr class="c-card__card-body__table__item">
+                                            <th class="c-card__card-body__table__item__heading" scope="col">DIA.</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">ARBOR</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">GRIT</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">ORDER NO</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">MAX RPM</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col">STD PKG</th>
+                                            <th class="c-card__card-body__table__item__heading c-card__card-body__table__item__list-price" scope="col">LIST PRICE($)</th>
+                                            <th class="c-card__card-body__table__item__heading" scope="col"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                          <tr class="c-card__card-body__table__item">
+                                            <td class="c-card__card-body__table__detail">4-1/2"</td>
+                                            <td class="c-card__card-body__table__detail">7/8"</td>
+                                            <td class="c-card__card-body__table__detail">40</td>
+                                            <td class="c-card__card-body__table__detail">15-R 454</td>
+                                            <td class="c-card__card-body__table__detail">13,300</td>
+                                            <td class="c-card__card-body__table__detail">10</td>
+                                            <td class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">13.00</td>
+                                            <td class="c-card__card-body__table__detail"><a href="#" class="c-card__card-body__table__detail__btn btn-primary">Order</a></td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseFive"
+                                    aria-expanded="false" aria-controls="collapseFive">
+                                    Applications
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse show" aria-labelledby="headingFive">
+                            <div class="c-card__card-body">
+                                <ul class="c-card__card-body__list-wrap">
+                                    <li class="c-card__card-body__list-wrap__list-item"><img class="c-card__card-body__list-wrap__image"
+                                        src="./assets/images/gear-icon.png">Grinding and finishing welds
+                                    </li>
+                                    <li class="c-card__card-body__list-wrap__list-item"><img class="c-card__card-body__list-wrap__image"
+                                        src="./assets/images/gear-icon.png">Surface finishing
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseSix"
+                                    aria-expanded="false" aria-controls="collapseSix">
+                                    Tips
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse show" aria-labelledby="headingSix">
+                            <div class="c-card__card-body">
+                                <ul class="c-card__card-body__list-wrap">
+                                    <li class="c-card__card-body__list-wrap__list-item"><img class="c-card__card-body__list-wrap__image"
+                                        src="./assets/images/tips.png">Always use a back flange
+                                    </li>
+                                    <li class="c-card__card-body__list-wrap__list-item"><img class="c-card__card-body__list-wrap__image"
+                                        src="./assets/images/tips.png">Backing can be trimmed for working in corners
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseSeven"
+                                    aria-expanded="false" aria-controls="collapseSeven">
+                                    Related Products
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven">
+                            <div class="c-card__card-body">
+                                <section class="product-carousel">
+                                    <div class="product-carousel__wrapper">
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/allsteel-flap-discs.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">ALLSTEEL™ Flap Discs</a>
+                                                <p class="product-carousel__wrap__heading-main">Industrial grade flap discs for a variety of applications
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/ENDURO-flex.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">ENDURO-FLEX Turbo™
+                                                </a>
+                                                <p class="product-carousel__wrap__heading-main">Blend welds faster with the fastest removal rate in the industry
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/ironman.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">Ironman™
+                                                </a>
+                                                <p class="product-carousel__wrap__heading-main">Top performance in strenuous and prolonged applications
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/XCAVATOR.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">XCAVATOR™</a>
+                                                <p class="product-carousel__wrap__heading-main">Ultra high removal grinding wheel</p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/XCAVATOR.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">XCAVATOR™</a>
+                                                <p class="product-carousel__wrap__heading-main">Ultra high removal grinding wheel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingEight">
+                            <h2 class="mb-0">
+                                <button
+                                    class="c-card__card-header__btn btn"
+                                    type="button" data-toggle="collapse" data-target="#collapseEight"
+                                    aria-expanded="false" aria-controls="collapseEight">
+                                    Accessories
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEight" class="collapse show" aria-labelledby="headingEight">
+                            <div class="c-card__card-body">
+                                <section class="product-carousel">
+                                    <div class="product-carousel__wrapper">
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/allsteel-flap-discs.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">ALLSTEEL™ Flap Discs</a>
+                                                <p class="product-carousel__wrap__heading-main">Industrial grade flap discs for a variety of applications
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/ENDURO-flex.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">ENDURO-FLEX Turbo™
+                                                </a>
+                                                <p class="product-carousel__wrap__heading-main">Blend welds faster with the fastest removal rate in the industry
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/ironman.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">Ironman™
+                                                </a>
+                                                <p class="product-carousel__wrap__heading-main">Top performance in strenuous and prolonged applications
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="product-carousel__wrap">
+                                            <figure class="product-carousel__wrap__image-holder">
+                                                <a href="#"><img class="product-carousel__wrap__image" src="./assets/images/XCAVATOR.jpg"></a>
+                                            </figure>
+                                            <div class="product-carousel__wrap__text-holder">
+                                                <a href="#" class="product-carousel__wrap__heading">XCAVATOR™</a>
+                                                <p class="product-carousel__wrap__heading-main">Ultra high removal grinding wheel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- Footer Starts Here -->
     <footer class="c-site-footer">
@@ -422,18 +914,12 @@
     <!-- Footer Ends Here -->
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/pdp.js"></script>
 
 </body>
 
 </html>
-
-<section id="tech-specs" class="layout__row table-technicals-spec clear-both"> <h2 class="title-like-h3">Technical Specifications </h2> <div class="table-technicals-spec__imagesBlock"> <img alt="Type 27" title="Type 27" src="https://images.walter.com/webform/images/walter/icons/Type-27.png"> <img alt="Angle Grinder Enduro" title="Angle Grinder Enduro" src="https://images.walter.com/webform/images/walter/icons/angle_grinder_Enduro.png"> <img alt="Stainless steel" title="Stainless steel" src="https://images.walter.com/webform/images/walter/icons/inox.png"> <img alt="Steel" title="Steel" src="https://images.walter.com/webform/images/walter/icons/steel.png"> </div> <table class="product-table state--responsive"> <thead> <tr> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> </tr> <tr> <!-- width=&quot;20.5%&quot; --> <th colspan="1" class="Diameter">Diameter<br> </th> <!-- width=&quot;14.4%&quot; --> <th colspan="1" class="Arbor">Arbor<br> </th> <!-- width=&quot;14.4%&quot; --> <th colspan="1" class="Grit">Grit<br> </th> <!-- width=&quot;16.8%&quot; --> <th colspan="1" class="Order No">Order No<br> </th> <!-- width=&quot;16.0%&quot; --> <th colspan="1" class="Max RPM">Max RPM<br> </th> <!-- width=&quot;11.0%&quot; --> <th colspan="1" class="Std Pkg">Std Pkg<br> </th> <!-- width=&quot;12.9%&quot; --> <th colspan="1" class="List Price">List Price<br> </th> <th colspan="1" class="BuyNow"> Order </th> </tr> </thead> <tbody><tr> <td>4-1/2 " </td> <td>7/8 " </td> <td>40 </td> <td>15-R 454 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:0:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>7/8 " </td> <td>60 </td> <td>15-R 456 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:1:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>7/8 " </td> <td>80 </td> <td>15-R 458 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:2:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>7/8 " </td> <td>120 </td> <td>15-R 462 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:3:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>7/8 " </td> <td>40 </td> <td>15-R 504 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:4:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>7/8 " </td> <td>60 </td> <td>15-R 506 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:5:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>7/8 " </td> <td>80 </td> <td>15-R 508 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:6:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>7/8 " </td> <td>120 </td> <td>15-R 512 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:7:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>7/8 " </td> <td>40 </td> <td>15-R 604 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:8:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>7/8 " </td> <td>60 </td> <td>15-R 606 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:9:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>7/8 " </td> <td>80 </td> <td>15-R 608 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:10:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>7/8 " </td> <td>120 </td> <td>15-R 612 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:11:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>7 " </td> <td>7/8 " </td> <td>40 </td> <td>15-R 704 </td> <td>8,600 </td> <td>10 </td> <td>27.50 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:12:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>7 " </td> <td>7/8 " </td> <td>60 </td> <td>15-R 706 </td> <td>8,600 </td> <td>10 </td> <td>27.50 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:13:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>7 " </td> <td>7/8 " </td> <td>80 </td> <td>15-R 708 </td> <td>8,600 </td> <td>10 </td> <td>27.50 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:14:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>7 " </td> <td>7/8 " </td> <td>120 </td> <td>15-R 712 </td> <td>8,600 </td> <td>10 </td> <td>27.50 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:0:j_idt145:15:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> </tbody></table> <div class="table-technicals-spec__imagesBlock"> <img alt="Yes" title="Yes" src="https://images.walter.com/webform/images/walter/icons/SpinOn.png"> <img alt="Type 27S" title="Type 27S" src="https://images.walter.com/webform/images/walter/icons/Type-27S.png"> <img alt="Angle Grinder Enduro" title="Angle Grinder Enduro" src="https://images.walter.com/webform/images/walter/icons/angle_grinder_Enduro.png"> <img alt="Stainless steel" title="Stainless steel" src="https://images.walter.com/webform/images/walter/icons/inox.png"> <img alt="Steel" title="Steel" src="https://images.walter.com/webform/images/walter/icons/steel.png"> </div> <table class="product-table state--responsive"> <thead> <tr> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> <th colspan="1"> </th> </tr> <tr> <!-- width=&quot;20.5%&quot; --> <th colspan="1" class="Diameter">Diameter<br> </th> <!-- width=&quot;14.4%&quot; --> <th colspan="1" class="Arbor">Arbor<br> </th> <!-- width=&quot;14.4%&quot; --> <th colspan="1" class="Grit">Grit<br> </th> <!-- width=&quot;16.8%&quot; --> <th colspan="1" class="Order No">Order No<br> </th> <!-- width=&quot;16.0%&quot; --> <th colspan="1" class="Max RPM">Max RPM<br> </th> <!-- width=&quot;11.0%&quot; --> <th colspan="1" class="Std Pkg">Std Pkg<br> </th> <!-- width=&quot;12.9%&quot; --> <th colspan="1" class="List Price">List Price<br> </th> <th colspan="1" class="BuyNow"> Order </th> </tr> </thead> <tbody><tr> <td>4-1/2 " </td> <td>5/8"-11 " </td> <td>40 </td> <td>06-B 454 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:0:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>5/8"-11 " </td> <td>60 </td> <td>06-B 456 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:1:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>5/8"-11 " </td> <td>80 </td> <td>06-B 458 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:2:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>4-1/2 " </td> <td>5/8"-11 " </td> <td>120 </td> <td>06-B 462 </td> <td>13,300 </td> <td>10 </td> <td>13.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:3:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>5/8"-11 " </td> <td>40 </td> <td>06-B 504 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:4:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>5/8"-11 " </td> <td>60 </td> <td>06-B 506 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:5:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>5/8"-11 " </td> <td>80 </td> <td>06-B 508 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:6:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>5 " </td> <td>5/8"-11 " </td> <td>120 </td> <td>06-B 512 </td> <td>12,200 </td> <td>10 </td> <td>17.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:7:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>5/8"-11 " </td> <td>40 </td> <td>06-B 604 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:8:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>5/8"-11 " </td> <td>60 </td> <td>06-B 606 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:9:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>5/8"-11 " </td> <td>80 </td> <td>06-B 608 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:10:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> <tr> <td>6 " </td> <td>5/8"-11 " </td> <td>120 </td> <td>06-B 612 </td> <td>10,200 </td> <td>10 </td> <td>21.00 </td> <td class="product-table__td__buyNow"> <form id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160" method="post" action="https://www.walter.com/en_US/products?p_auth=MCmu8L3s&amp;p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=1&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__facesViewIdRender=%2Fviews%2Fproducttradename%2Fview.xhtml" enctype="application/x-www-form-urlencoded"> <input type="hidden" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160" value="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160"> <input type="hidden" name="javax.faces.encodedURL" value="https://www.walter.com/en_US/products?p_p_id=producttradename_WAR_websiteportlet&amp;p_p_lifecycle=2&amp;p_p_state=maximized&amp;p_p_mode=view&amp;p_p_cacheability=cacheLevelPage&amp;p_p_col_id=&amp;p_p_col_count=0&amp;_producttradename_WAR_websiteportlet__jsfBridgeAjax=true&amp;_producttradename_WAR_websiteportlet__facesViewIdResource=%2Fviews%2Fproducttradename%2Fview.xhtml&amp;_producttradename_WAR_websiteportlet_franchiseName=abrasives&amp;_producttradename_WAR_websiteportlet_productName=enduro-flex&amp;_producttradename_WAR_websiteportlet_actionName=blending"> <input id="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160:techInfoItem" type="submit" name="_producttradename_WAR_websiteportlet_:j_idt120:1:j_idt145:11:j_idt160:techInfoItem" value="Buy Now" class="product-table__buyNow" onclick="mojarra.ab(this,event,'action',0,'_producttradename_WAR_websiteportlet_:buynow-panel');return false"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-2262562040365108496:-984839674177057146" autocomplete="off"> </form> </td> </tr> </tbody></table> <div id="animated-spinner" class="product-table__buyNow__spinner"> <i class="icon-spinner icon-spin"></i> </div> </section>

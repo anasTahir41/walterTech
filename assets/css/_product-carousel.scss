@@ -1,73 +1,53 @@
-.slider {
-    margin-bottom: 50px;
-    padding-bottom: 30px;
-
-    &-wrap {
-        background-color: $white;
-    }
+.product-carousel {
+    margin-bottom: 60px;
 
     &__intro {
         &__text {
             font-size: 32px;
             font-weight: $font700;
             margin-bottom: 25px;
-            padding-top: 25px;
         }
     }
 
     &__wrap {
+        background-color: $white;
         border: 1px solid $border-color;
-        Display: flex !important;
-            flex-direction: column;
-            justify-content: space-between;
         margin-right: 10px;
 
         &__image-holder {
             display: flex;
                 align-items: center;
                 justify-content: center;
-            margin-bottom: 0;
             height: 100%;
-            padding: 10px;
-            position: relative;
+            margin-bottom: 0;
+            max-height: 235px;
+            padding: 30px;
         }
 
         &__image {
-            width: auto;
-            max-height: 225px;
+            max-height: 175px;
             max-width: 100%;
+            width: auto;
         }
 
         &__text-holder {
             background-color: $grey1;
-            padding: 20px 30px;
+            height: 100%;
+            padding: 35px 15px;
             text-align: center;
         }
 
         &__heading {
             font-size: 18px;
             font-weight: $font700;
-            text-transform: uppercase;
         }
 
         &__heading-main {
             font-size: 16px;
             font-weight: $font500;
         }
-
-        &__btn {
-            font-size: 16px;
-            font-weight: $font500;
-            padding: 8px 25px;
-        }
-
-        &__badge {
-            background-color: $primary;
-            position: absolute;
-                left: 20px;
-                top: 88%;
-        }
     }
+
     .slick-dots {
         padding-top: 25px;
         position: unset;
