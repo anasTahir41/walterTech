@@ -58,6 +58,9 @@ $ns: product-detail;
         }
 
         &__bottom-content {
+            border-top: 1px solid $grey3;
+            margin-top: 16px;
+
             &__heading {
                 color: $primary;
                 font-size: 15px;
@@ -229,22 +232,6 @@ $ns: product-detail;
     }
 }
 
-.panel-text > button:after {
-    background-image: url(../images/uparrow.png);
-    background-repeat: no-repeat;
-    content: "";
-    height: 20px;
-    padding-right: 30px;
-    transform-origin: center;
-    transition: 0.3s all;
-    width: 20px;
-}
-
-.panel-text > button.collapsed:after {
-    transform-origin: 12px 12px;
-    transform: rotate(180deg);
-}
-
 .c-card {
     border: 0;
 
@@ -269,6 +256,24 @@ $ns: product-detail;
                 box-shadow: none;
                 color: $secondary;
                 text-decoration: none;
+            }
+
+            &.collapsed {
+                &::after {
+                    transform-origin: 12px 12px;
+                    transform: rotate(180deg);
+                }
+            }
+
+            &::after {
+                background-image: url(../images/uparrow.png);
+                background-repeat: no-repeat;
+                content: "";
+                height: 20px;
+                padding-right: 30px;
+                transform-origin: center;
+                transition: 0.3s all;
+                width: 20px;
             }
         }
     }

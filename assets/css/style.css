@@ -133,10 +133,6 @@ label {
   margin-bottom: 0;
 }
 
-hr {
-  background-color: #a4a4a4;
-}
-
 .slick-slider {
   position: relative;
   display: block;
@@ -2195,6 +2191,10 @@ label input[type=checkbox]:checked + span {
     font-size: 16px;
   }
 }
+.product-detail__wrap__bottom-content {
+  border-top: 1px solid #a4a4a4;
+  margin-top: 16px;
+}
 .product-detail__wrap__bottom-content__heading {
   color: #f9a13b;
   font-size: 15px;
@@ -2344,22 +2344,6 @@ label input[type=checkbox]:checked + span {
   padding: 25px 0 60px 0;
 }
 
-.panel-text > button:after {
-  background-image: url(../images/uparrow.png);
-  background-repeat: no-repeat;
-  content: "";
-  height: 20px;
-  padding-right: 30px;
-  transform-origin: center;
-  transition: 0.3s all;
-  width: 20px;
-}
-
-.panel-text > button.collapsed:after {
-  transform-origin: 12px 12px;
-  transform: rotate(180deg);
-}
-
 .c-card {
   border: 0;
 }
@@ -2383,6 +2367,20 @@ label input[type=checkbox]:checked + span {
   box-shadow: none;
   color: #1b1b1b;
   text-decoration: none;
+}
+.c-card__card-header__btn.collapsed::after {
+  transform-origin: 12px 12px;
+  transform: rotate(180deg);
+}
+.c-card__card-header__btn::after {
+  background-image: url(../images/uparrow.png);
+  background-repeat: no-repeat;
+  content: "";
+  height: 20px;
+  padding-right: 30px;
+  transform-origin: center;
+  transition: 0.3s all;
+  width: 20px;
 }
 .c-card__card-body {
   margin-bottom: 60px;
