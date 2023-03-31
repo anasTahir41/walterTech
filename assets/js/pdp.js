@@ -42,13 +42,13 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         asNavFor: '.slider-thumb'
-      });
-      $('.slider-thumb').slick({
+    });
+    $('.slider-thumb').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
         asNavFor: '.slider-content',
         dots: false,
         centerMode: false,
         focusOnSelect: true
-      });
+    });
 });
