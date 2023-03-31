@@ -23,22 +23,19 @@
         margin-right: 10px;
 
         &__image-holder {
-            height: 0;
-            overflow: hidden;
-            padding-bottom: 67%;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            margin-bottom: 0;
+            height: 100%;
+            padding: 10px;
             position: relative;
-            width: 100%;
         }
 
         &__image {
-            height: auto;
-            object-fit: fill;
-            padding: 15px;
-            position: absolute;
-                left: 50%;
-                top: 50%;
-            transform: translate(-50%, -50%);
-            width: 70%;
+            width: auto;
+            max-height: 225px;
+            max-width: 100%;
         }
 
         &__text-holder {

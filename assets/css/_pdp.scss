@@ -149,15 +149,11 @@ $ns: product-detail;
 
         &__slider-thumb {
             margin: 0 auto;
-            padding: 0 80px 0 80px;
             width: 100%;
+            max-width: 340px;
 
-            @media only screen and (max-width: 1199.98px) {
-                padding: 0 50px 0 50px;
-            }
-
-            @media only screen and (max-width: 575.98px) {
-                padding: 0 15px 0 25px;
+            .slick-track {
+                justify-content: center;
             }
 
             .product-detail__wrap__image {
@@ -171,13 +167,16 @@ $ns: product-detail;
             .product-detail__wrap__image-holder {
                 border-radius: 5px;
                 border: 2px solid $grey2;
+                display: flex;
+                    justify-content: center;
+                    align-items: center;
                 height: 50px;
                 margin: 0;
                 padding: 4px 2px;
                 width: 55px;
 
                 @media only screen and (max-width: 767.98px) {
-                    padding: 0 0 5px 0;
+                    padding: 3px;
                 }
 
                 img {
@@ -188,6 +187,7 @@ $ns: product-detail;
             .product-detail__wrap__slider {
                 padding-top: 5px;
                 height: 58px;
+                width: 58px;
 
                 &.slick-current {
                     .product-detail__wrap__image-holder {
