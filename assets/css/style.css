@@ -2599,4 +2599,86 @@ label input[type=checkbox]:checked + span {
 .product-carousel .slick-dots {
   padding-top: 25px;
   position: unset;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .modal {
+    padding-left: 0;
+  }
+}
+.modal__modal-wrap {
+  background-color: #fff;
+  margin: 150px auto;
+  max-width: 700px;
+  transition: transform 0.3s ease-out;
+}
+.modal__header {
+  border: none;
+  display: block;
+  padding: 30px 20px 20px 25px;
+  position: relative;
+}
+.modal__header__heading {
+  color: #1b1b1b;
+  font-size: 32px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 767.98px) {
+  .modal__header__heading {
+    font-size: 24px;
+  }
+}
+.modal__header__para {
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal__header__close-btn {
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  top: 13px;
+  right: 18px;
+}
+.modal__body {
+  padding: 0 25px;
+}
+.modal__body__label {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 600;
+}
+.modal__body__input {
+  border-radius: 6px;
+  border: 1px solid #a4a4a4;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 100%;
+}
+.modal__body__input::-moz-placeholder {
+  color: #bfc4c9;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal__body__input::placeholder {
+  color: #bfc4c9;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal__body__input:focus-visible {
+  outline: none;
+}
+.modal__footer {
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+.modal__footer__cancel {
+  font-size: 16px;
+  font-weight: 700;
+}
+.modal__footer__subscribe {
+  font-size: 16px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
