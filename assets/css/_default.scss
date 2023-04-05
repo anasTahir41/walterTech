@@ -26,18 +26,19 @@ a {
     font-weight: $font500;
     padding: 8px 14px;
 
-    &:hover {
-        background: $btn-hover;
-        color: $secondary;
-        text-decoration: none;
-    }
+    &:hover,
+    &:focus,
     &:active {
         background: $btn-hover;
+        box-shadow: none;
         color: $secondary;
         text-decoration: none;
     }
-
-    &:focus {
+    &:not(:disabled):not(.disabled):active,
+    &.btn-primary:not(:disabled):not(.disabled):active:focus {
+        background: $btn-hover;
+        color: $secondary;
+        text-decoration: none;
         box-shadow: none;
     }
 }
