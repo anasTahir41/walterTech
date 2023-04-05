@@ -20,8 +20,8 @@ $ns: p-sheets;
             max-width: 100%;
             padding: 40px 60px;
             position: absolute;
-                top: 50%;
                 left: 50%;
+                top: 50%;
             text-align: center;
             transform: translate(-50%, -50%);
             width: 840px;
@@ -70,7 +70,7 @@ $ns: p-sheets;
             }
         }
 
-        &__para {
+        &__descrip {
             color: $white;
             font-size: 16px;
             margin: 0;
@@ -103,6 +103,9 @@ $ns: p-sheets;
                 background: $grey1 url(../images/search-orange.png) no-repeat left 17px center/22px;
                 border-radius: 10px;
                 border: none;
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font700;
                 max-width: 100%;
                 padding: 20px 10px 20px 50px;
                 width: 700px;
@@ -133,12 +136,17 @@ $ns: p-sheets;
         padding-bottom: 60px;
 
         &__nav-tabs {
-            justify-content: center;
-            margin-bottom: 60px;
+            margin: 0 auto;
+            width: max-content;
         }
 
         &__nav-item {
             margin-bottom: 15px;
+        }
+
+        &__bar {
+            margin-bottom: 60px;
+            overflow-x: auto;
         }
 
         &__nav-link {
@@ -155,7 +163,7 @@ $ns: p-sheets;
             &.active {
                 border-bottom: 3px solid $primary;
                 color: $secondary;
-                text-shadow: 0 0 black;
+                text-shadow: 0 0 $black;
 
                 a {
                     box-shadow: none;
@@ -206,10 +214,9 @@ $ns: p-sheets;
             &__text {
                 font-size: 18px;
                 font-weight: 700;
-                padding-right: 40px;
             }
 
-            &__para {
+            &__descrip {
                 color: $grey10;
                 font-size: 14px;
                 font-weight: 500;
@@ -223,6 +230,8 @@ $ns: p-sheets;
             }
 
             &__btn {
+                background-color: transparent;
+                border: none;
                 font-size: 14px;
                 font-weight: 700;
                 padding-right: 25px;
@@ -255,6 +264,12 @@ $ns: p-sheets;
                     top: 0;
                     right: 0;
             }
+        }
+    }
+
+    .is-new {
+        .p-sheets__main__content__text {
+            padding-right: 40px;
         }
     }
 }

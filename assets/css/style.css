@@ -2701,8 +2701,8 @@ label input[type=checkbox]:checked + span {
   max-width: 100%;
   padding: 40px 60px;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
   width: 840px;
@@ -2754,18 +2754,18 @@ label input[type=checkbox]:checked + span {
     margin-bottom: 5px;
   }
 }
-.p-sheets__banner__para {
+.p-sheets__banner__descrip {
   color: #fff;
   font-size: 16px;
   margin: 0;
 }
 @media only screen and (max-width: 991.98px) {
-  .p-sheets__banner__para {
+  .p-sheets__banner__descrip {
     font-size: 14px;
   }
 }
 @media only screen and (max-width: 767.98px) {
-  .p-sheets__banner__para {
+  .p-sheets__banner__descrip {
     font-size: 10px;
     margin-bottom: 5px;
   }
@@ -2788,6 +2788,9 @@ label input[type=checkbox]:checked + span {
   background: #f7f7f7 url(../images/search-orange.png) no-repeat left 17px center/22px;
   border-radius: 10px;
   border: none;
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: 700;
   max-width: 100%;
   padding: 20px 10px 20px 50px;
   width: 700px;
@@ -2823,11 +2826,16 @@ label input[type=checkbox]:checked + span {
   padding-bottom: 60px;
 }
 .p-sheets__main__nav-tabs {
-  justify-content: center;
-  margin-bottom: 60px;
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
 }
 .p-sheets__main__nav-item {
   margin-bottom: 15px;
+}
+.p-sheets__main__bar {
+  margin-bottom: 60px;
+  overflow-x: auto;
 }
 .p-sheets__main__nav-link {
   border-bottom: 1px solid #d1d1d1;
@@ -2842,7 +2850,7 @@ label input[type=checkbox]:checked + span {
 .p-sheets__main__nav-link.active {
   border-bottom: 3px solid #f9a13b;
   color: #1b1b1b;
-  text-shadow: 0 0 black;
+  text-shadow: 0 0 #000;
 }
 .p-sheets__main__nav-link.active a {
   box-shadow: none;
@@ -2886,9 +2894,8 @@ label input[type=checkbox]:checked + span {
 .p-sheets__main__content__text {
   font-size: 18px;
   font-weight: 700;
-  padding-right: 40px;
 }
-.p-sheets__main__content__para {
+.p-sheets__main__content__descrip {
   color: #757575;
   font-size: 14px;
   font-weight: 500;
@@ -2900,6 +2907,8 @@ label input[type=checkbox]:checked + span {
   margin: 0;
 }
 .p-sheets__main__content__btn {
+  background-color: transparent;
+  border: none;
   font-size: 14px;
   font-weight: 700;
   padding-right: 25px;
@@ -2928,4 +2937,7 @@ label input[type=checkbox]:checked + span {
   position: absolute;
   top: 0;
   right: 0;
+}
+.p-sheets .is-new .p-sheets__main__content__text {
+  padding-right: 40px;
 }/*# sourceMappingURL=style.css.map */
