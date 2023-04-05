@@ -9,7 +9,7 @@ $ns: s-result;
             width: 100%;
         }
         &__search {
-            background-color: #130b0385;
+            background-color: $banner-text-bg-color;
             padding: 35px;
             position: absolute;
                 top: 50%;
@@ -209,18 +209,19 @@ $ns: s-result;
     &__table {
         margin: 0;
     }
-}
 
-.tab-content {
-    @media only screen and (max-width: 991.98px) {
-        overflow-x: scroll;
-    }
-    .tab-pane  {
+    .tab-content {
         @media only screen and (max-width: 991.98px) {
-            width: 700px;
+            overflow-x: scroll;
+        }
+        .tab-pane  {
+            @media only screen and (max-width: 991.98px) {
+                width: 700px;
+            }
         }
     }
 }
+
 
 .search-result__item td.search-result__detail:not(:first-child):not(:last-child) {
     width: 220px;
