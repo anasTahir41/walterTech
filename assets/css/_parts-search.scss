@@ -20,7 +20,7 @@ $ns: parts-search;
         }
 
         &__text-holder {
-            background-color: $banner-text-bg;
+            background-color: $banner-text-bg-color;
             padding: 45px;
             position: absolute;
                 top: 50%;
@@ -128,7 +128,7 @@ $ns: parts-search;
         &__table {
             &__item {
                 &__heading {
-                    color: $grey9;
+                    color: $secondary;
                     font-size: 14px;
                     font-weight: $font700;
                     letter-spacing: 1;
@@ -150,7 +150,7 @@ $ns: parts-search;
             }
 
             &__detail {
-                color: $grey9;
+                color: $secondary;
                 font-size: 14px;
                 font-weight: $font500;
                 padding: 14px;
@@ -165,7 +165,7 @@ $ns: parts-search;
             &__norder-no {
                 background: transparent;
                 border: none;
-                color: $grey9;
+                color: $secondary;
                 font-size: 14px;
                 font-weight: $font500;
                 padding: 0;
