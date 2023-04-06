@@ -3009,7 +3009,7 @@ label input[type=checkbox]:checked + span {
   padding: 0 10px 4px 10px;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991.98px) {
   .parts-search__banner__title {
     font-size: 12px;
     margin-bottom: 0;
@@ -3035,7 +3035,8 @@ label input[type=checkbox]:checked + span {
 }
 @media only screen and (max-width: 767.98px) {
   .parts-search__banner__wrap__search-field {
-    background: rgba(243, 243, 243, 0.1) url(../images/search-grey.png) no-repeat left 6px center/14px;
+    background-position: left 6px center;
+    background-size: 14px;
     font-size: 10px;
     padding: 2px 2px 2px 26px;
   }
@@ -3067,7 +3068,7 @@ label input[type=checkbox]:checked + span {
   color: #1b1b1b;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 1;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .parts-search__card-body__table__item__list-price {
@@ -3093,7 +3094,7 @@ label input[type=checkbox]:checked + span {
     font-size: 12px;
   }
 }
-.parts-search__card-body__table__product-name, .parts-search__card-body__table__norder-no {
+.parts-search__card-body__table__product-name, .parts-search__card-body__table__order-no {
   background: transparent;
   border: none;
   color: #1b1b1b;
