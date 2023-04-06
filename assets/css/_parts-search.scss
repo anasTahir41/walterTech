@@ -115,16 +115,6 @@ $ns: parts-search;
     }
 
     &__card-body {
-        @media only screen and (max-width: 991.98px) {
-            overflow-x: auto;
-        }
-
-        &__wrap {
-            @media only screen and (max-width: 991.98px) {
-                width: max-content;
-            }
-        }
-
         &__table {
             &__item {
                 &__heading {
@@ -146,6 +136,7 @@ $ns: parts-search;
                 td {
                     vertical-align: middle;
                     padding: 15px;
+                    width: 33.33%;
                 }
             }
 

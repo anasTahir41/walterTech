@@ -3063,17 +3063,6 @@ label input[type=checkbox]:checked + span {
 .parts-search__content {
   padding-bottom: 60px;
 }
-@media only screen and (max-width: 991.98px) {
-  .parts-search__card-body {
-    overflow-x: auto;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .parts-search__card-body__wrap {
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
 .parts-search__card-body__table__item__heading {
   color: #1b1b1b;
   font-size: 14px;
@@ -3090,6 +3079,7 @@ label input[type=checkbox]:checked + span {
 .parts-search__card-body__table__item td {
   vertical-align: middle;
   padding: 15px;
+  width: 33.33%;
 }
 .parts-search__card-body__table__detail {
   color: #1b1b1b;
