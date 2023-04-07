@@ -1,7 +1,8 @@
-$ns: parts-search;
+$ns: msds-search;
 
 .#{$ns} {
     background-color: $white;
+    padding-bottom: 60px;
 
     &__banner {
         margin-bottom: 40px;
@@ -109,10 +110,23 @@ $ns: parts-search;
                 width: 100%;
             }
         }
-    }
 
-    &__content {
-        padding-bottom: 60px;
+        &__search-btn {
+            background-color: $primary;
+            padding: 11px;
+
+            @media only screen and (max-width: 767.98px) {
+                padding: 3px;
+            }
+
+            &__img {
+                width: 21px;
+
+                @media only screen and (max-width: 767.98px) {
+                    width: 15px;
+                }
+            }
+        }
     }
 
     &__card-body {
@@ -132,6 +146,7 @@ $ns: parts-search;
 
                 th {
                     padding: 15px;
+                    vertical-align: text-top;
                 }
 
                 td {
@@ -170,6 +185,60 @@ $ns: parts-search;
             thead th {
                 border: none;
                 vertical-align: text-top;
+            }
+        }
+    }
+
+    .bottom {
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: 0;
+        width: 100%;
+
+        &__left {
+            display: flex;
+                align-items: baseline;
+        }
+
+        &__dropdown {
+            &__btn {
+                background-color: transparent;
+                border: none;
+                color: $black;
+                font-size: 14px;
+                font-weight: 700;
+                margin-right: 15px;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    border: none;
+                    color: $black;
+                }
+            }
+        }
+
+        &__descrip {
+            color: $grey8;
+            font-size: 14px;
+            font-weight: $font500;
+        }
+
+        &__right {
+            &__num {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+
+            &__list {
+                font-weight: $font700;
+                margin-right: 20px;
+            }
+
+            &__link {
+                font-size: 14px;
+                font-weight: $font700;
             }
         }
     }
