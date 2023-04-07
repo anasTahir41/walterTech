@@ -1,8 +1,7 @@
-$ns: msds-search;
+$ns: product-search;
 
 .#{$ns} {
     background-color: $white;
-    padding-bottom: 60px;
 
     &__banner {
         margin-bottom: 40px;
@@ -129,6 +128,10 @@ $ns: msds-search;
         }
     }
 
+    &__content {
+        padding-bottom: 60px;
+    }
+
     &__card-body {
         &__table {
             &__item {
@@ -146,7 +149,6 @@ $ns: msds-search;
 
                 th {
                     padding: 15px;
-                    vertical-align: text-top;
                 }
 
                 td {
