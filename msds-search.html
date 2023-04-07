@@ -1,5 +1,5 @@
 <head>
-    <title>Parts List Search</title>
+    <title>M(SDS) Search</title>
     <link rel="icon" type="image/x-icon" href="" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -267,12 +267,12 @@
             </figure>
             <div class="product-search__banner__text-holder">
                 <h3 class="product-search__banner__title">Resources</h3>
-                <h2 class="product-search__banner__text">Parts List Search</h2>
+                <h2 class="product-search__banner__text">M(SDS) Search</h2>
                 <div class="product-search__banner__wrap" data-test="hdr-searchForm">
                     <form class="product-search__banner__wrap__form">
                         <input class="product-search__banner__wrap__search-field" type="search" name="q" value=""
-                            autocomplete="off" placeholder="Search by product code or model no."
-                            aria-label="parts list search" />
+                            autocomplete="off" placeholder="Search by Order no. or M(SDS)"
+                            aria-label="M(SDS) search" />
                     </form>
                     <a href="#" class="product-search__banner__search-btn">
                         <img class="product-search__banner__search-btn__img" src="./assets/images/search-w.png">
@@ -286,15 +286,15 @@
                     <table class="table product-search__card-body__table">
                         <thead>
                             <tr class="product-search__card-body__table__item">
-                                <th class="product-search__card-body__table__item__heading" scope="col">Model no.</th>
+                                <th class="product-search__card-body__table__item__heading" scope="col">M(SDS) Name</th>
                                 <th class="product-search__card-body__table__item__heading" scope="col">Product</th>
                                 <th class="product-search__card-body__table__item__heading" scope="col">Order no.</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="product-search__card-body__table__item">
-                                <td class="product-search__card-body__table__detail">6161-H</td>
-                                <td class="product-search__card-body__table__detail"><span
+                                <td class="product-search__card-body__table__detail">L-95</td>
+                                <td class="product-search__card-body__table__detail">Zinc 200<span
                                         class="product-search__card-body__table__product-name">Maxi Grinder</span>
                                 </td>
                                 <td class="product-search__card-body__table__detail"><span
@@ -373,6 +373,38 @@
                     </table>
                 </div>
             </section>
+            <div class="bottom">
+                <div class="bottom__left">
+                    <div class="dropdown bottom__dropdown">
+                        <button class="bottom__dropdown__btn btn btn-secondary dropdown-toggle"
+                            type="button" data-toggle="dropdown" aria-expanded="false">
+                            Show 25 items
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" href="#">Show 10 items</a>
+                            <a href="#" class="dropdown-item" href="#">Show 20 items</a>
+                            <a href="#" class="dropdown-item" href="#">Show 30 items</a>
+                        </div>
+                    </div>
+                    <p class="bottom__descrip">
+                        Showing 1 to 25 of 200 entries
+                    </p>
+                </div>
+                <div class="bottom__right">
+                    <ul class="bottom__right__num">
+                        <li class="bottom__right__list">
+                            <a href="#" class="bottom__right__link"><
+                                </a>
+                        </li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">1</a></li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">2</a></li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">3</a></li>
+                        <li class="bottom__right__list">...</li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">9</a></li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
