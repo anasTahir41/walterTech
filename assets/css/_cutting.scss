@@ -3,23 +3,6 @@ $ns: cutting;
 .#{$ns} {
     background-color: $white;
 
-    .col {
-        flex: 0 0 20%;
-        margin-bottom: 25px;
-
-        @media only screen and (max-width: 1199.98px) {
-            flex: 0 0 33%;
-        }
-
-        @media only screen and (max-width: 991.98px) {
-        flex: 0 0 50%;
-        }
-
-        @media only screen and (max-width: 767.98px) {
-            flex: 0 0 100%;
-        }
-    }
-
     .breadcrumb-wrap {
         background-color: $grey1;
 
@@ -111,6 +94,22 @@ $ns: cutting;
     }
 
     &__products {
+        .col {
+            flex: 0 0 20%;
+            margin-bottom: 25px;
+
+            @media only screen and (max-width: 1199.98px) {
+                flex: 0 0 33%;
+            }
+
+            @media only screen and (max-width: 991.98px) {
+            flex: 0 0 50%;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                flex: 0 0 100%;
+            }
+        }
         &__wrap {
             border: 1px solid $grey2;
             height: 100%;
@@ -122,8 +121,9 @@ $ns: cutting;
         }
 
         &__image {
+            max-width: 100%;
             padding: 10px 20px;
-            width: 100%;
+            width: auto;
         }
 
         &__text-holder {

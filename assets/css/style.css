@@ -3197,25 +3197,6 @@ label input[type=checkbox]:checked + span {
 .cutting {
   background-color: #fff;
 }
-.cutting .col {
-  flex: 0 0 20%;
-  margin-bottom: 25px;
-}
-@media only screen and (max-width: 1199.98px) {
-  .cutting .col {
-    flex: 0 0 33%;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .cutting .col {
-    flex: 0 0 50%;
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .cutting .col {
-    flex: 0 0 100%;
-  }
-}
 .cutting .breadcrumb-wrap {
   background-color: #f7f7f7;
 }
@@ -3293,6 +3274,25 @@ label input[type=checkbox]:checked + span {
     max-width: 100%;
   }
 }
+.cutting__products .col {
+  flex: 0 0 20%;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 1199.98px) {
+  .cutting__products .col {
+    flex: 0 0 33%;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .cutting__products .col {
+    flex: 0 0 50%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .cutting__products .col {
+    flex: 0 0 100%;
+  }
+}
 .cutting__products__wrap {
   border: 1px solid #d1d1d1;
   height: 100%;
@@ -3302,8 +3302,9 @@ label input[type=checkbox]:checked + span {
   margin: 0;
 }
 .cutting__products__image {
+  max-width: 100%;
   padding: 10px 20px;
-  width: 100%;
+  width: auto;
 }
 .cutting__products__text-holder {
   background-color: #f7f7f7;
