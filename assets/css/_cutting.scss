@@ -1,0 +1,146 @@
+$ns: cutting;
+
+.#{$ns} {
+    background-color: $white;
+
+    .breadcrumb-wrap {
+        background-color: $grey1;
+
+        &__breadcrumb {
+            background-color: $grey1;
+            margin-bottom: 0;
+
+            .breadcrumb-item {
+                &.active {
+                    .breadcrumb-link {
+                        color: $grey6;
+                        font-size: 14px;
+                        font-weight: $font700;
+                    }
+                }
+            }
+        }
+
+        .breadcrumb-link {
+            color: $grey12;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &__cutting-banner {
+        background-color: $cutting-banner-bg-color;
+        margin-bottom: 55px;
+
+        &__wrap {
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+
+            @media only screen and (max-width: 767.98px) {
+               display: block;
+            }
+        }
+
+        &__left {
+            &__heading {
+                color: $primary;
+                font-size: 16px;
+                font-weight: $font700;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+
+                @media only screen and (max-width: 991.98px) {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+            }
+
+            &__main-heading {
+                color: $white;
+                font-size: 40px;
+                font-weight: $font700;
+                margin-bottom: 12px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 32px;
+                }
+            }
+
+            &__descrip {
+                color: $grey13;
+                font-size: 14px;
+
+                @media only screen and (max-width: 767.98px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        &__right {
+            text-align: center;
+
+            &__btn  {
+                font-weight: $font700;
+                width: 100%;
+
+                @media only screen and (max-width: 767.98px) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    &__products {
+        .col {
+            flex: 0 0 20%;
+            margin-bottom: 25px;
+
+            @media only screen and (max-width: 1199.98px) {
+                flex: 0 0 33%;
+            }
+
+            @media only screen and (max-width: 991.98px) {
+                flex: 0 0 50%;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                flex: 0 0 100%;
+            }
+        }
+
+        &__wrap {
+            border: 1px solid $grey2;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        &__image-holder {
+            margin: 0;
+        }
+
+        &__image {
+            max-width: 100%;
+            padding: 10px 20px;
+            width: auto;
+        }
+
+        &__text-holder {
+            background-color: $grey1;
+            height: 100%;
+            padding: 35px 25px 25px 25px;
+            text-align: center;
+        }
+
+        &__text {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: capitalize;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
