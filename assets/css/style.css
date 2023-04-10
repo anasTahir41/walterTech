@@ -3266,8 +3266,8 @@ label input[type=checkbox]:checked + span {
   text-align: center;
 }
 .cutting__cutting-banner__right__btn {
-  width: 100%;
   font-weight: 700;
+  width: 100%;
 }
 @media only screen and (max-width: 767.98px) {
   .cutting__cutting-banner__right__btn {
