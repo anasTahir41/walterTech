@@ -3319,4 +3319,152 @@ label input[type=checkbox]:checked + span {
 }
 .cutting__products__text:hover {
   text-decoration: none;
+}
+
+.automotive {
+  background-color: #fff;
+}
+.automotive .breadcrumb-wrap {
+  background-color: #f7f7f7;
+}
+.automotive .breadcrumb-wrap__breadcrumb {
+  background-color: #f7f7f7;
+  margin-bottom: 0;
+}
+.automotive .breadcrumb-wrap__breadcrumb .breadcrumb-item.active .breadcrumb-link {
+  color: #727272;
+  font-size: 14px;
+  font-weight: 700;
+}
+.automotive .breadcrumb-wrap .breadcrumb-link {
+  color: #878787;
+  font-size: 14px;
+  font-weight: 500;
+}
+.automotive__banner {
+  margin-bottom: 55px;
+  position: relative;
+}
+.automotive__banner__img {
+  height: 200px;
+  width: 100%;
+}
+.automotive__banner__text-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 767.98px) {
+  .automotive__banner__text-content {
+    display: block;
+  }
+}
+.automotive__banner__left__heading {
+  color: #f9a13b;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.automotive__banner__left__heading-main {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767.98px) {
+  .automotive__banner__left__heading-main {
+    font-size: 25px;
+  }
+}
+.automotive__banner__right__btn {
+  font-weight: 700;
+  width: 100%;
+}
+.automotive__banner__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.automotive__banner__wrap-content {
+  align-items: center;
+  justify-content: space-between;
+}
+.automotive__products {
+  margin-bottom: 40px;
+}
+.automotive__products__wrap {
+  border: 1px solid #d1d1d1;
+  height: 100%;
+  overflow: hidden;
+}
+.automotive__products__image-holder {
+  margin: 0;
+}
+.automotive__products__image {
+  max-width: 100%;
+  padding: 10px 20px;
+  width: auto;
+}
+.automotive__products__text-holder {
+  background-color: #f7f7f7;
+  height: 100%;
+  padding: 35px 25px 25px 25px;
+  text-align: left;
+}
+@media only screen and (max-width: 767.98px) {
+  .automotive__products__text-holder {
+    text-align: center;
+  }
+}
+.automotive__products__text {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+.automotive__products__text:hover {
+  text-decoration: none;
+}
+.automotive__products__link {
+  background: transparent;
+  border: none;
+  color: #4169b3;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  padding: 0;
+}
+.automotive__products__link:hover {
+  color: #4169b3;
+  text-decoration: none;
+}
+.automotive .filter {
+  margin-top: 0;
+}
+.automotive .filter .filter__title {
+  font-size: 16px;
+}
+.automotive .grid-view .content__wrap {
+  margin-top: 28px;
+}
+.automotive .products-head__left__text {
+  font-size: 32px;
+}
+.automotive .bottom {
+  display: flex;
+}
+@media only screen and (max-width: 991.98px) {
+  .automotive .bottom {
+    display: block;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .automotive .bottom__right {
+    padding-left: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,186 @@
+$ns: automotive;
+
+.#{$ns} {
+    background-color: $white;
+
+    .breadcrumb-wrap {
+        background-color: $grey1;
+
+        &__breadcrumb {
+            background-color: $grey1;
+            margin-bottom: 0;
+
+            .breadcrumb-item {
+                &.active {
+                    .breadcrumb-link {
+                        color: $grey6;
+                        font-size: 14px;
+                        font-weight: $font700;
+                    }
+                }
+            }
+        }
+
+        .breadcrumb-link {
+            color: $grey12;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &__banner {
+        margin-bottom: 55px;
+        position: relative;
+
+        &__img {
+            height: 200px;
+            width: 100%;
+        }
+
+        &__text-content {
+            display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            @media only screen and (max-width: 767.98px) {
+                display: block;
+            }
+        }
+
+        &__left {
+            &__heading {
+                color: $primary;
+                font-size: 16px;
+                font-weight: $font700;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            &__heading-main {
+                color: $white;
+                font-size: 40px;
+                font-weight: $font700;
+                margin-bottom: 15px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &__right {
+            &__btn {
+                font-weight: $font700;
+                width: 100%;
+            }
+        }
+
+        &__wrap {
+            position: absolute;
+                top: 50%;
+                left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        &__wrap-content {
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__products {
+        margin-bottom: 40px;
+
+        &__wrap {
+            border: 1px solid $grey2;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        &__image-holder {
+            margin: 0;
+        }
+
+        &__image {
+            max-width: 100%;
+            padding: 10px 20px;
+            width: auto;
+        }
+
+        &__text-holder {
+            background-color: $grey1;
+            height: 100%;
+            padding: 35px 25px 25px 25px;
+            text-align: left;
+
+            @media only screen and (max-width: 767.98px) {
+                text-align: center;
+            }
+        }
+
+        &__text {
+            font-size: 18px;
+            font-weight: $font700;
+            margin-bottom: 12px;
+            text-transform: capitalize;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &__link {
+            background: transparent;
+            border: none;
+            color: $products-link-color;
+            display: block;
+            font-size: 17px;
+            font-weight: $font500;
+            margin-bottom: 6px;
+            padding: 0;
+
+            &:hover {
+                color: $products-link-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .filter {
+        margin-top: 0;
+
+        .filter__title {
+            font-size: 16px;
+        }
+    }
+
+    .grid-view {
+        .content__wrap {
+            margin-top: 28px;
+        }
+    }
+
+    .products-head {
+        &__left {
+            &__text {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+
+        @media only screen and (max-width: 991.98px) {
+            display: block;
+        }
+
+        &__right {
+            @media only screen and (max-width: 991.98px) {
+                padding-left: 14px;
+            }
+        }
+    }
+}
