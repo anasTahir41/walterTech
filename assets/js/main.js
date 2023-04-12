@@ -140,4 +140,20 @@ $(document).ready(function () {
     }
 
     searchSuggestionsShow();
+
+    $('.dropdown-menu a.dropdown-toggle').on("click", function (e) {
+        $(this).parent('li').siblings().removeClass('show');
+        $(this).parent('li').siblings().find('ul').hide();
+
+        $(this).parent('li').toggleClass('show');
+        $(this).next('ul').toggle();
+
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
+    $('.nav-item.dropdown').on('hidden.bs.dropdown', function () {
+        $(this).find('.dropdown-menu .dropdown').removeClass('show');
+        $(this).find('.dropdown-menu .dropdown > .dropdown-menu').hide();
+    })
 });

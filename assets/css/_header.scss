@@ -166,9 +166,17 @@ $ns: c-site-header;
             }
         }
 
+        .navbar-nav {
+            @media only screen and (max-width: 991.98px) {
+                margin: 0 -16px;
+                max-height: calc(100vh - 140px);
+                overflow: hidden auto;
+            }
+        }
+
         .nav-item {
             border-bottom: 1px solid $grey2;
-            margin: 0 -16px;
+            margin: 0;
             padding: 0 24px;
 
             @media only screen and (min-width: 992px) {
@@ -260,14 +268,82 @@ $ns: c-site-header;
                 padding: 0;
 
                 @media only screen and (min-width: 992px) {
+                    background-color: $white;
                     margin: 0;
+                    width: 320px;
+                    position: relative;
+                }
+
+                &--wrapper {
+                    @media only screen and (min-width: 992px) {
+                        background-color: $white;
+                        box-shadow: 0 4px 13px -2px $black;
+                        width: auto;
+                        position: absolute;
+                            left: 0;
+                            top: 100%;
+                    }
+                }
+
+                &__inner {
+                    @media only screen and (min-width: 992px) {
+                        max-height: calc(100vh - 140px);
+                        overflow-y: auto;
+                    }
+                }
+
+                &__heading {
+                    color: $secondary;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin: 28px 0;
+                    padding: 0 24px;
+                    text-transform: uppercase;
+
+                    @media only screen and (max-width: 991.98px) {
+                        display: none;
+                    }
+                }
+
+                &__descp {
+                    color: $secondary;
+                    font-size: 14px;
+                    padding: 0 24px;
+
+                    @media only screen and (max-width: 991.98px) {
+                        display: none;
+                    }
+                }
+
+                li.dropdown {
+                    position: static;
+
+                    &.show {
+                        .dropdown-item {
+                            &.dropdown-toggle {
+                                background-color: $grey1;
+
+                                &::after {
+                                    @media only screen and (max-width: 991.98px) {
+                                        background-image: url(../images/minus-icon.png);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .dropdown-item {
-                    background-color: $grey1;
+                    background-color: $white;
                     color: $secondary;
                     font-weight: $font700;
                     padding: 16px 36px;
+
+                    @media only screen and (min-width: 992px) {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 20px;
+                    }
 
                     &:not(:last-child) {
                         margin-bottom: 2px;
@@ -275,7 +351,102 @@ $ns: c-site-header;
 
                     &:hover,
                     &:focus {
-                        background-color: $white;
+                        background-color: $grey1;
+                    }
+
+                    &--button {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: $font700;
+                        padding: 12px 24px;
+                        position: relative;
+                        width: 100%;
+
+                        &::after {
+                            background: url(../images/right-arrow.png) no-repeat right center;
+                            content: "";
+                            display: inline-block;
+                            height: 20px;
+                            position: absolute;
+                            right: 24px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                        }
+                    }
+
+                    &.dropdown-toggle {
+                        position: relative;
+
+                        &::after {
+                            @media only screen and (max-width: 991.98px) {
+                                border: none;
+                                content: '';
+                                background: url(../images/plus-icon.png) no-repeat center/16px;
+                                position: absolute;
+                                    right: 24px;
+                                    top: 50%;
+                                transform: translateY(-50%);
+                                margin-left: 0;
+                                height: 24px;
+                                width: 24px;
+                            }
+
+                            @media only screen and (min-width: 992px) {
+                                transition: all 0.2s;
+                                border: 2px solid $grey3;
+                                border-left: none;
+                                border-bottom: none;
+                                width: 7px;
+                                height: 7px;
+                                margin-left: 0;
+                                position: absolute;
+                                right: 30px;
+                                top: 50%;
+                                transform: rotate(45deg) translateY(-50%);
+                            }
+                        }
+                    }
+
+                    img {
+                        border-radius: 6px;
+                        height: 40px;
+                        margin-right: 20px;
+                        width: 40px;
+
+                        @media only screen and (max-width: 991.98px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    margin: 0;
+
+                    @media only screen and (min-width: 992px) {
+                        background-color: $grey1;
+                        box-shadow: 0 10px 10px -10px $black;
+                        position: absolute;
+                            left: 100%;
+                            top: 0;
+                        max-height: calc(100vh - 140px);
+                        min-height: 100%;
+                        min-width: max-content;
+                        overflow-y: auto;
+                    }
+
+                    .dropdown-item {
+                        background-color: $grey1;
+
+                        @media only screen and (max-width: 991.98px) {
+                            margin-bottom: 2px;
+                            padding-left: 60px;
+                            padding-right: 60px;
+                        }
+
+                        &:hover {
+                            background-color: $grey15;
+                        }
                     }
                 }
             }
