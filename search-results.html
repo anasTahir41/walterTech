@@ -668,7 +668,52 @@
                             </ul>
                         </div>
                         <div class="c-site-footer__newsletter__subscribe">
-                            <a href="#" class="c-site-footer__newsletter__btn btn-primary">Subscribe</a>
+                            <button type="button" class="c-site-footer__newsletter__btn btn-primary" data-toggle="modal"
+                                data-target="#Modal" data-whatever="@mdo">Subscribe</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                            aria-labelledby="ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal__modal-wrap" role="document">
+                                <div class="modal-content">
+                                    <div class="modal__header">
+                                        <h2 class="modal__header__heading">Subscribe to Our Newsletter</h2>
+                                        <p class="modal__header__para">Receive updates, promotions, and more.</p>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal__body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label class="modal__body__label" for="firstname">First Name</label>
+                                                    <input class="modal__body__input" type="text" id="firstname"
+                                                        name="firstname" placeholder="Input">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label class="modal__body__label" for="lastname">Last Name</label>
+                                                    <input class="modal__body__input" type="text" id="lastname"
+                                                        name="lastname" placeholder="Input">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="modal__body__label" for="lastname">Email</label>
+                                                    <input class="modal__body__input" type="email" id="email"
+                                                        name="Input" placeholder="Input" required>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="modal__footer__cancel" type="button"
+                                            class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                        <button type="button"
+                                            class="modal__footer__subscribe btn-primary">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

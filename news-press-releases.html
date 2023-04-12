@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>News & Press Release</title>
+    <link rel="icon" type="image/x-icon" href="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header Starts Here -->
+    <header class="c-site-header">
+        <div class="c-site-header__top">
+            <div class="c-site-header__top__main container">
+                <div class="c-site-header__top__left">
+                    <div class="dropdown c-site-header__top__left__dropdown language">
+                        <button class="dropdown-toggle c-site-header__top__left__btn" type="button"
+                            id="languageDropdownButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="flag-icon flag-icon-us"></span> en-US
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdownButton">
+                            <a class="dropdown-item" href="#fr"><span class="flag-icon flag-icon-fr"> </span> fr-FR</a>
+                            <a class="dropdown-item" href="#it"><span class="flag-icon flag-icon-it"> </span> it-IT</a>
+                            <a class="dropdown-item" href="#ru"><span class="flag-icon flag-icon-ru"> </span> ru-RU</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-site-header__top__right d-none d-lg-flex">
+                    <div class="c-site-header__top__menu">
+                        <ul class="c-site-header__top__items">
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">E-Catalog</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">SDS Search</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Parts List</a>
+                            </li>
+                            <li class="c-site-header__top__items__list">
+                                <a href="#" class="c-site-header__top__items__list-item">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c-site-header__top__search">
+                        <div class="c-site-header__top__search__wrap" data-test="hdr-searchForm">
+                            <form class="c-site-header__top__search__wrap__form">
+                                <input
+                                    class="c-site-header__top__search__wrap__search-field js-search-suggestions-field"
+                                    type="search" name="q" value="" autocomplete="off"
+                                    placeholder="What are you looking for?" aria-label="What are you looking for?" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="c-site-header__navbar navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
+                    <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
+                </a>
+                <div class="c-site-header__search d-lg-none">
+                    <a href="#" class="c-site-header__search--wrapper js-search-suggestions-field">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px"
+                            fill-rule="nonzero">
+                            <g fill="#a9a9a9" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(4,4)">
+                                    <path
+                                        d="M27,9c-9.925,0 -18,8.075 -18,18c0,9.925 8.075,18 18,18c4.12921,0 7.9263,-1.41263 10.9668,-3.75977l13.08203,13.08203c0.904,0.904 2.36944,0.904 3.27344,0c0.904,-0.904 0.904,-2.36944 0,-3.27344l-13.08203,-13.08203c2.34713,-3.0405 3.75977,-6.83758 3.75977,-10.9668c0,-9.925 -8.075,-18 -18,-18zM27,13c7.719,0 14,6.281 14,14c0,7.719 -6.281,14 -14,14c-7.719,0 -14,-6.281 -14,-14c0,-7.719 6.281,-14 14,-14z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-lg-center mt-2 mt-lg-0"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <a class="dropdown-item" href="plp.html">Products</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="industryDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Industry
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="industryDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Brands
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="brandsDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourceDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Resources
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="resourceDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <div class="quick-links d-lg-none">
+                            <h4 class="quick-links__heading">Quick Links</h4>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ECatalogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Parts List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SDS Search</a>
+                            </li>
+                            <li class="nav-item btn-buy">
+                                <a href="#" class="btn-primary">Where to Buy</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
+            </div>
+        </nav>
+
+        <div id="js-search-suggestions" class="search-suggestions">
+            <div class="search-suggestions__container">
+                <form action="" class="search-suggestions__form">
+                    <input type="search" name="query" id="search-suggestions-input"
+                        class="search-suggestions__input js-search-input" placeholder="Search..." autofocus>
+                </form>
+
+                <div class="search-suggestions__wrapper">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="search-suggestions__list">
+                                <h4 class="search-suggestions__heading">Search Suggestions</h4>
+                                <ul>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle, Total Nozzle Protection for the best
+                                            efficiency</a></li>
+                                    <li><a href="#">E-<strong>WELD</strong> Nozzle Kit, Total Nozzle Protection for the
+                                            best efficiency</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                    <li><a href="#">E-<strong>Weld</strong> 4_E.pdf</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="best-matches">
+                                <h4 class="search-suggestions__heading">Best Product Matches</h4>
+                                <div class="search-suggestions__products">
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg"
+                                                        alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for
+                                                the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg"
+                                                        alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for
+                                                the best efficiency</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-suggestions__products__list">
+                                        <div class="search-suggestions__products__left">
+                                            <div class="search-suggestions__products__image">
+                                                <a href="#">
+                                                    <img src="./assets/images/E-Weld_Nozzle_can.jpg"
+                                                        alt="E-WELD NOZZLE&trade;">
+                                                </a>
+                                            </div>
+                                            <div class="search-suggestions__products__name">
+                                                <a href="#">
+                                                    E-WELD NOZZLE&trade;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="search-suggestions__products__right">
+                                            <p class="search-suggestions__products__descp">Total Nozzle Protection for
+                                                the best efficiency</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends Here -->
+
+    <div class="news-release">
+        <section class="news-release__banner">
+            <figure class="news-release__banner__image">
+                <img class="news-release__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
+            </figure>
+            <div class="news-release__banner__wrap container">
+                <h3 class="news-release__banner__wrap__heading">In The Know</h3>
+                <h2 class="news-release__banner__wrap__heading-main">News & Press Releases</h2>
+            </div>
+        </section>
+        <section class="featured-news">
+            <div class="container">
+                <h2 class="featured-news__title">Featured News</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="featured-news__wrap">
+                            <figure class="featured-news__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="featured-news__wrap__text-holder is-info">
+                                <p class="featured-news__wrap__date">
+                                    01/23/12
+                                </p>
+                                <span class="featured-news__wrap__badge p-sheets__main__content__badge">INFO
+                                </span>
+                                <h3 class="featured-news__wrap__text">WALTER Surface Technologies launches of the ICECUT
+                                    250 AUTO
+                                </h3>
+                                <p class="featured-news__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="featured-news__wrap">
+                            <figure class="featured-news__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="featured-news__wrap__text-holder">
+                                <p class="featured-news__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="featured-news__wrap__text">WALTER Surface Technologies launches of the ICECUT
+                                    250 AUTO
+                                </h3>
+                                <p class="featured-news__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="featured-news__wrap">
+                            <figure class="featured-news__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="featured-news__wrap__text-holder">
+                                <p class="featured-news__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="featured-news__wrap__text">WALTER Surface Technologies launches of the ICECUT
+                                    250 AUTO
+                                </h3>
+                                <p class="featured-news__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="featured-news__wrap">
+                            <figure class="featured-news__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="featured-news__wrap__text-holder">
+                                <p class="featured-news__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="featured-news__wrap__text">WALTER Surface Technologies launches of the ICECUT
+                                    250 AUTO
+                                </h3>
+                                <p class="featured-news__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news-press-release">
+            <div class="container">
+                <div class="news-press-release__header">
+                    <div class="news-press-release__title">
+                        <h2 class="news-press-release__text">News & Press Releases</h2>
+                    </div>
+                    <div class="news-press-release__select-box">
+                        <h3 class="news-press-release__select-box__name">Type:</h3>
+                        <select class="news-press-release__select-box__select mr-4">
+                            <option value="1">Innovative</option>
+                            <option value="2">Example</option>
+                            <option value="3">Example1</option>
+                        </select>
+                        <h3 class="news-press-release__select-box__name">Year:</h3>
+                        <select class="news-press-release__select-box__select">
+                            <option value="1">2022</option>
+                            <option value="2">2023</option>
+                            <option value="3">2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <span class="news-press-release__wrap__badge p-sheets__main__content__badge">Inovation
+                                </span>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="news-press-release__wrap">
+                            <figure class="news-press-release__wrap__image-holder">
+                                <a href="#"><img class="featured-news__wrap__image"
+                                        src="./assets/images/news&press.jpg"></a>
+                            </figure>
+                            <div class="news-press-release__wrap__text-holder is-info">
+                                <p class="news-press-release__wrap__date">
+                                    01/23/12
+                                </p>
+                                <h3 class="news-press-release__wrap__text">WALTER Surface Technologies launches of the
+                                    ICECUT 250 AUTO
+                                </h3>
+                                <p class="news-press-release__wrap__descrip">
+                                    WALTER Surface Technologies expands its portfolio of magnetic drilling units with
+                                    the
+                                    launch of the ICECUT 250 AUTO™ with continuous feed for maximum consistency and
+                                    efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="bottom">
+                <div class="bottom__left">
+                    <div class="dropdown bottom__dropdown">
+                        <button class="bottom__dropdown__btn btn btn-secondary dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Show 10 items
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" href="#">Show 10 items</a>
+                            <a href="#" class="dropdown-item" href="#">Show 20 items</a>
+                            <a href="#" class="dropdown-item" href="#">Show 30 items</a>
+                        </div>
+                    </div>
+                    <p class="bottom__para">
+                        Showing 1 to 10 of 95 entries.
+                    </p>
+                </div>
+                <div class="bottom__right">
+                    <ul class="bottom__right__num">
+                        <li class="bottom__right__list">
+                            <a href="#" class="bottom__right__link">
+                                < </a>
+                        </li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">1</a>
+                        </li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">2</a>
+                        </li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">3</a>
+                        </li>
+                        <li class="bottom__right__list">...</li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">9</a>
+                        </li>
+                        <li class="bottom__right__list"><a href="#" class="bottom__right__link">></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Starts Here -->
+    <footer class="c-site-footer">
+        <div class="container c-site-footer__container">
+            <div class="row justify-content-between">
+                <div class="col-lg-2">
+                    <div class="c-site-footer__logo">
+                        <a href="#">
+                            <img src="assets/images/logo.svg" alt="logo" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">About Us</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Our Mission</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">History</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Pillars</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Management Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Where to Buy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">Careers</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Benefits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Job Opportunities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hiring Process</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="c-site-footer__list">
+                                <h4 class="c-site-footer__heading">In the know</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#">Apps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Become a Distributor</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News & Press Release</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Promotions</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Videos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="c-site-footer__newsletter">
+                        <div class="c-site-footer__newsletter__social">
+                            <h4 class="c-site-footer__heading">Stay In Touch</h4>
+                            <p class="c-site-footer__text">Receive updates, promotions, and more.</p>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/linkedin.svg" alt="linkedin"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/instagram.svg"
+                                            alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="./assets/images/footer-icons/facebook.svg" alt="facebook"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="c-site-footer__newsletter__subscribe">
+                            <button type="button" class="c-site-footer__newsletter__btn btn-primary" data-toggle="modal"
+                                data-target="#Modal" data-whatever="@mdo">Subscribe</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Modal" tabindex="-1" role="dialog"
+                            aria-labelledby="ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal__modal-wrap" role="document">
+                                <div class="modal-content">
+                                    <div class="modal__header">
+                                        <h2 class="modal__header__heading">Subscribe to Our Newsletter</h2>
+                                        <p class="modal__header__para">Receive updates, promotions, and more.</p>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal__body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label class="modal__body__label" for="firstname">First Name</label>
+                                                    <input class="modal__body__input" type="text" id="firstname"
+                                                        name="firstname" placeholder="Input">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label class="modal__body__label" for="lastname">Last Name</label>
+                                                    <input class="modal__body__input" type="text" id="lastname"
+                                                        name="lastname" placeholder="Input">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label class="modal__body__label" for="lastname">Email</label>
+                                                    <input class="modal__body__input" type="email" id="email"
+                                                        name="Input" placeholder="Input" required>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal__footer">
+                                        <a href="#" class="modal__footer__cancel" type="button"
+                                            class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                        <button type="button"
+                                            class="modal__footer__subscribe btn-primary">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container c-site-footer__bottom">
+            <div class="c-site-footer__bottom__list">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-lg-center mt-3 mt-lg-0">
+                        <p class="c-site-footer__bottom__text">&copy; 2019 RyPen Inc. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
