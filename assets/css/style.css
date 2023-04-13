@@ -3626,4 +3626,264 @@ label input[type=checkbox]:checked + span {
   .automotive .bottom__right {
     padding-left: 14px;
   }
+}
+
+.news-release__banner {
+  margin-bottom: 45px;
+  position: relative;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release__banner {
+    margin-bottom: 30px;
+  }
+}
+.news-release__banner__img {
+  width: 100%;
+}
+.news-release__banner__text-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release__banner__text-content {
+    display: block;
+  }
+}
+.news-release__banner__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.news-release__banner__wrap__heading {
+  color: #f9a13b;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release__banner__wrap__heading {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+.news-release__banner__wrap__heading-main {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release__banner__wrap__heading-main {
+    font-size: 25px;
+  }
+}
+.news-release .featured-news {
+  margin-bottom: 40px;
+}
+.news-release .featured-news__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .featured-news__title {
+    font-size: 18px;
+  }
+}
+.news-release .featured-news__wrap {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  height: 100%;
+}
+.news-release .featured-news__wrap__image-holder {
+  height: 225px;
+  margin: 0;
+  position: relative;
+}
+.news-release .featured-news__wrap__image {
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.news-release .featured-news__wrap__text-holder {
+  padding: 15px;
+  position: relative;
+}
+.news-release .featured-news__wrap__date {
+  color: #a9a9a9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.news-release .featured-news__wrap__badge {
+  background-color: #82888c;
+  border-radius: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-transform: uppercase;
+}
+.news-release .featured-news__wrap__text {
+  font-size: 18px;
+  font-weight: 700;
+}
+.news-release .featured-news__wrap__descrip {
+  color: #757575;
+  font-size: 15px;
+  font-weight: 500;
+}
+.news-release .news-press-release__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .news-press-release__header {
+    display: block;
+  }
+}
+.news-release .news-press-release__text {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 991.98px) {
+  .news-release .news-press-release__text {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .news-press-release__text {
+    font-size: 18px;
+  }
+}
+.news-release .news-press-release__select-box {
+  display: flex;
+  align-items: center;
+}
+.news-release .news-press-release__select-box__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .news-press-release__select-box__name {
+    font-size: 16px;
+  }
+}
+.news-release .news-press-release__select-box__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: rgba(243, 243, 243, 0.1) url(../images/down-arrow.png) no-repeat right 5px center/18px;
+  border: none;
+  color: #f9a13b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px 28px 6px 5px;
+  vertical-align: middle;
+  width: auto;
+}
+.news-release .news-press-release__select-box__select:focus-visible {
+  outline: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .news-press-release__select-box__select {
+    font-size: 16px;
+  }
+}
+.news-release .news-press-release__select-box__select option {
+  color: #000;
+  font-size: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-release .news-press-release__select-box__select option {
+    font-size: 14px;
+  }
+}
+.news-release .news-press-release__wrap {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  height: 100%;
+}
+.news-release .news-press-release__wrap__image-holder {
+  height: 225px;
+  margin: 0;
+  position: relative;
+}
+.news-release .news-press-release__wrap__image {
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.news-release .news-press-release__wrap__text-holder {
+  padding: 15px;
+  position: relative;
+}
+.news-release .news-press-release__wrap__date {
+  color: #a9a9a9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.news-release .news-press-release__wrap__badge {
+  background-color: #82888c;
+  border-radius: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-transform: uppercase;
+}
+.news-release .news-press-release__wrap__text {
+  font-size: 18px;
+  font-weight: 700;
+}
+.news-release .news-press-release__wrap__descrip {
+  color: #757575;
+  font-size: 15px;
+  font-weight: 500;
+}
+.news-release .bottom {
+  display: flex;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 991.98px) {
+  .news-release .bottom {
+    display: block;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .news-release .bottom__right {
+    padding-left: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
