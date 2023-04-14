@@ -1,0 +1,307 @@
+$ns: careers;
+
+.#{$ns} {
+    background-color: $white;
+
+    &__banner {
+        margin-bottom: 45px;
+        position: relative;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__wrap {
+            position: absolute;
+                top: 50%;
+                left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+            &__heading {
+                color: $primary;
+                font-size: 16px;
+                font-weight: $font700;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+            }
+
+            &__heading-main {
+                color: $white;
+                font-size: 40px;
+                font-weight: $font700;
+                margin-bottom: 15px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    &__search {
+        @media only screen and (max-width: 991.98px) {
+            margin-bottom: 20px;
+        }
+
+        &__form {
+            margin-right: 10px;
+
+            &__search-field {
+                background: transparent url(../images/search-grey.png) no-repeat left/18px;
+                background-position: 12px 11px;
+                border: 1px solid $grey2;
+                color: $black;
+                font-size: 18px;
+                outline: none;
+                padding: 7px 35px;
+
+                &::placeholder {
+                    color: $grey6;
+                    font-size: 18px;
+                    font-weight: $font600;
+                }
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+            justify-content: space-between;
+        margin-bottom: 35px;
+
+        @media only screen and (max-width: 991.98px) {
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__select-box {
+        display: flex;
+            align-items: center;
+
+        @media only screen and (max-width: 991.98px) {
+            overflow-x: scroll;
+        }
+
+        &__name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0;
+
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 16px;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+
+        &__select {
+            appearance: none;
+            background: $search-bg-color url(../images/down-arrow.png) no-repeat right 5px center/18px;
+            border: none;
+            color: $primary;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: $font700;
+            max-width: 135px;
+            padding: 6px 28px 6px 5px;
+            vertical-align: middle;
+            width: auto;
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 16px;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+
+            option {
+                color: $black;
+                font-size: 20px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding-bottom: 60px;
+
+        @media only screen and (max-width: 991.98px) {
+            overflow-x: auto;
+        }
+
+        &__table {
+            &__heading {
+                color: $secondary;
+                padding: 15px;
+                text-transform: uppercase;
+
+                &:last-child {
+                    text-align: right;
+                    padding-right: 52px;
+                }
+            }
+
+            &__list-price {
+                text-align: center;
+            }
+
+            td {
+                vertical-align: middle;
+
+                &.hiddenRow {
+                    padding: 0;
+                }
+            }
+
+            &__detail {
+                color: $grey10;
+                font-size: 14px;
+                font-weight: $font500;
+                vertical-align: middle;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 12px;
+                }
+
+                &:last-child {
+                    text-align: right;
+                    padding-right: 52px;
+                }
+            }
+
+            &__name {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font700;
+
+                @media only screen and (max-width: 991.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &__accordian-content {
+        padding: 0 15px 0 15px;
+
+        &__wrap {
+            display: flex;
+                justify-content: space-between;
+            padding-top: 15px;
+
+            @media only screen and (max-width: 991.98px) {
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__list {
+            list-style: none;
+            margin-bottom: 24px;
+            padding-left: 0;
+
+            &__list-item {
+                color: $grey10;
+                font-size: 16px;
+                font-weight: $font500;
+            }
+
+            &.l-dots {
+                list-style: disc;
+                padding-left: 25px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+            font-weight: $font700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        &__btn {
+            color: $white;
+            font-size: 14px;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .table {
+        thead {
+            th {
+                border-top: none;
+            }
+        }
+    }
+
+    .accordion-toggle {
+        cursor: pointer;
+        position: relative;
+
+        .careers__content__table__name {
+            color: $primary;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            color: $secondary;
+            text-decoration: none;
+        }
+
+        &.collapsed {
+            &::after {
+                filter: brightness(0.0);
+                margin: 0;
+                transform-origin: center 0;
+                transform: rotate(180deg) translateY(-50%);
+            }
+
+            .careers__content__table__name {
+                color: $secondary;
+            }
+        }
+
+        &::after {
+            background: url(../images/up-arrow.png) no-repeat center;
+            content: "";
+            display: block;
+            height: 20px;
+            margin-right: 4px;
+            margin-top: -4px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.3s all;
+            width: 20px;
+        }
+    }
+}

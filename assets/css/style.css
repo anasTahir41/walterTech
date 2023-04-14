@@ -3886,4 +3886,283 @@ label input[type=checkbox]:checked + span {
   .news-release .bottom__right {
     padding-left: 14px;
   }
+}
+
+.careers {
+  background-color: #fff;
+}
+.careers__banner {
+  margin-bottom: 45px;
+  position: relative;
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__banner {
+    margin-bottom: 30px;
+  }
+}
+.careers__banner__img {
+  width: 100%;
+}
+.careers__banner__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.careers__banner__wrap__heading {
+  color: #f9a13b;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__banner__wrap__heading {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+.careers__banner__wrap__heading-main {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__banner__wrap__heading-main {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__search {
+    margin-bottom: 20px;
+  }
+}
+.careers__search__form {
+  margin-right: 10px;
+}
+.careers__search__form__search-field {
+  background: transparent url(../images/search-grey.png) no-repeat left/18px;
+  background-position: 12px 11px;
+  border: 1px solid #d1d1d1;
+  color: #000;
+  font-size: 18px;
+  outline: none;
+  padding: 7px 35px;
+}
+.careers__search__form__search-field::-moz-placeholder {
+  color: #727272;
+  font-size: 18px;
+  font-weight: 600;
+}
+.careers__search__form__search-field::placeholder {
+  color: #727272;
+  font-size: 18px;
+  font-weight: 600;
+}
+.careers__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__header {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.careers__select-box {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__select-box {
+    overflow-x: scroll;
+  }
+}
+.careers__select-box__name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 1199.98px) {
+  .careers__select-box__name {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__select-box__name {
+    font-size: 14px;
+  }
+}
+.careers__select-box__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: rgba(243, 243, 243, 0.1) url(../images/down-arrow.png) no-repeat right 5px center/18px;
+  border: none;
+  color: #f9a13b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  max-width: 135px;
+  padding: 6px 28px 6px 5px;
+  vertical-align: middle;
+  width: auto;
+}
+.careers__select-box__select:focus-visible {
+  outline: none;
+}
+@media only screen and (max-width: 1199.98px) {
+  .careers__select-box__select {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__select-box__select {
+    font-size: 14px;
+  }
+}
+.careers__select-box__select option {
+  color: #000;
+  font-size: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__select-box__select option {
+    font-size: 14px;
+  }
+}
+.careers__content {
+  padding-bottom: 60px;
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__content {
+    overflow-x: auto;
+  }
+}
+.careers__content__table__heading {
+  color: #1b1b1b;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.careers__content__table__heading:last-child {
+  text-align: right;
+  padding-right: 52px;
+}
+.careers__content__table__list-price {
+  text-align: center;
+}
+.careers__content__table td {
+  vertical-align: middle;
+}
+.careers__content__table td.hiddenRow {
+  padding: 0;
+}
+.careers__content__table__detail {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767.98px) {
+  .careers__content__table__detail {
+    font-size: 12px;
+  }
+}
+.careers__content__table__detail:last-child {
+  text-align: right;
+  padding-right: 52px;
+}
+.careers__content__table__name {
+  color: #1b1b1b;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__content__table__name {
+    font-size: 14px;
+  }
+}
+.careers__accordian-content {
+  padding: 0 15px 0 15px;
+}
+.careers__accordian-content__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+@media only screen and (max-width: 991.98px) {
+  .careers__accordian-content__wrap {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.careers__accordian-content__list {
+  list-style: none;
+  margin-bottom: 24px;
+  padding-left: 0;
+}
+.careers__accordian-content__list__list-item {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 500;
+}
+.careers__accordian-content__list.l-dots {
+  list-style: disc;
+  padding-left: 25px;
+}
+.careers__accordian-content__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.careers__accordian-content__btn {
+  color: #fff;
+  font-size: 14px;
+}
+.careers__accordian-content__btn:hover {
+  color: #fff;
+}
+.careers .table thead th {
+  border-top: none;
+}
+.careers .accordion-toggle {
+  cursor: pointer;
+  position: relative;
+}
+.careers .accordion-toggle .careers__content__table__name {
+  color: #f9a13b;
+}
+.careers .accordion-toggle:hover, .careers .accordion-toggle:focus {
+  box-shadow: none;
+  color: #1b1b1b;
+  text-decoration: none;
+}
+.careers .accordion-toggle.collapsed::after {
+  filter: brightness(0);
+  margin: 0;
+  transform-origin: center 0;
+  transform: rotate(180deg) translateY(-50%);
+}
+.careers .accordion-toggle.collapsed .careers__content__table__name {
+  color: #1b1b1b;
+}
+.careers .accordion-toggle::after {
+  background: url(../images/up-arrow.png) no-repeat center;
+  content: "";
+  display: block;
+  height: 20px;
+  margin-right: 4px;
+  margin-top: -4px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s all;
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
