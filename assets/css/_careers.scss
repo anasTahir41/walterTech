@@ -1,6 +1,8 @@
 $ns: careers;
 
 .#{$ns} {
+    background-color: $white;
+
     &__banner {
         margin-bottom: 45px;
         position: relative;
@@ -98,6 +100,10 @@ $ns: careers;
             font-weight: 700;
             margin-bottom: 0;
 
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 16px;
+            }
+
             @media only screen and (max-width: 767.98px) {
                 font-size: 14px;
             }
@@ -112,12 +118,17 @@ $ns: careers;
             display: inline-block;
             font-size: 18px;
             font-weight: $font700;
+            max-width: 135px;
             padding: 6px 28px 6px 5px;
             vertical-align: middle;
             width: auto;
 
             &:focus-visible {
                 outline: none;
+            }
+
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 16px;
             }
 
             @media only screen and (max-width: 767.98px) {
@@ -136,13 +147,13 @@ $ns: careers;
     }
 
     &__content {
+        padding-bottom: 60px;
+
         @media only screen and (max-width: 991.98px) {
             overflow-x: auto;
         }
 
         &__table {
-            margin-bottom: 60px;
-
             &__heading {
                 color: $secondary;
                 padding: 15px;

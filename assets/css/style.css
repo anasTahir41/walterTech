@@ -3888,6 +3888,9 @@ label input[type=checkbox]:checked + span {
   }
 }
 
+.careers {
+  background-color: #fff;
+}
 .careers__banner {
   margin-bottom: 45px;
   position: relative;
@@ -3985,6 +3988,11 @@ label input[type=checkbox]:checked + span {
   font-weight: 700;
   margin-bottom: 0;
 }
+@media only screen and (max-width: 1199.98px) {
+  .careers__select-box__name {
+    font-size: 16px;
+  }
+}
 @media only screen and (max-width: 767.98px) {
   .careers__select-box__name {
     font-size: 14px;
@@ -4001,12 +4009,18 @@ label input[type=checkbox]:checked + span {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
+  max-width: 135px;
   padding: 6px 28px 6px 5px;
   vertical-align: middle;
   width: auto;
 }
 .careers__select-box__select:focus-visible {
   outline: none;
+}
+@media only screen and (max-width: 1199.98px) {
+  .careers__select-box__select {
+    font-size: 16px;
+  }
 }
 @media only screen and (max-width: 767.98px) {
   .careers__select-box__select {
@@ -4022,13 +4036,13 @@ label input[type=checkbox]:checked + span {
     font-size: 14px;
   }
 }
+.careers__content {
+  padding-bottom: 60px;
+}
 @media only screen and (max-width: 991.98px) {
   .careers__content {
     overflow-x: auto;
   }
-}
-.careers__content__table {
-  margin-bottom: 60px;
 }
 .careers__content__table__heading {
   color: #1b1b1b;
