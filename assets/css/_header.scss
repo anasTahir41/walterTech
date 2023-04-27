@@ -241,6 +241,18 @@ $ns: c-site-header;
                 }
             }
 
+            &:hover {
+                .nav-link {
+                    &.dropdown-toggle {
+                        &::after {
+                            @media only screen and (min-width: 992px) {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+
             .nav-link {
                 color: $secondary;
                 font-weight: $font700;

@@ -132,10 +132,6 @@ label {
   margin-bottom: 0;
 }
 
-sup {
-  font-size: 60%;
-}
-
 .slick-slider {
   position: relative;
   display: block;
@@ -436,6 +432,11 @@ sup {
 }
 @media only screen and (min-width: 992px) {
   .c-site-header__navbar .nav-item.show .nav-link.dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .c-site-header__navbar .nav-item:hover .nav-link.dropdown-toggle::after {
     transform: rotate(180deg);
   }
 }
