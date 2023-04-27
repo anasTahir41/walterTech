@@ -151,9 +151,4 @@ $(document).ready(function () {
         e.stopPropagation();
         e.preventDefault();
     });
-
-    $('.nav-item.dropdown').on('hidden.bs.dropdown', function () {
-        $(this).find('.dropdown-menu .dropdown').removeClass('show');
-        $(this).find('.dropdown-menu .dropdown > .dropdown-menu').hide();
-    })
 });
