@@ -132,6 +132,10 @@ label {
   margin-bottom: 0;
 }
 
+sup {
+  font-size: 60%;
+}
+
 .slick-slider {
   position: relative;
   display: block;
@@ -680,6 +684,14 @@ label {
   padding: 8px 0;
   font-size: 14px;
   font-weight: 500;
+}
+@media only screen and (min-width: 992px) {
+  .c-site-header .navbar-nav .dropdown:hover > .dropdown-menu--wrapper > .dropdown-menu {
+    display: block;
+  }
+  .c-site-header .navbar-nav .dropdown-menu__inner > .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
 
 .c-site-footer {
