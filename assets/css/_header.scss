@@ -565,8 +565,32 @@ $ns: c-site-header;
         }
     }
 
+    .dropdown:hover >.dropdown-menu {
+        display: block;
+    }
+
+    &__cart {
+        margin-right: 20px;
+        margin-top: 10px;
+        position: relative;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-right: 10px;
+        }
+
+        &__counter {
+            background-color: #f9a13b;
+            border-radius: 40px;
+            color: $white;
+            font-size: 12px;
+            padding: 1px 5px;
+            position: absolute;
+                right: -5px;
+                top: -10px;
+        }
+    }
+
     &__cart-icon {
-        margin-right: 10px;
-        width: 27px;
+        width: 22px;
     }
 }
