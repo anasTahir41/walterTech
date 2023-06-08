@@ -4421,6 +4421,11 @@ label input[type=checkbox]:checked + span {
 .checkout__checkbox-holder {
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 991.98px) {
+  .checkout__checkbox-holder {
+    margin-bottom: 10px;
+  }
+}
 .checkout__content {
   margin-bottom: 60px;
 }
@@ -4666,18 +4671,27 @@ label:has(input[type=radio]) > input[type=radio]:checked::before {
 }
 .order-summary__cart-totals__btn {
   color: #757575;
+  display: inline-block;
   font-weight: 500;
-  padding: 0;
+  padding-right: 32px;
+  position: relative;
+}
+.order-summary__cart-totals__btn.collapsed::after {
+  top: 6px;
+  transform: rotate(180deg);
 }
 .order-summary__cart-totals__btn::after {
   background-image: url(../images/uparrow.png);
   background-repeat: no-repeat;
   content: "";
   height: 20px;
-  margin-left: 10px;
-  padding-right: 22px;
-  transform-origin: center 0;
-  transform: rotate(180deg) translateY(-50%);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: none;
   width: 20px;
 }
 .order-summary__cart-totals .card {
@@ -4712,20 +4726,30 @@ label:has(input[type=radio]) > input[type=radio]:checked::before {
 }
 .order-summary__comment-box__title {
   color: #1b1b1b;
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 6px;
+  padding-right: 32px;
+  position: relative;
   text-decoration: underline;
+}
+.order-summary__comment-box__title.collapsed::after {
+  top: 6px;
+  transform: rotate(180deg);
 }
 .order-summary__comment-box__title::after {
   background-image: url(../images/uparrow.png);
   background-repeat: no-repeat;
   content: "";
   height: 20px;
-  margin-left: 10px;
-  padding-right: 22px;
-  transform-origin: center 0;
-  transform: rotate(180deg) translateY(-50%);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: none;
   width: 20px;
 }
 .order-summary__comment-box textarea {

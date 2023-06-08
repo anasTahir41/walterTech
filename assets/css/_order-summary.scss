@@ -74,18 +74,31 @@ $ns: order-summary;
 
         &__btn {
             color: $grey10;
+            display: inline-block;
             font-weight: $font500;
-            padding: 0;
+            padding-right: 32px;
+            position: relative;
+
+            &.collapsed {
+
+                &::after {
+                    top: 6px;
+                    transform: rotate(180deg);
+                }
+            }
 
             &::after {
                 background-image: url(../images/uparrow.png);
                 background-repeat: no-repeat;
                 content: "";
                 height: 20px;
-                margin-left: 10px;
-                padding-right: 22px;
-                transform-origin: center 0;
-                transform: rotate(180deg) translateY(-50%);
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                    right: 0;
+                    top: 0;
+                transform-origin: center;
+                transform: none;
                 width: 20px;
             }
         }
@@ -128,21 +141,35 @@ $ns: order-summary;
         }
 
         &__title {
-            color: #1b1b1b;
+            color: $secondary;
+            display: inline-block;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: $font500;
             margin-bottom: 6px;
+            padding-right: 32px;
+            position: relative;
             text-decoration: underline;
+
+            &.collapsed {
+
+                &::after {
+                    top: 6px;
+                    transform: rotate(180deg);
+                }
+            }
 
             &::after {
                 background-image: url(../images/uparrow.png);
                 background-repeat: no-repeat;
                 content: "";
                 height: 20px;
-                margin-left: 10px;
-                padding-right: 22px;
-                transform-origin: center 0;
-                transform: rotate(180deg) translateY(-50%);
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                    right: 0;
+                    top: 0;
+                transform-origin: center;
+                transform: none;
                 width: 20px;
             }
         }
