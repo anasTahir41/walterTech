@@ -82,23 +82,21 @@ $ns: order-summary;
             &.collapsed {
 
                 &::after {
-                    top: 6px;
-                    transform: rotate(180deg);
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
 
             &::after {
-                background-image: url(../images/uparrow.png);
-                background-repeat: no-repeat;
+                background: url(../images/uparrow.png) no-repeat center/contain;
                 content: "";
                 height: 20px;
-                margin: 0;
-                padding: 0;
+                margin-top: 2px;
                 position: absolute;
                     right: 0;
-                    top: 0;
+                    top: 50%;
                 transform-origin: center;
-                transform: none;
+                transform: translateY(-50%);
+                transition: 0.2s all;
                 width: 20px;
             }
         }
@@ -153,23 +151,21 @@ $ns: order-summary;
             &.collapsed {
 
                 &::after {
-                    top: 6px;
-                    transform: rotate(180deg);
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
 
             &::after {
-                background-image: url(../images/uparrow.png);
-                background-repeat: no-repeat;
+                background: url(../images/uparrow.png) no-repeat center/contain;
                 content: "";
                 height: 20px;
-                margin: 0;
-                padding: 0;
+                margin-top: 2px;
                 position: absolute;
                     right: 0;
-                    top: 0;
+                    top: 50%;
                 transform-origin: center;
-                transform: none;
+                transform: translateY(-50%);
+                transition: 0.2s all;
                 width: 20px;
             }
         }
