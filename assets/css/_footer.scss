@@ -79,7 +79,24 @@ $ns: c-site-footer;
                 }
             }
         }
+
+        &__title {
+            color: $grey2;
+            font-size: 14px;
+        }
+
+        &__social-icon {
+            display: flex;
+            padding: 0;
+            list-style: none;
+
+            img {
+                height: 24px;
+                width: 24px;
+            }
+        }
     }
+
 
     &__bottom {
         &__list {

@@ -25,7 +25,7 @@ $ns: c-site-header;
                 display: block;
                 font-size: 14px;
                 font-weight: $font500;
-                padding: 5px 12px;
+                padding: 2px 12px;
                 text-transform: uppercase;
                 width: 100%;
             }
@@ -57,6 +57,43 @@ $ns: c-site-header;
 
         &__right {
             display: flex;
+
+            &__btn {
+                background: none;
+                border: 2px solid $secondary;
+                border-radius: 5px;
+                color: $black;
+                cursor: pointer;
+                display: block;
+                font-size: 14px;
+                font-weight: $font500;
+                padding: 2px 12px;
+                width: 100%;
+            }
+
+            &__img {
+                padding-bottom: 2px;
+                width: 15px;
+            }
+
+            &__dropdown {
+                .dropdown-menu {
+                    background-color: $grey1;
+                    border-radius: 0;
+                    margin: 0;
+                    min-width: 100%;
+                    padding: 15px;
+
+                    .dropdown-item {
+                        background-color: $grey1;
+                        border-bottom: 1px solid $secondary;
+                        color: $secondary;
+                        padding: 5px 12px;
+                        font-size: 14px;
+                        font-weight: $font500;
+                    }
+                }
+            }
         }
 
         &__items {

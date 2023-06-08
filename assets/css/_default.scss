@@ -12,9 +12,14 @@ body {
 a {
     color: $secondary;
     text-decoration: none;
+
     &:hover {
         color: $secondary;
     }
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .btn-primary {
@@ -34,6 +39,7 @@ a {
         color: $secondary;
         text-decoration: none;
     }
+
     &:not(:disabled):not(.disabled):active,
     &.btn-primary:not(:disabled):not(.disabled):active:focus {
         background: $btn-hover;
@@ -87,8 +93,8 @@ input[type=checkbox]:before {
     height: 12px;
     margin: -1px -1px 0 -1px;
     position: absolute;
-        right: 50%;
-        top: 50%;
+    right: 50%;
+    top: 50%;
     transform: rotate(45deg) translate(-50%, -50%);
     width: 6px;
     z-index: 2;
@@ -96,6 +102,7 @@ input[type=checkbox]:before {
 
 label {
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .heading {
@@ -115,7 +122,7 @@ label {
 //back button styling
 .back-btn {
     display: flex;
-        align-items: center;
+    align-items: center;
     margin-bottom: 10px;
 
     &__image {
@@ -137,4 +144,21 @@ label {
         padding: 0 0 0 15px;
         margin-bottom: 0;
     }
+}
+
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment-box label {
+    color: $white;
+    font-size: 16px;
+    font-weight: $font500;
+}
+
+.comment-box textarea {
+    border: 2px solid $primary;
+    border-radius: 2px;
 }
