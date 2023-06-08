@@ -22,8 +22,8 @@
                     <img class="c-back-btn__img" src="./assets/images/left-arrow.png" alt="back arrow">
                     <a href="#" class="c-back-btn__back-button d-none d-lg-block">Back to Shopping</a>
                 </div>
-                <a class="navbar-brand" href="index.html">
-                    <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo c-logo d-lg-none">
+                <a class="c-logo" href="index.html">
+                    <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
                     <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
                 </a>
                 <p class="c-descrip d-none d-lg-block">We're here to help 123-123-123</p>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="comment-box">
                                 <label for="commentBox">Special Instructions</label>
-                                <textarea id="commentBox" spellcheck="false" rows="3"></textarea>
+                                <textarea id="commentBox" spellcheck="false" class="form-control" rows="3"></textarea>
                             </div>
                             <div class="checkout__left__btn-holder">
                                 <a href="#" class="checkout__left__btn btn-primary">Place Order</a>
@@ -110,6 +110,18 @@
                                         <div class="order-summary__product-wrap__price-holder">
                                             <p class="order-summary__product-wrap__price">$4.99</p>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="order-summary__comment-box">
+                                    <div class="order-summary__comment-box__text-holder">
+                                        <a class="order-summary__comment-box__title" data-toggle="collapse"
+                                        href="#commentbox" role="button" aria-expanded="false"
+                                        aria-controls="commentbox">
+                                        Add Instructions:
+                                    </a>
+                                    </div>
+                                    <div class="collapse" id="commentbox">
+                                        <textarea id="commentBox" spellcheck="false" class="form-control" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="order-summary__cart-totals">

@@ -119,6 +119,39 @@ $ns: order-summary;
         text-align: center;
         width: 160px;
     }
+
+    &__comment-box {
+        margin-bottom: 20px;
+
+        &__text-holder {
+            margin-bottom: 6px;
+        }
+
+        &__title {
+            color: #1b1b1b;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            text-decoration: underline;
+
+            &::after {
+                background-image: url(../images/uparrow.png);
+                background-repeat: no-repeat;
+                content: "";
+                height: 20px;
+                margin-left: 10px;
+                padding-right: 22px;
+                transform-origin: center 0;
+                transform: rotate(180deg) translateY(-50%);
+                width: 20px;
+            }
+        }
+
+        textarea {
+            border: 2px solid $primary;
+            border-radius: 2px;
+        }
+    }
 }
 
 .order-summary__cart-totals>.row:nth-child(-n+5) {

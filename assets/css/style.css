@@ -4497,10 +4497,8 @@ label input[type=checkbox]:checked + span {
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 991.98px) {
-  .checkout-header {
-    padding: 15px;
-  }
+.checkout-header {
+  height: 75px;
 }
 .checkout-header .c-back-btn {
   display: flex;
@@ -4544,6 +4542,8 @@ label input[type=checkbox]:checked + span {
   position: absolute;
   left: 50%;
   top: 50%;
+  margin: 0;
+  padding: 0;
   transform: translate(-50%, -50%);
 }
 .checkout-header .c-descrip {
@@ -4703,6 +4703,34 @@ label:has(input[type=radio]) > input[type=radio]:checked::before {
   padding: 12px 14px;
   text-align: center;
   width: 160px;
+}
+.order-summary__comment-box {
+  margin-bottom: 20px;
+}
+.order-summary__comment-box__text-holder {
+  margin-bottom: 6px;
+}
+.order-summary__comment-box__title {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-decoration: underline;
+}
+.order-summary__comment-box__title::after {
+  background-image: url(../images/uparrow.png);
+  background-repeat: no-repeat;
+  content: "";
+  height: 20px;
+  margin-left: 10px;
+  padding-right: 22px;
+  transform-origin: center 0;
+  transform: rotate(180deg) translateY(-50%);
+  width: 20px;
+}
+.order-summary__comment-box textarea {
+  border: 2px solid #f9a13b;
+  border-radius: 2px;
 }
 
 .order-summary__cart-totals > .row:nth-child(-n+5) {
