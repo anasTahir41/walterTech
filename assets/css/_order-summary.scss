@@ -12,7 +12,7 @@ $ns: order-summary;
         border: 1px solid $grey16;
         display: flex;
             align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         padding: 15px;
 
         &__detail {
@@ -24,10 +24,22 @@ $ns: order-summary;
 
         &__image-container {
             margin: 0 20px 0 0;
+            position: relative;
 
             &__image {
                 width: 70px;
             }
+        }
+
+        &__counter {
+            background-color: #f9a13b;
+            border-radius: 40px;
+            color: $white;
+            font-size: 12px;
+            padding: 1px 7px;
+            position: absolute;
+                right: -9px;
+                top: -5px;
         }
 
         &__text-holder {
@@ -80,24 +92,26 @@ $ns: order-summary;
             position: relative;
 
             &.collapsed {
-
                 &::after {
-                    transform: translateY(-50%) rotate(180deg);
+                    top: 6px;
+                    transform: rotate(180deg);
+                    transition: all .35s;
                 }
             }
 
             &::after {
-                background: url(../images/uparrow.png) no-repeat center/contain;
+                background-image: url(../images/uparrow.png);
+                background-repeat: no-repeat;
                 content: "";
                 height: 20px;
-                margin-top: 2px;
+                margin: 0;
+                padding: 0;
                 position: absolute;
                     right: 0;
-                    top: 50%;
+                    top: 0;
                 transform-origin: center;
-                transform: translateY(-50%);
-                transition: 0.2s all;
-                width: 20px;
+                transform: none;
+                width: 21px;
             }
         }
 
@@ -149,24 +163,26 @@ $ns: order-summary;
             text-decoration: underline;
 
             &.collapsed {
-
                 &::after {
-                    transform: translateY(-50%) rotate(180deg);
+                    top: 6px;
+                    transform: rotate(180deg);
+                    transition: all .35s;
                 }
             }
 
             &::after {
-                background: url(../images/uparrow.png) no-repeat center/contain;
+                background-image: url(../images/uparrow.png);
+                background-repeat: no-repeat;
                 content: "";
                 height: 20px;
-                margin-top: 2px;
+                margin: 0;
+                padding: 0;
                 position: absolute;
                     right: 0;
-                    top: 50%;
+                    top: 0;
                 transform-origin: center;
-                transform: translateY(-50%);
-                transition: 0.2s all;
-                width: 20px;
+                transform: none;
+                width: 21px;
             }
         }
 
@@ -178,12 +194,12 @@ $ns: order-summary;
 }
 
 .order-summary__cart-totals>.row:nth-child(-n+5) {
+    align-items: center;
     border-bottom: 2px solid $grey16;
     line-height: 20px;
-    padding: 5px 0;
     margin: 0;
     margin-bottom: 15px;
-    align-items: center;
+    padding: 5px 0;
 }
 
 .order-summary__cart-totals>.row:nth-child(-n+5):last-child {

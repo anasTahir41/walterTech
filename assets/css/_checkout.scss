@@ -91,8 +91,8 @@ $ns: checkout;
             display: flex;
                 align-items: center;
                 justify-content: space-between;
-            margin-left: 10px;
             padding-bottom: 6px;
+            width: 100%;
 
             &__text {
                 font-size: 16px;
@@ -107,7 +107,7 @@ $ns: checkout;
         }
 
         &__shipping {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         &__select-box {
@@ -119,6 +119,72 @@ $ns: checkout;
         &__btn {
             text-align: center;
             width: 100%;
+        }
+    }
+
+    &__multi-ship {
+        background-color: $white;
+        border: 1px solid $grey16;
+        margin-bottom: 20px;
+        padding: 20px 20px 5px;
+
+        &__heading {
+            font-size: 20px;
+            font-weight: $font600;
+            margin-bottom: 25px;
+        }
+
+        &__product-wrap {
+            display: flex;
+                align-items: center;
+            margin-bottom: 20px;
+
+            &__detail {
+                display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                width: 100%;
+            }
+
+            &__image-container {
+                margin: 0 20px 0 0;
+                position: relative;
+
+                &__image {
+                    width: 70px;
+                }
+            }
+
+            &__text-holder {
+                &__text {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                &__disc {
+                    color: $grey10;
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+
+            &__price {
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            &__counter {
+                background-color: $primary;
+                border-radius: 40px;
+                color: $white;
+                font-size: 12px;
+                padding: 1px 7px;
+                position: absolute;
+                    right: -9px;
+                    top: -5px;
+            }
         }
     }
 
@@ -149,6 +215,47 @@ $ns: checkout;
             justify-content: space-between;
     }
 
+    label:has(input[type='radio']) {
+        cursor: pointer;
+        display: grid;
+        gap: 0.5em;
+        grid-template-columns: 1em auto;
+        line-height: 1.1;
+
+        >input[type='radio'] {
+            appearance: none;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2.4px solid $primary;
+            color: $primary;
+            cursor: pointer;
+            display: grid;
+            font: inherit;
+            height: 18.4px;
+            margin: 0;
+            place-content: center;
+            transform: translateY(-0.075em);
+            width: 18.4px;
+
+            &::before {
+                background-color:  $primary;
+                border-radius: 50%;
+                content: "";
+                height: 9.28px;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                width: 9.28px;
+            }
+
+            &:checked {
+                border-color: $primary;
+
+                &::before {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
 }
 
 .checkout-header {
@@ -205,64 +312,5 @@ $ns: checkout;
         color: $white;
         font-size: 14px;
         font-weight: $font400;
-    }
-}
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    margin-bottom: 100px;
-    min-width: 160px;
-    position: absolute;
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-label:has(input[type='radio']) {
-    cursor: pointer;
-    display: grid;
-    gap: 0.5em;
-    grid-template-columns: 1em auto;
-    line-height: 1.1;
-
-    >input[type='radio'] {
-        appearance: none;
-        background-color: transparent;
-        border-radius: 50%;
-        border: 2.4px solid $primary;
-        color: $primary;
-        cursor: pointer;
-        display: grid;
-        font: inherit;
-        height: 18.4px;
-        margin: 0;
-        place-content: center;
-        transform: translateY(-0.075em);
-        width: 18.4px;
-
-        &::before {
-            background-color:  $primary;
-            border-radius: 50%;
-            content: "";
-            height: 9.28px;
-            transform: scale(0);
-            transition: 120ms transform ease-in-out;
-            width: 9.28px;
-        }
-
-        &:checked {
-            border-color: $primary;
-
-            &::before {
-                transform: scale(1);
-            }
-        }
     }
 }

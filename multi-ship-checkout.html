@@ -42,7 +42,7 @@
         </section>
         <div class="container">
             <div class="checkout__checkbox-holder">
-                <label><input type="checkbox">
+                <label><input type="checkbox" checked>
                     <span class="checkmark">Shipping to more than one address?
                     </span>
                 </label>
@@ -51,6 +51,87 @@
                 <div class="row">
                     <div class="col-12 col-lg-7">
                         <div class="checkout__left">
+                            <h3 class="checkout__left__title">Multi Shipping</h3>
+                            <div class="checkout__multi-ship">
+                                <h3 class="checkout__multi-ship__heading">Shipping Address</h3>
+                                <div class="checkout__multi-ship__product-wrap">
+                                    <figure class="checkout__multi-ship__product-wrap__image-container">
+                                        <img class="checkout__multi-ship__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                        <span class="checkout__multi-ship__product-wrap__counter">
+                                            1
+                                        </span>
+                                    </figure>
+                                    <div class="checkout__multi-ship__product-wrap__detail">
+                                        <div class="checkout__multi-ship__product-wrap__text-holder">
+                                            <h3 class="checkout__multi-ship__product-wrap__text-holder__text">
+                                                ENDURO-flex 2
+                                                in 1
+                                            </h3>
+                                            <p class="checkout__multi-ship__product-wrap__text-holder__disc">Surface
+                                                Finishing Discs
+                                            </p>
+                                        </div>
+                                        <div class="checkout__multi-ship__product-wrap__price-holder">
+                                            <p class="checkout__multi-ship__product-wrap__price">$4.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__left__shipping">
+                                    <h3 class="checkout__left__title">Standard Shipping</h3>
+                                    <div class="checkout__left__select-box">
+                                        <select class="checkout__left__select-box__select">
+                                            <option value="1">321, Street, Main Fly Heights building, Alaska, xyz
+                                            </option>
+                                            <option value="2">321, Street, Main Fly Heights building, Alaska, abc
+                                            </option>
+                                            <option value="3">321, Street, Main Fly Heights building, Alaska,</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__multi-ship">
+                                <h3 class="checkout__multi-ship__heading">Shipping Address</h3>
+                                <div class="checkout__multi-ship__product-wrap">
+                                    <figure class="checkout__multi-ship__product-wrap__image-container">
+                                        <img class="checkout__multi-ship__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                        <span class="checkout__multi-ship__product-wrap__counter">
+                                            3
+                                        </span>
+                                    </figure>
+                                    <div class="checkout__multi-ship__product-wrap__detail">
+                                        <div class="checkout__multi-ship__product-wrap__text-holder">
+                                            <h3 class="checkout__multi-ship__product-wrap__text-holder__text">
+                                                ENDURO-flex 2
+                                                in 1
+                                            </h3>
+                                            <p class="checkout__multi-ship__product-wrap__text-holder__disc">Surface
+                                                Finishing Discs
+                                            </p>
+                                        </div>
+                                        <div class="checkout__multi-ship__product-wrap__price-holder">
+                                            <p class="checkout__multi-ship__product-wrap__price">$12.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__left__shipping">
+                                    <h3 class="checkout__left__title">Standard Shipping</h3>
+                                    <div class="checkout__left__select-box">
+                                        <select class="checkout__left__select-box__select">
+                                            <option value="1">321, Street, Main Fly Heights building, Alaska, xyz
+                                            </option>
+                                            <option value="2">321, Street, Main Fly Heights building, Alaska, abc
+                                            </option>
+                                            <option value="3">321, Street, Main Fly Heights building, Alaska,</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-box">
+                                <label for="commentBox">Special Instructions</label>
+                                <textarea id="commentBox" spellcheck="false" class="form-control" rows="3"></textarea>
+                            </div>
                             <div class="checkout__left__delivery-ops">
                                 <h3 class="checkout__left__title">Delivery Options</h3>
                                 <form>
@@ -70,20 +151,6 @@
                                     </label>
                                 </form>
                             </div>
-                            <div class="checkout__left__shipping">
-                                <h3 class="checkout__left__title">Standard Shipping</h3>
-                                <div class="checkout__left__select-box">
-                                    <select class="checkout__left__select-box__select">
-                                        <option value="1">321, Street, Main Fly Heights building, Alaska, xyz</option>
-                                        <option value="2">321, Street, Main Fly Heights building, Alaska, abc</option>
-                                        <option value="3">321, Street, Main Fly Heights building, Alaska,</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="comment-box">
-                                <label for="commentBox">Special Instructions</label>
-                                <textarea id="commentBox" spellcheck="false" class="form-control" rows="3"></textarea>
-                            </div>
                             <div class="checkout__left__btn-holder">
                                 <a href="#" class="checkout__left__btn btn-primary">Place Order</a>
                             </div>
@@ -93,6 +160,43 @@
                         <div class="checkout__right">
                             <div class="order-summary">
                                 <h3 class="order-summary__title">Order Summary</h3>
+                                <div class="order-summary__product-holder">
+                                    <div class="order-summary__product-wrap">
+                                        <figure class="order-summary__product-wrap__image-container">
+                                            <img class="order-summary__product-wrap__image-container__image"
+                                                src="./assets/images/ENDURO-flex.jpg">
+                                            <span class="order-summary__product-wrap__counter">
+                                                1
+                                            </span>
+                                        </figure>
+                                        <div class="order-summary__product-wrap__detail">
+                                            <div class="order-summary__product-wrap__text-holder">
+                                                <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                    in 1
+                                                </h3>
+                                                <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                    Finishing Discs
+                                                </p>
+                                            </div>
+                                            <div class="order-summary__product-wrap__price-holder">
+                                                <p class="order-summary__product-wrap__price">$4.99</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-summary__comment-box">
+                                        <div class="order-summary__comment-box__text-holder">
+                                            <a class="order-summary__comment-box__title collapsed"
+                                                data-toggle="collapse" href="#commentbox" role="button"
+                                                aria-expanded="false" aria-controls="commentbox">
+                                                Add Instructions:
+                                            </a>
+                                        </div>
+                                        <div class="collapse" id="commentbox">
+                                            <textarea id="commentBox" spellcheck="false" class="form-control"
+                                                rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="order-summary__product-holder">
                                     <div class="order-summary__product-wrap">
                                         <figure class="order-summary__product-wrap__image-container">
