@@ -1651,6 +1651,7 @@ label input[type=checkbox]:checked + span {
   margin-bottom: 20px;
 }
 .list-view .block-item {
+  align-items: center;
   border: 0;
   border-top: 2px solid #d1d1d1;
   display: flex;
@@ -1694,7 +1695,7 @@ label input[type=checkbox]:checked + span {
   background-color: transparent;
   display: flex;
   align-items: center;
-  padding-top: 0;
+  padding: 5px 0;
 }
 .list-view .block-item__tile-body__text {
   font-size: 14px;
@@ -1734,12 +1735,12 @@ label input[type=checkbox]:checked + span {
   }
 }
 .list-view .block-item__tile-body__text-bottom {
+  align-items: center;
   background-color: transparent;
   display: flex;
   justify-content: flex-end;
-  padding-right: 0;
-  padding-bottom: 10px;
   max-width: 30%;
+  padding: 0;
 }
 @media only screen and (max-width: 1199.98px) {
   .list-view .block-item__tile-body__text-bottom {
