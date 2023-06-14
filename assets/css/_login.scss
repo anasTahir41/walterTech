@@ -78,15 +78,19 @@ $ns: login;
                 position: relative;
                 width: 100%;
 
-                &__eye {
+                &__image-holder {
+                    cursor: pointer;
                     position: absolute;
-                        right: 73px;
-                        top: 48%;
-                    width: 20px;
+                        right: 77px;
+                        top: 47%;
 
                     @media only screen and (max-width: 767.98px) {
-                        top: 47%;
+                        top: 46%;
                     }
+                }
+
+                &__eye {
+                    width: 20px;
                 }
             }
         }
