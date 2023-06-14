@@ -5380,6 +5380,10 @@ label input[type=checkbox]:checked + span {
   font-size: 16px;
   font-weight: 600;
 }
+.login__wrap__forgot-pass:hover {
+  color: #f9a13b;
+  text-decoration: none;
+}
 @media only screen and (max-width: 767.98px) {
   .login__wrap__forgot-pass {
     font-size: 14px;

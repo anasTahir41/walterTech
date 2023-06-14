@@ -117,6 +117,11 @@ $ns: login;
             font-size: 16px;
             font-weight: $font600;
 
+            &:hover {
+                color: $primary;
+                text-decoration: none;
+            }
+
             @media only screen and (max-width: 767.98px) {
                 font-size: 14px;
             }
