@@ -5355,7 +5355,19 @@ label input[type=checkbox]:checked + span {
   border: 1px solid #a4a4a4;
   margin-bottom: 10px;
   padding: 15px;
+  position: relative;
   width: 100%;
+}
+.login__wrap__form__input__eye {
+  position: absolute;
+  right: 73px;
+  top: 48%;
+  width: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .login__wrap__form__input__eye {
+    top: 47%;
+  }
 }
 .login__wrap__bottom {
   display: flex;
@@ -5383,6 +5395,55 @@ label input[type=checkbox]:checked + span {
 }
 @media only screen and (max-width: 767.98px) {
   .login__wrap__forgot-pass {
+    font-size: 14px;
+  }
+}
+
+.news-detail {
+  background-color: #fff;
+}
+.news-detail__banner {
+  margin-bottom: 60px;
+  position: relative;
+}
+.news-detail__banner__image-wrapper {
+  margin: 0;
+}
+.news-detail__banner__img {
+  width: 100%;
+}
+.news-detail__banner__wrap {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.news-detail__banner__wrap__title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  position: relative;
+}
+.news-detail__banner__wrap__title::after {
+  content: "";
+  height: 1px;
+  width: 76px;
+  background: #f9a13b;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -38px;
+  display: block;
+}
+.news-detail__banner__wrap__heading-main {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767.98px) {
+  .news-detail__banner__wrap__heading-main {
     font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
