@@ -306,6 +306,11 @@ label {
   padding: 2px 12px;
   width: 100%;
 }
+@media only screen and (max-width: 991.98px) {
+  .c-site-header__top__right__btn {
+    width: auto;
+  }
+}
 .c-site-header__top__right__img {
   padding-bottom: 2px;
   width: 15px;
@@ -321,9 +326,15 @@ label {
   background-color: #f7f7f7;
   border-bottom: 1px solid #1b1b1b;
   color: #1b1b1b;
-  padding: 5px 12px;
   font-size: 14px;
   font-weight: 500;
+  padding: 5px 12px;
+}
+@media only screen and (max-width: 991.98px) {
+  .c-site-header__top__right__dropdown .dropdown-menu .dropdown-item {
+    border: 0;
+    margin-left: 25px;
+  }
 }
 .c-site-header__top__items {
   display: flex;
@@ -5274,4 +5285,104 @@ label input[type=checkbox]:checked + span {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
+}
+
+.login {
+  background-color: #fff;
+}
+.login__banner {
+  margin-bottom: 60px;
+  position: relative;
+}
+.login__banner__image-wrapper {
+  margin: 0;
+}
+.login__banner__img {
+  width: 100%;
+}
+.login__banner__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.login__banner__wrap__heading-main {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 767.98px) {
+  .login__banner__wrap__heading-main {
+    font-size: 25px;
+  }
+}
+.login__wrap {
+  background-color: #f7f7f7;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 60px;
+  padding: 35px 45px 45px;
+}
+.login__wrap__content {
+  text-align: center;
+}
+.login__wrap__content__heading {
+  color: #1b1b1b;
+  font-size: 28px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767.98px) {
+  .login__wrap__content__heading {
+    font-size: 22px;
+  }
+}
+.login__wrap__content__btn {
+  font-weight: 600;
+  max-width: 210px;
+  text-transform: uppercase;
+  width: 100%;
+}
+.login__wrap__form {
+  text-align: left;
+}
+.login__wrap__form__label {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 600;
+}
+.login__wrap__form__input {
+  border-radius: 6px;
+  border: 1px solid #a4a4a4;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 100%;
+}
+.login__wrap__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.login__wrap__checkbox-holder__checkmark {
+  color: #1b1b1b;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 767.98px) {
+  .login__wrap__checkbox-holder__checkmark {
+    font-size: 14px;
+  }
+}
+.login__wrap__forgot-pass {
+  color: #f9a13b;
+  font-size: 16px;
+  font-weight: 600;
+}
+.login__wrap__forgot-pass:hover {
+  color: #f9a13b;
+  text-decoration: none;
+}
+@media only screen and (max-width: 767.98px) {
+  .login__wrap__forgot-pass {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
