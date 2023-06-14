@@ -69,6 +69,10 @@ $ns: c-site-header;
                 font-weight: $font500;
                 padding: 2px 12px;
                 width: 100%;
+
+                @media only screen and (max-width: 991.98px) {
+                    width: auto;
+                }
             }
 
             &__img {
@@ -88,9 +92,14 @@ $ns: c-site-header;
                         background-color: $grey1;
                         border-bottom: 1px solid $secondary;
                         color: $secondary;
-                        padding: 5px 12px;
                         font-size: 14px;
                         font-weight: $font500;
+                        padding: 5px 12px;
+
+                        @media only screen and (max-width: 991.98px) {
+                            border: 0;
+                            margin-left: 25px;
+                        }
                     }
                 }
             }
