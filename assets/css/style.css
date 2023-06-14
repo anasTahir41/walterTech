@@ -5345,6 +5345,16 @@ label input[type=checkbox]:checked + span {
 .login__wrap__form {
   text-align: left;
 }
+.login__wrap__form__inner {
+  position: relative;
+}
+.login__wrap__form__inner.error .login__wrap__form__input {
+  border: 1px solid #c23934;
+  box-shadow: #c23934 0 0 0 1px inset;
+}
+.login__wrap__form__inner.error .login__wrap__form__erorr-msg {
+  display: block;
+}
 .login__wrap__form__label {
   color: #1b1b1b;
   font-size: 16px;
@@ -5355,22 +5365,21 @@ label input[type=checkbox]:checked + span {
   border: 1px solid #a4a4a4;
   margin-bottom: 10px;
   padding: 15px;
-  position: relative;
   width: 100%;
 }
 .login__wrap__form__input__image-holder {
   cursor: pointer;
   position: absolute;
-  right: 77px;
-  top: 47%;
-}
-@media only screen and (max-width: 767.98px) {
-  .login__wrap__form__input__image-holder {
-    top: 46%;
-  }
+  right: 17px;
+  top: 44%;
 }
 .login__wrap__form__input__eye {
   width: 20px;
+}
+.login__wrap__form__erorr-msg {
+  display: none;
+  font-size: 12px;
+  color: #c23934;
 }
 .login__wrap__bottom {
   display: flex;
