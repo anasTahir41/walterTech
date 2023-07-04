@@ -102,7 +102,6 @@ input[type=checkbox]:before {
 
 label {
     cursor: pointer;
-    margin-bottom: 0;
 }
 
 .heading {
@@ -141,8 +140,13 @@ label {
 
     &__breadcrumb {
         background-color: $grey1;
-        padding: 0 0 0 15px;
+        padding: 0;
         margin-bottom: 0;
+    }
+
+    .breadcrumb-item {
+        padding-left: 0;
+        padding-right: 8px;
     }
 }
 

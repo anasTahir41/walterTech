@@ -1,6 +1,6 @@
 'use strict';
 
-$(document).ready(function () {
+$(document).ready(function (currentSlide) {
     $('.js-main-banner').slick({
         dots: true,
         arrows: false,
@@ -36,6 +36,17 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    $('.js-main-banner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        var CurrentSlideDom = $(slick.$slides.get(currentSlide));
+        $('.js-main-banner__video-wrap').each(function () {
+            $(this).get(0).pause();
+        });
+        var currentSlideVideo = CurrentSlideDom.find('.js-main-banner__video-wrap').get(0);
+        if (currentSlideVideo) {
+            currentSlideVideo.play();
+        }
     });
 
     $('.slider__wrapper').slick({
@@ -110,13 +121,13 @@ $(document).ready(function () {
         ]
     });
 
-    $('#list-view').click(function(){
+    $('#list-view').click(function () {
         if ($('.c-products .c-products__list').hasClass('grid-view')) {
             $('.c-products .c-products__list').removeClass('grid-view');
             $('.c-products .c-products__list').addClass('list-view');
         }
     });
-    $('#grid-view').click(function(){
+    $('#grid-view').click(function () {
         if ($('.c-products .c-products__list').hasClass('list-view')) {
             $('.c-products .c-products__list').removeClass('list-view');
             $('.c-products .c-products__list').addClass('grid-view');
@@ -152,29 +163,29 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.num-in span').click(function () {
             var $input = $(this).parents('.num-block').find('input.in-num');
-          if($(this).hasClass('minus')) {
-            var count = parseFloat($input.val()) - 1;
-            count = count < 1 ? 1 : count;
-            if (count < 2) {
-              $(this).addClass('dis');
+            if ($(this).hasClass('minus')) {
+                var count = parseFloat($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                if (count < 2) {
+                    $(this).addClass('dis');
+                }
+                else {
+                    $(this).removeClass('dis');
+                }
+                $input.val(count);
             }
             else {
-              $(this).removeClass('dis');
+                var count = parseFloat($input.val()) + 1
+                $input.val(count);
+                if (count > 1) {
+                    $(this).parents('.num-block').find(('.minus')).removeClass('dis');
+                }
             }
-            $input.val(count);
-          }
-          else {
-            var count = parseFloat($input.val()) + 1
-            $input.val(count);
-            if (count > 1) {
-              $(this).parents('.num-block').find(('.minus')).removeClass('dis');
-            }
-          }
-          $input.change();
-          return false;
+            $input.change();
+            return false;
         });
     });
 });
