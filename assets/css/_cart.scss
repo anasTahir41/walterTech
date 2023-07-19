@@ -2,6 +2,7 @@ $ns: cart;
 
 .#{$ns} {
     background-color: $white;
+    padding-bottom: 30px;
 
     &__title-holder {
         padding: 60px 0;
@@ -17,12 +18,10 @@ $ns: cart;
 
         @media only screen and (max-width: 767.98px) {
             margin-bottom: 30px;
-            overflow-x: auto;
         }
     }
 
     &__right {
-        padding-top: 10px;
         margin-bottom: 40px;
 
         .order-summary__btn-wrap {
@@ -60,161 +59,236 @@ $ns: cart;
         }
     }
 
-    &__wrap {
-        &__table {
-            margin-bottom: 5px;
+    &__heading-wrap {
+        border-bottom: 3px solid $grey17;
+    }
 
-            @media only screen and (max-width: 767.98px) {
-                width: 100%;
+    &__product-wrap {
+        margin-top: 25px;
+
+        &__p-detail {
+            display: flex;
+        }
+
+        &__img-wrap {
+            margin-right: 10px;
+        }
+
+        &__img {
+            width: 130px;
+        }
+
+        &__price-wrap {
+            padding-right: 0;
+            text-align: end;
+        }
+
+        &__text-holder {
+            &__p-name {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font600;
+                margin-bottom: 8px;
             }
 
-            thead {
-                th {
-                    border: 0;
-                    padding-left: 0;
+            &__sku {
+                color: $secondary;
+                font-size: 14px;
+                font-weight: $font500;
+            }
+
+            &__promo,
+            &__backorder-msg {
+                color: $primary;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+
+            &__promo-end {
+                color: $secondary;
+                font-size: 14px;
+                font-weight: $font500;
+            }
+
+            &__change {
+                color: $primary;
+                font-size: 14px;
+                font-weight: $font500;
+                text-decoration: underline;
+            }
+        }
+
+        &__qty-holder {
+            margin-top: 20px;
+
+            @media only screen and (max-width: 992.98px) {
+                margin-bottom: 10px;
+                margin-left: 140px;
+            }
+
+            &__qty {
+                @media only screen and (max-width: 992.98px) {
+                    display: flex;
                 }
             }
 
-            tbody {
-                td {
-                    border: 0;
-                    padding-left: 0;
+            .qty-selector input.in-num {
+                background-color: $white;
+                border: 2px solid $secondary;
+                float: left;
+                font-size: 14px;
+                height: 32px;
+                text-align: center;
+                width: 83px;
+            }
+
+            .qty-selector .num-in span {
+                background-color: transparent;
+                border: 2px solid $secondary;
+                cursor: pointer;
+                display: block;
+                float: left;
+                font-size: 17px;
+                height: 32px;
+                text-align: center;
+                transition: all 0.3s;
+                width: 40px;
+
+                &.minus {
+                    border-bottom-left-radius: 7px;
+                    border-top-left-radius: 7px;
+                }
+
+                &.plus {
+                    border-bottom-right-radius: 7px;
+                    border-top-right-radius: 7px;
                 }
             }
 
-            &__item {
-                border-bottom: 2px solid $grey16;
+            .qty-selector .num-in span:hover {
+                background-color: $grey16;
+            }
 
-                td {
-                    vertical-align: middle;
+            .qty-selector .num-in input {
+                border-left: 0;
+                border-right: 0;
+                float: left;
+                line-height: 34px;
+                text-align: center;
+                width: 40px;
+            }
+        }
+
+        &__price-holder {
+            &__unit-price {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font600;
+                margin-bottom: 8px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
                 }
+            }
 
-                th {
-                    padding-left: 0;
+            &__total {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font700;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
                 }
+            }
+        }
+    }
 
-                &__img {
-                    background: $grey16;
-                    border-radius: 40px;
-                    padding: 3px;
-                    width: 17px;
-                }
+    &__heading-holder {
+        &__heading {
+            color: $secondary;
+            font-size: 18px;
+            font-weight: $font700 ;
+            margin-bottom: 8px;
+        }
+    }
 
-                &__detail {
-                    &__img-holder {
-                        position: relative;
-                    }
+    &__p-bottom {
+        border-bottom: 3px solid $grey17;
+        margin-top: 10px;
+        padding-bottom: 20px;
 
-                    &__img {
-                        width: 80px;
-                    }
+        &__c-box {
+            &__text-holder {
+                margin-bottom: 6px;
+            }
 
-                    &__counter {
-                        background-color: $primary;
-                        border-radius: 40px;
-                        color: $white;
-                        font-size: 12px;
-                        padding: 1px 7px;
-                        position: absolute;
-                        right: 40px;
-                        top: -5px;
+            &__text {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font700;
+                margin-bottom: 6px;
+                padding-right: 32px;
+                position: relative;
+                text-decoration: underline;
 
-                        @media only screen and (max-width: 1198.98px) {
-                            right: 0;
-                        }
-                    }
+                &.collapsed {
+                    &::after {
+                        top: 6px;
+                        transform: rotate(180deg);
+                        transition: all .35s;
 
-                    &__heading {
-                        color: $secondary;
-                        font-size: 14px;
-                        font-weight: $font500;
-                        margin-bottom: 0;
-                    }
-
-                    &__promotion {
-                        color: $primary;
-                        font-size: 14px;
-                        font-weight: $font500;
-                    }
-
-                    &__sku {
-                        color: $secondary;
-                        font-size: 12px;
-                        font-weight: $font500;
-                    }
-
-                    &__change {
-                        color: $primary;
-                        font-size: 12px;
-                        font-weight: $font500;
-                    }
-
-                    &__price {
-                        color: $secondary;
-                        font-size: 14px;
-                        font-weight: $font500;
-                    }
-
-                    &__total {
-                        color: $secondary;
-                        font-size: 14px;
-                        font-weight: $font700;
-                    }
-
-                    .qty-selector input.in-num {
-                        background-color: $white;
-                        border: 2px solid $secondary;
-                        float: left;
-                        font-size: 14px;
-                        height: 32px;
-                        text-align: center;
-                        width: 83px;
-                    }
-
-                    .qty-selector .num-in span  {
-                        background-color: transparent;
-                        border: 2px solid $secondary;
-                        cursor: pointer;
-                        display: block;
-                        float: left;
-                        font-size: 17px;
-                        height: 32px;
-                        text-align: center;
-                        transition: all 0.3s;
-                        width: 46px;
-
-                        @media only screen and (max-width: 767.98px) {
-                            width: 22px;
-                        }
-
-                        &.minus {
-                            border-bottom-left-radius: 7px;
-                            border-top-left-radius: 7px;
-                        }
-
-                        &.plus {
-                            border-bottom-right-radius: 7px;
-                            border-top-right-radius: 7px;
-                        }
-                    }
-
-                    .qty-selector .num-in span:hover {
-                        background-color: $grey16;
-                    }
-
-                    .qty-selector .num-in input {
-                        border-left: 0;
-                        border-right: 0;
-                        float: left;
-                        line-height: 34px;
-                        text-align: center;
-                        width: 44px;
-
-                        @media only screen and (max-width: 767.98px) {
-                            width: 19px;
+                        @media only screen and (max-width: 992.98px) {
+                            top: 4px;
                         }
                     }
                 }
+
+                &::after {
+                    background-image: url(../images/uparrow.png);
+                    background-repeat: no-repeat;
+                    content: "";
+                    height: 20px;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform-origin: center;
+                    transform: none;
+                    width: 21px;
+                }
+
+                @media only screen and (max-width: 992.98px) {
+                    font-size: 14px;
+                    padding-right: 25px;
+                }
+            }
+
+            &__f-control {
+                border-radius: 2px;
+                border: 2px solid $primary;
+            }
+
+            textarea {
+                border: 2px solid $primary;
+                border-radius: 2px;
+            }
+        }
+
+        &__btn-holder {
+            text-align: right;
+        }
+
+        &__btn {
+            color: $secondary;
+            font-size: 18px;
+            font-weight: $font700;
+            margin-bottom: 6px;
+            text-decoration: underline;
+
+            @media only screen and (max-width: 992.98px) {
+                font-size: 14px;
             }
         }
     }
@@ -223,17 +297,18 @@ $ns: cart;
         display: flex;
             align-items: center;
             justify-content: space-between;
+        margin-top: 10px;
 
         &__add-more {
             color: $secondary;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: $font500;
             text-decoration: underline;
         }
 
         &__clear-cart {
             color: $primary;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: $font500;
             text-decoration: underline;
 
@@ -241,13 +316,5 @@ $ns: cart;
                 color: $primary;
             }
         }
-    }
-
-    .order-summary__cart-totals>.row:nth-child(-n+5) {
-        align-items: center;
-        border-bottom: 2px solid $grey16;
-        line-height: 20px;
-        margin-bottom: 25px;
-        padding: 5px 0;
     }
 }
