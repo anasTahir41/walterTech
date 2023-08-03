@@ -1,6 +1,7 @@
 .container {
     @media only screen and (min-width: 1440px) {
         max-width: 1440px;
+        // max-width: 1450px;
     }
 }
 
@@ -44,6 +45,36 @@ p {
     &.btn-primary:not(:disabled):not(.disabled):active:focus {
         background: $btn-hover;
         color: $secondary;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+.btn-secondary {
+    background: none;
+    border: 2px solid $primary;
+    color: $primary;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: $font600;
+    padding: 8px 45px;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $primary;
+        background: none;
+        box-shadow: none;
+        color: $primary;
+        text-decoration: none;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &.btn-primary:not(:disabled):not(.disabled):active:focus {
+        border-color: $primary;
+        background: none;
+        color: $primary;
         text-decoration: none;
         box-shadow: none;
     }

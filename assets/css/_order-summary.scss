@@ -2,7 +2,7 @@ $ns: order-summary;
 
 .#{$ns} {
     &__title {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: $font600;
         margin-bottom: 15px;
     }
@@ -12,7 +12,7 @@ $ns: order-summary;
         border: 1px solid $grey16;
         display: flex;
             align-items: center;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         padding: 15px;
 
         &__detail {
@@ -70,7 +70,12 @@ $ns: order-summary;
             margin-bottom: 0;
         }
 
-        &__subtotal,
+        &__subtotal {
+            color: $grey6;
+            font-size: 16px;
+            font-weight: $font600;
+        }
+
         &__shipping,
         &__grand-total {
             color: $secondary;
@@ -79,9 +84,24 @@ $ns: order-summary;
             margin-bottom: 0;
         }
 
+        &__promo-text {
+            color: $primary;
+            font-size: 16px;
+            font-weight: $font700;
+            text-transform: uppercase;
+        }
+
         &__grand-total {
             font-size: 18px;
             font-weight: $font700;
+        }
+
+        &__coupon-code,
+        &__amount {
+            color: $primary;
+            font-size: 16px;
+            font-weight: $font700;
+            text-transform: uppercase;
         }
 
         &__btn {
@@ -197,7 +217,7 @@ $ns: order-summary;
     }
 }
 
-.order-summary__cart-totals>.row:nth-child(-n+5) {
+.order-summary__cart-totals>.row:nth-child(-n+6) {
     align-items: center;
     border-bottom: 2px solid $grey16;
     line-height: 20px;
@@ -206,6 +226,6 @@ $ns: order-summary;
     padding: 5px 0;
 }
 
-.order-summary__cart-totals>.row:nth-child(-n+5):last-child {
+.order-summary__cart-totals>.row:nth-child(-n+6):last-child {
     border: none
 }

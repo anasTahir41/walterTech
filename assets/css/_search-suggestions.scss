@@ -31,9 +31,24 @@
         padding-right: 15px;
     }
 
+    &__input-wrap {
+        position: relative;
+    }
+
     &__form {
         text-align: center;
+        margin-right: 26px;
     }
+
+    &__close-btn {
+        cursor: pointer;
+        font-size: 25px;
+        font-weight: 700;
+        position: absolute;
+            top: 13px;
+            right: 0;
+    }
+
 
     &__input {
         background: $grey1 url('../images/search-yellow.svg') no-repeat right 20px center;
