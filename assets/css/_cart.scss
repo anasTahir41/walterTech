@@ -136,11 +136,21 @@ $ns: cart;
             .qty-selector input.in-num {
                 background-color: $white;
                 border: 2px solid $secondary;
-                float: left;
                 font-size: 14px;
                 height: 32px;
                 text-align: center;
                 width: 83px;
+            }
+
+            .qty-selector .num-in {
+                display: flex;
+                align-items: center;
+            }
+
+            .qty-selector .in-num {
+                display: flex;
+                align-items: center;
+                height: 32px;
             }
 
             .qty-selector .num-in span {
@@ -148,7 +158,6 @@ $ns: cart;
                 border: 2px solid $secondary;
                 cursor: pointer;
                 display: block;
-                float: left;
                 font-size: 17px;
                 height: 32px;
                 text-align: center;
@@ -171,12 +180,15 @@ $ns: cart;
             }
 
             .qty-selector .num-in input {
+                border: 2px solid $secondary;
                 border-left: 0;
                 border-right: 0;
-                float: left;
-                line-height: 34px;
                 text-align: center;
                 width: 40px;
+
+                &:focus-visible {
+                    outline: none;
+                }
             }
         }
 
@@ -217,6 +229,7 @@ $ns: cart;
         border-bottom: 3px solid $grey17;
         margin-top: 10px;
         padding-bottom: 20px;
+        position: relative;
 
         &__c-box {
             &__text-holder {
@@ -278,6 +291,9 @@ $ns: cart;
 
         &__btn-holder {
             text-align: right;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
 
         &__btn {

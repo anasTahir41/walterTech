@@ -141,6 +141,10 @@ $(document).ready(function (currentSlide) {
             $('.c-site-header').addClass('search-active');
             $('.js-search-input').focus();
         });
+        $(document).on('click', '.js-close-btn', function () {
+            searchSuggestions.hide();
+            $('.c-site-header').removeClass('search-active');
+        });
         $(document).on('mouseup', function (e) {
             if (!searchSuggestions.is(e.target) && searchSuggestions.has(e.target).length === 0) {
                 searchSuggestions.hide();

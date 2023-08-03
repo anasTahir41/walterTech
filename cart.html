@@ -995,14 +995,6 @@
                     Your Cart (3 Items)
                 </h2>
             </div>
-            <div class="cart__shipping-desc">
-                <p class="cart__shipping-desc__title">Congrats! You are eligible for <span
-                        class="cart__shipping-desc__text">
-                        Free Shipping
-                    </span>
-                    <img class="cart__shipping-desc__img" src="./assets/images/shipping.png">
-                </p>
-            </div>
             <div class="cart__content">
                 <div class="row">
                     <div class="col-12 col-lg-8">
@@ -1057,7 +1049,7 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="text" class="in-num" value="1" readonly="">
+                                                <input type="number" class="in-num" value="1">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1074,7 +1066,7 @@
                             </div>
                             <div class="cart__p-bottom">
                                 <div class="row">
-                                    <div class="col-lg-8 col-6">
+                                    <div class="col-12">
                                         <div class="cart__p-bottom__c-box">
                                             <div class="cart__p-bottom__c-box__text-holder">
                                                 <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
@@ -1090,10 +1082,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-6">
-                                        <div class="cart__p-bottom__btn-holder">
-                                            <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                        </div>
+                                    <div class="cart__p-bottom__btn-holder">
+                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
                                     </div>
                                 </div>
                             </div>
@@ -1121,7 +1111,7 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="text" class="in-num" value="1" readonly="">
+                                                <input type="number" class="in-num" value="1">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1140,7 +1130,7 @@
                             </div>
                             <div class="cart__p-bottom">
                                 <div class="row">
-                                    <div class="col-lg-8 col-6">
+                                    <div class="col-12">
                                         <div class="cart__p-bottom__c-box">
                                             <div class="cart__p-bottom__c-box__text-holder">
                                                 <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
@@ -1156,10 +1146,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-6">
-                                        <div class="cart__p-bottom__btn-holder">
-                                            <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                        </div>
+                                    <div class="cart__p-bottom__btn-holder">
+                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
                                     </div>
                                 </div>
                             </div>
@@ -1187,7 +1175,7 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="text" class="in-num" value="1" readonly="">
+                                                <input type="number" class="in-num" value="1">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1205,7 +1193,7 @@
                             </div>
                             <div class="cart__p-bottom">
                                 <div class="row">
-                                    <div class="col-lg-8 col-6">
+                                    <div class="col-12">
                                         <div class="cart__p-bottom__c-box">
                                             <div class="cart__p-bottom__c-box__text-holder">
                                                 <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
@@ -1221,10 +1209,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-6">
-                                        <div class="cart__p-bottom__btn-holder">
-                                            <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                        </div>
+                                    <div class="cart__p-bottom__btn-holder">
+                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
                                     </div>
                                 </div>
                             </div>
@@ -1246,14 +1232,6 @@
                                         </div>
                                         <div class="col-4 p-0">
                                             <p class="order-summary__cart-totals__subtotal text-right">$19.99</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-8 p-0">
-                                            <p class="order-summary__cart-totals__text">Shipping:</p>
-                                        </div>
-                                        <div class="col-4 p-0">
-                                            <p class="order-summary__cart-totals__shipping text-right">Free</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1280,10 +1258,18 @@
                                         </div>
                                     </div>
                                     <div class="row">
+                                        <div class="col-9 p-0">
+                                            <p class="order-summary__cart-totals__promo-text">Manager's Special / Coupon: Walter16</p>
+                                        </div>
+                                        <div class="col-3 p-0">
+                                            <p class="order-summary__cart-totals__promo-text text-right">-$530</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-8 p-0">
                                             <p
                                                 class="order-summary__cart-totals__text order-summary__cart-totals__grand-total">
-                                                Grand Total:</p>
+                                                Estimated Total:</p>
                                         </div>
                                         <div class="col-4 p-0">
                                             <p class="order-summary__cart-totals__grand-total text-right">$188.99</p>

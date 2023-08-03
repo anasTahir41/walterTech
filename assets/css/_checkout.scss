@@ -49,11 +49,83 @@ $ns: checkout;
         }
     }
 
+    &__progress-tab-wrap {
+        &__progress-tab {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+
+            &__list {
+                width: 25%;
+
+                @media only screen and (max-width: 767.98px) {
+                    margin-right: 5px;
+                }
+
+                &.active {
+                    .checkout__progress-tab-wrap__progress-tab__link {
+                        font-weight: $font700;
+
+                        &::before {
+                            background-color: $primary;
+                        }
+                    }
+
+                    &::after {
+                        background-color: $primary;
+                    }
+                }
+
+                &::after {
+                    background-color: $grey7;
+                    border-radius: 40px;
+                    border: none;
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    width: 25%;
+
+                    @media only screen and (max-width: 767.98px) {
+                        width: 24%;
+                    }
+                }
+            }
+
+            &__link {
+                display: block;
+                padding-left: 35px;
+                position: relative;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 12px;
+                    padding-left: 30px;
+                }
+
+                &::before {
+                    background-color: transparent;
+                    border-radius: 40px;
+                    border: 3px solid $primary;
+                    content: '';
+                    display: block;
+                    height: 24px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 24px;
+                }
+            }
+        }
+    }
+
     &__checkbox-holder {
-        margin-bottom: 15px;
+        margin-bottom: 8px;
 
         @media only screen and (max-width: 991.98px) {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
     }
 
@@ -61,10 +133,32 @@ $ns: checkout;
         padding-bottom: 60px;
     }
 
+    &__left-wrap {
+        @media only screen and (max-width: 991.98px) {
+            margin-bottom: 30px;
+        }
+
+        &__btn-holder {
+            text-align: center;
+            width: 100%;
+
+            @media only screen and (max-width: 991.98px) {
+                margin-bottom: 30px;
+                margin-top: 30px;
+                padding: 0 15px;
+            }
+
+            &__btn {
+                font-weight: $font600;
+                width: 100%;
+            }
+        }
+    }
+
     &__left {
         background-color: $grey1;
         border: 1px solid $grey16;
-        padding: 30px 20px;
+        margin-bottom: 30px;
 
         @media only screen and (max-width: 991.98px) {
             margin-bottom: 30px;
@@ -107,12 +201,28 @@ $ns: checkout;
         }
 
         &__shipping {
-            margin-bottom: 20px;
+            margin-bottom: 45px;
         }
 
         &__select-box {
             &__select {
+                appearance: none;
+                background: $white url(../images/downarrow.png) no-repeat right 15px center/23px;
+                border: 1px solid $grey16;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 18px;
+                padding: 6px 18px;
+                position: relative;
                 width: 100%;
+
+                @media only screen and (max-width: 767.98px) {
+                    padding-right: 40px;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
             }
         }
 
@@ -120,24 +230,24 @@ $ns: checkout;
             text-align: center;
             width: 100%;
         }
-    }
 
-    &__multi-ship {
-        background-color: $white;
-        border: 1px solid $grey16;
-        margin-bottom: 20px;
-        padding: 20px 20px 5px;
+        &__select-box {
+            position: relative;
 
-        &__heading {
-            font-size: 20px;
-            font-weight: $font600;
-            margin-bottom: 25px;
+            &.collapsed {
+                &::after {
+                    top: 6px;
+                    transform: rotate(180deg);
+                    transition: all .35s;
+                }
+            }
         }
 
-        &__product-wrap {
+        &__product-holder {
+            border-bottom: 1px solid $grey16;
             display: flex;
                 align-items: center;
-            margin-bottom: 20px;
+            padding: 30px 20px;
 
             &__detail {
                 display: flex;
@@ -153,6 +263,17 @@ $ns: checkout;
                 &__image {
                     width: 70px;
                 }
+            }
+
+            &__counter {
+                background-color: $primary;
+                border-radius: 40px;
+                color: $white;
+                font-size: 12px;
+                padding: 1px 7px;
+                position: absolute;
+                    right: -9px;
+                    top: -5px;
             }
 
             &__text-holder {
@@ -174,16 +295,98 @@ $ns: checkout;
                 font-weight: 600;
                 margin: 0;
             }
+        }
 
-            &__counter {
-                background-color: $primary;
-                border-radius: 40px;
-                color: $white;
-                font-size: 12px;
-                padding: 1px 7px;
-                position: absolute;
-                    right: -9px;
-                    top: -5px;
+        &__text-content {
+            padding: 30px 20px;
+        }
+
+        &__btn-holder {
+            margin-bottom: 20px;
+            text-align: center;
+
+            &__address-btn {
+                border: 2px solid $primary;
+                color: $primary;
+                font-weight: 600;
+                padding: 8px 45px;
+
+                &:hover {
+                    color: $primary;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__form-holder {
+            &__title {
+                font-size: 18px;
+                font-weight: $font600;
+                margin-bottom: 14px;
+            }
+
+            &__form {
+                margin-bottom: 25px;
+
+                &__label {
+                    color: $secondary;
+                    font-size: 16px;
+                    font-weight: $font600;
+                }
+
+                &__input {
+                    border: 1px solid $grey3;
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    width: 100%;
+
+                    &::placeholder {
+                        color: $grey4;
+                        font-size: 16px;
+                        font-weight: $font500;
+                    }
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        &__form-btn-wrap {
+            &__btn {
+                border: 2px solid $primary;
+                text-align: center;
+                width: 100%;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__billing {
+            padding: 30px 20px;
+
+            &__title {
+                font-size: 20px;
+                font-weight: $font600;
+                margin-bottom: 15px;
+            }
+
+            .checkout__left__text-holder {
+                border: 0;
+            }
+
+            &__note-list {
+                padding: 0;
+                list-style: none;
+                margin-bottom: 16px;
+            }
+            &__note-text {
+                color: $secondary;
+                font-size: 16px;
+                font-weight: 600;
             }
         }
     }
