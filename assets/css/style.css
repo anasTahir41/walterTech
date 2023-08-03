@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    max-width: 1450px;
   }
 }
 
@@ -25,6 +25,7 @@ p {
   background: #f9a13b;
   border: none;
   color: #1b1b1b;
+  cursor: pointer;
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -35,6 +36,7 @@ p {
   box-shadow: none;
   color: #1b1b1b;
   text-decoration: none;
+  border-color: #f9a13b;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary.btn-primary:not(:disabled):not(.disabled):active:focus {
   background: #f7890a;
@@ -4730,7 +4732,7 @@ label input[type=checkbox]:checked + span {
   border-radius: 2px;
 }
 
-.order-summary__cart-totals > .row:nth-child(-n+6) {
+.order-summary__cart-totals > div:not(.collapse):not(.order-summary__comment-box) {
   align-items: center;
   border-bottom: 2px solid #d7d7d7;
   line-height: 20px;
@@ -4739,7 +4741,7 @@ label input[type=checkbox]:checked + span {
   padding: 5px 0;
 }
 
-.order-summary__cart-totals > .row:nth-child(-n+6):last-child {
+.order-summary__cart-totals > div:not(.collapse):not(.order-summary__comment-box):last-child {
   border: none;
 }
 
@@ -4936,6 +4938,7 @@ label input[type=checkbox]:checked + span {
   border-bottom: 3px solid #b7b7b7;
   margin-top: 10px;
   padding-bottom: 20px;
+  position: relative;
 }
 .cart__p-bottom__c-box__text-holder {
   margin-bottom: 6px;
@@ -4989,6 +4992,9 @@ label input[type=checkbox]:checked + span {
 }
 .cart__p-bottom__btn-holder {
   text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .cart__p-bottom__btn {
   color: #1b1b1b;
@@ -5268,13 +5274,16 @@ label input[type=checkbox]:checked + span {
 .checkout__progress-tab-wrap__progress-tab__list {
   width: 25%;
 }
+@media only screen and (max-width: 767.98px) {
+  .checkout__progress-tab-wrap__progress-tab__list {
+    margin-right: 5px;
+  }
+}
 .checkout__progress-tab-wrap__progress-tab__list.active .checkout__progress-tab-wrap__progress-tab__link {
   font-weight: 700;
 }
 .checkout__progress-tab-wrap__progress-tab__list.active .checkout__progress-tab-wrap__progress-tab__link::before {
   background-color: #f9a13b;
-  border: none;
-  content: "";
 }
 .checkout__progress-tab-wrap__progress-tab__list.active::after {
   background-color: #f9a13b;
@@ -5296,12 +5305,14 @@ label input[type=checkbox]:checked + span {
   }
 }
 .checkout__progress-tab-wrap__progress-tab__link {
+  display: block;
   padding-left: 35px;
   position: relative;
 }
 @media only screen and (max-width: 767.98px) {
   .checkout__progress-tab-wrap__progress-tab__link {
     font-size: 12px;
+    padding-left: 30px;
   }
 }
 .checkout__progress-tab-wrap__progress-tab__link::before {
@@ -5313,7 +5324,8 @@ label input[type=checkbox]:checked + span {
   height: 24px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 24px;
 }
 .checkout__checkbox-holder {
@@ -5402,6 +5414,11 @@ label input[type=checkbox]:checked + span {
   padding: 6px 18px;
   position: relative;
   width: 100%;
+}
+@media only screen and (max-width: 767.98px) {
+  .checkout__left__select-box__select {
+    padding-right: 40px;
+  }
 }
 .checkout__left__select-box__select:focus-visible {
   outline: none;

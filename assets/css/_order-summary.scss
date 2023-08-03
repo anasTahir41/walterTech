@@ -217,7 +217,7 @@ $ns: order-summary;
     }
 }
 
-.order-summary__cart-totals>.row:nth-child(-n+6) {
+.order-summary__cart-totals > div:not(.collapse):not(.order-summary__comment-box) {
     align-items: center;
     border-bottom: 2px solid $grey16;
     line-height: 20px;
@@ -226,6 +226,6 @@ $ns: order-summary;
     padding: 5px 0;
 }
 
-.order-summary__cart-totals>.row:nth-child(-n+6):last-child {
+.order-summary__cart-totals > div:not(.collapse):not(.order-summary__comment-box):last-child {
     border: none
 }

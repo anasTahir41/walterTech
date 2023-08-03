@@ -59,14 +59,16 @@ $ns: checkout;
             &__list {
                 width: 25%;
 
+                @media only screen and (max-width: 767.98px) {
+                    margin-right: 5px;
+                }
+
                 &.active {
                     .checkout__progress-tab-wrap__progress-tab__link {
                         font-weight: $font700;
 
                         &::before {
                             background-color: $primary;
-                            border: none;
-                            content: '';
                         }
                     }
 
@@ -93,11 +95,13 @@ $ns: checkout;
             }
 
             &__link {
+                display: block;
                 padding-left: 35px;
                 position: relative;
 
                 @media only screen and (max-width: 767.98px) {
                     font-size: 12px;
+                    padding-left: 30px;
                 }
 
                 &::before {
@@ -109,7 +113,8 @@ $ns: checkout;
                     height: 24px;
                     position: absolute;
                     left: 0;
-                    top: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
                     width: 24px;
                 }
             }
@@ -210,6 +215,10 @@ $ns: checkout;
                 padding: 6px 18px;
                 position: relative;
                 width: 100%;
+
+                @media only screen and (max-width: 767.98px) {
+                    padding-right: 40px;
+                }
 
                 &:focus-visible {
                     outline: none;
