@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Cart</title>
+    <title>Checkout</title>
     <link rel="icon" type="image/x-icon" href="" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +62,7 @@
                     <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
                     </div>
-                    <div class="dropdown c-site-header__top__right__dropdown">
+                    <!-- <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -74,7 +74,7 @@
                             <a class="dropdown-item" href="#">Addresses</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -988,243 +988,139 @@
         </div>
     </header>
     <!-- Header Ends Here -->
-    <div class="cart">
-        <div class="container">
-            <div class="cart__title-holder">
-                <h2 class="cart__title-holder__text">
-                    Your Cart (3 Items)
-                </h2>
+    <div class="checkout">
+        <section class="checkout__banner">
+            <figure class="checkout__banner__image">
+                <img class="checkout__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
+            </figure>
+            <div class="checkout__banner__wrap container">
+                <h2 class="checkout__banner__wrap__heading-main">Checkout</h2>
             </div>
-            <div class="cart__content">
+        </section>
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="checkout__progress-tab-wrap">
+                        <ul class="checkout__progress-tab-wrap__progress-tab">
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                                    class="checkout__progress-tab-wrap__progress-tab__link">Cart</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                                class="checkout__progress-tab-wrap__progress-tab__link">Shipping</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                                class="checkout__progress-tab-wrap__progress-tab__link">Billing</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                                class="checkout__progress-tab-wrap__progress-tab__link">Review</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="checkout__content">
                 <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="cart__heading-wrap d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="cart__heading-holder">
-                                        <h3 class="cart__heading-holder__heading">Item
-
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="cart__heading-holder">
-                                        <h3 class="cart__heading-holder__heading">Quantity
-
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="cart__heading-holder  cart__product-wrap__price-wrap">
-                                        <h3 class="cart__heading-holder__heading">Price
-
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <p class="cart__product-wrap__text-holder__backorder-msg">On Backorder from
-                                                WAREHOUSE.
-                                                Est Ship Date August, 25th 2023</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1">
-                                                <span class="plus">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
+                    <div class="col-12 col-lg-7">
+                        <div class="checkout__left-wrap">
+                            <div class="checkout__left mb-0">
+                                <div class="order-summary__product-holder checkout__left__product-holder">
+                                    <figure class="order-summary__product-wrap__image-container">
+                                        <img class="order-summary__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                        <span class="order-summary__product-wrap__counter">
+                                            3
                                         </span>
+                                    </figure>
+                                    <div class="order-summary__product-wrap__detail">
+                                        <div class="order-summary__product-wrap__text-holder">
+                                            <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                in 1
+                                            </h3>
+                                            <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                Finishing Discs
+                                            </p>
+                                            <p class="order-summary__product-wrap__text-holder__disc">In Stock
+                                            </p>
+                                        </div>
+                                        <div class="order-summary__product-wrap__price-holder">
+                                            <p class="order-summary__product-wrap__price">$12.99</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox1" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox1">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox1">
-                                                <textarea id="commentBox1" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1">
-                                                <span class="plus">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <p class="cart__product-wrap__text-holder__promo">NATIONAL PROMO 16% Off</p>
-                                        <p class="cart__product-wrap__text-holder__promo-end">Promo Ends 5/17/2023</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
+                            <div class="checkout__left">
+                                <div class="order-summary__product-holder checkout__left__product-holder">
+                                    <figure class="order-summary__product-wrap__image-container">
+                                        <img class="order-summary__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                        <span class="order-summary__product-wrap__counter">
+                                            3
                                         </span>
+                                    </figure>
+                                    <div class="order-summary__product-wrap__detail">
+                                        <div class="order-summary__product-wrap__text-holder">
+                                            <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                in 1
+                                            </h3>
+                                            <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                Finishing Discs
+                                            </p>
+                                            <p class="order-summary__product-wrap__text-holder__disc">In Stock
+                                            </p>
+                                        </div>
+                                        <div class="order-summary__product-wrap__price-holder">
+                                            <p class="order-summary__product-wrap__price">$12.99</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox3" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox3">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox3">
-                                                <textarea id="commentBox3" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
+                            <div class="checkout__left">
+                                <div class="checkout__left__text-content">
+                                    <div class="checkout__left__delivery-ops mb-0">
+                                        <h3 class="checkout__left__title">Delivery Options</h3>
+                                        <form>
+                                            <label class="checkout__left__label">
+                                                <input type="radio" name="delivery" value="standard" checked>
+                                                <div class="checkout__left__text-holder">
+                                                    <p class="checkout__left__text-holder__text">Pickup</p>
+                                                    <span class="checkout__left__text-holder__price">$0.00</span>
+                                                </div>
+                                            </label>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1">
-                                                <span class="plus">+</span>
+                            <div class="checkout__left">
+                                <div class="checkout__left__billing">
+                                    <h3 class="checkout__left__billing__title">
+                                        Payment
+                                    </h3>
+                                    <form>
+                                        <label class="checkout__left__label">
+                                            <input type="radio" name="delivery" value="standard" checked>
+                                            <div class="checkout__left__text-holder">
+                                                <p class="checkout__left__text-holder__text">Purchase Order</p>
                                             </div>
-                                        </div>
+                                        </label>
+                                    </form>
+                                    <div class="checkout__left__billing__po-text-wrap">
+                                        <h5 class="checkout__left__billing__po-heading">
+                                            Purchase Order Number
+                                        </h5>
+                                        <p class="checkout__left__billing__po-num">
+                                            00012345
+                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <p class="cart__product-wrap__text-holder__promo">TIERED DISCOUNT16% Off</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
-                                        </span>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox">
-                                                <textarea id="commentBox" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__left">
-                            <div class="cart__btn-holder">
-                                <a href="#" class="cart__btn-holder__add-more">Add More</a>
-                                <a href="#" class="cart__btn-holder__clear-cart">Clear Cart</a>
+                            <div class="checkout__left-wrap__btn-holder d-none d-lg-block">
+                                <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="cart__right">
+                    <div class="col-12 col-lg-5">
+                        <div class="checkout__right">
                             <div class="order-summary">
+                                <h3 class="order-summary__title">Order Summary</h3>
                                 <div class="order-summary__cart-totals">
                                     <div class="row">
                                         <div class="col-8 p-0">
@@ -1235,34 +1131,12 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-7 p-0">
-                                            <p class="order-summary__cart-totals__text">Coupon Code:</p>
+                                        <div class="col-8 p-0">
+                                            <p class="order-summary__cart-totals__coupon-code">Manager special / coupon:
+                                                Walter16</p>
                                         </div>
-                                        <div class="col-5 p-0 text-right">
-                                            <a class="order-summary__cart-totals__btn collapsed" data-toggle="collapse"
-                                                href="#collapseExample" role="button" aria-expanded="false"
-                                                aria-controls="collapseExample">
-                                                Add coupon
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="order-summary__card">
-                                            <div class="order-summary__input-holder">
-                                                <input class="order-summary__input" type="text" id="coupon"
-                                                    name="coupon" placeholder="Add code">
-                                            </div>
-                                            <div class="order-summary__btn-holder">
-                                                <a href="#" class="order-summary__btn btn-primary">Apply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-9 p-0">
-                                            <p class="order-summary__cart-totals__promo-text">Manager's Special / Coupon: Walter16</p>
-                                        </div>
-                                        <div class="col-3 p-0">
-                                            <p class="order-summary__cart-totals__promo-text text-right">-$530</p>
+                                        <div class="col-4 p-0">
+                                            <p class="order-summary__cart-totals__amount text-right">-$530.00</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1275,100 +1149,17 @@
                                             <p class="order-summary__cart-totals__grand-total text-right">$188.99</p>
                                         </div>
                                     </div>
-                                    <div class="order-summary__comment-box">
-                                        <div class="order-summary__comment-box__text-holder">
-                                            <a class="order-summary__comment-box__title collapsed"
-                                                data-toggle="collapse" href="#commentbox2" role="button"
-                                                aria-expanded="false" aria-controls="commentbox2">
-                                                Add Instructions:
-                                            </a>
-                                        </div>
-                                        <div class="collapse" id="commentbox2">
-                                            <textarea id="commentBox2" spellcheck="false" class="form-control" rows="2"
-                                                cols="2"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="order-summary__btn-wrap">
-                                    <a href="#" class="order-summary__c-shop-btn">Continue Shopping</a>
-                                    <a href="#" class="order-summary__checkout-btn btn-primary">Checkout</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="checkout__left-wrap__btn-holder d-block d-lg-none">
+                        <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <section class="slider-wrap container-fluid">
-            <div class="slider container">
-                <div class="slider__intro">
-                    <h2 class="slider__intro__text">Recommended Products</h2>
-                </div>
-                <div class="slider__wrapper">
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/XCAVATOR.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">XCAVATOR XX</h3>
-                            <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/icecut.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Icecut 200PM</h3>
-                            <p class="slider__wrap__heading-main">Drill unit with permanent magnet base for maximun
-                                safety
-                                on worksites </p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/e-weld pre coated.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">E-weld pre-coated nozzles</h3>
-                            <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
-                            <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate in
-                                the
-                                industry</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
-                            <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
-
     <!-- Footer Starts Here -->
     <footer class="c-site-footer">
         <div class="container c-site-footer__container">

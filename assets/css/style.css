@@ -4902,7 +4902,7 @@ label input[type=checkbox]:checked + span {
   border-left: 0;
   border-right: 0;
   text-align: center;
-  width: 40px;
+  width: 60px;
 }
 .cart__product-wrap__qty-holder .qty-selector .num-in input:focus-visible {
   outline: none;
@@ -5558,6 +5558,19 @@ label input[type=checkbox]:checked + span {
   color: #1b1b1b;
   font-size: 16px;
   font-weight: 600;
+}
+.checkout__left__billing__po-text-wrap {
+  margin-bottom: 10px;
+}
+.checkout__left__billing__po-heading {
+  color: #1b1b1b;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.checkout__left__billing__po-num {
+  font-size: 16px;
+  font-weight: 500;
 }
 .checkout__right {
   background-color: #f7f7f7;

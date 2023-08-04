@@ -388,6 +388,20 @@ $ns: checkout;
                 font-size: 16px;
                 font-weight: 600;
             }
+
+            &__po-text-wrap {
+                margin-bottom: 10px;
+            }
+            &__po-heading {
+                color: $secondary;
+                font-size: 20px;
+                font-weight: $font600;
+                margin-bottom: 5px;
+            }
+            &__po-num {
+                font-size: 16px;
+                font-weight: $font500;
+            }
         }
     }
 
