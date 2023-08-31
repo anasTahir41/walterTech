@@ -2,7 +2,7 @@ $ns: cart;
 
 .#{$ns} {
     background-color: $white;
-    padding-bottom: 30px;
+    padding: 60px 0 30px;
 
     &__title-holder {
         padding: 60px 0;
@@ -184,12 +184,17 @@ $ns: cart;
                 border-left: 0;
                 border-right: 0;
                 text-align: center;
-                // width: 40px;
                 width: 60px;
 
                 &:focus-visible {
                     outline: none;
                 }
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
             }
         }
 
@@ -317,6 +322,8 @@ $ns: cart;
         margin-top: 10px;
 
         &__add-more {
+            background: transparent;
+            border: 0;
             color: $secondary;
             font-size: 16px;
             font-weight: $font500;

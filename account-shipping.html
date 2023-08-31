@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Cart</title>
+    <title>Account Shipping/ Billing</title>
     <link rel="icon" type="image/x-icon" href="" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,10 +59,10 @@
                             </form>
                         </div>
                     </div>
-                    <div class="c-site-header__top__user">
+                    <!-- <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
-                    </div>
-                    <!-- <div class="dropdown c-site-header__top__right__dropdown">
+                    </div> -->
+                    <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -74,7 +74,7 @@
                             <a class="dropdown-item" href="#">Addresses</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -988,549 +988,755 @@
         </div>
     </header>
     <!-- Header Ends Here -->
-    <div class="cart">
+    <section class="account">
         <div class="container">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-8">
-                    <div class="checkout__progress-tab-wrap">
-                        <div class="checkout__progress-tab-wrap">
-                            <ul class="checkout__progress-tab-wrap__progress-tab">
-                                <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
-                                        class="checkout__progress-tab-wrap__progress-tab__counter">1</span><a href="#"
-                                        class="checkout__progress-tab-wrap__progress-tab__link">Cart</a></li>
-                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
-                                        class="checkout__progress-tab-wrap__progress-tab__counter">2</span><a href="#"
-                                        class="checkout__progress-tab-wrap__progress-tab__link">Shipping</a></li>
-                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
-                                        class="checkout__progress-tab-wrap__progress-tab__counter">3</span><a href="#"
-                                        class="checkout__progress-tab-wrap__progress-tab__link">Billing</a></li>
-                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
-                                        class="checkout__progress-tab-wrap__progress-tab__counter">4</span><a href="#"
-                                        class="checkout__progress-tab-wrap__progress-tab__link">Review</a></li>
-                            </ul>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-12">
+                    <div class="account__side-bar">
+                        <ul class="account__side-bar__wrap">
+                            <h3 class="account__side-bar__wrap__title">Your Account</h3>
+                            <li class="account__side-bar__wrap__list"><a class="account__side-bar__wrap__link">My
+                                    Profile</a></li>
+                            <li class="account__side-bar__wrap__list"><a class="account__side-bar__wrap__link">Order
+                                    History</a></li>
+                            <li class="account__side-bar__wrap__list active"><a
+                                    class="account__side-bar__wrap__link">Addresses</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-8 col-12">
+                    <div class="account__content">
+                        <h3 class="account__content__title">
+                            Address Management
+                        </h3>
+                        <div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="exTab1" class="account__content__main">
+                                        <div class="account__content__main__btn-wrap">
+                                            <ul class="nav nav-pills account__content__main__btn-holder">
+                                                <li
+                                                    class="account__content__main__list active">
+                                                    <a href="#1a" class="account__content__main__link" data-toggle="tab">Shipping</a>
+                                                </li>
+                                                <li class="account__content__main__list"><a
+                                                        href="#2a" class="account__content__main__link " data-toggle="tab">Billing</a>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="account__content__main__btn btn-primary" data-toggle="modal"
+                                                    data-target="#address-Modal" data-whatever="@mdo">Add Address</button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="address-Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal__modal-wrap" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal__header">
+                                                            <h2 class="modal__header__heading">Add Shipping Address</h2>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal__body">
+                                                            <div class="checkout__left__form-holder">
+                                                                <form class="checkout__left__form-holder__form">
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="addresstitle">Address
+                                                                                Title</label>
+                                                                            <input class="checkout__left__form-holder__form__input"
+                                                                                type="addresstitle" id="addresstitle" name="Input"
+                                                                                placeholder="" maxlength="20" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="firstname">First Name</label>
+                                                                            <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                id="firstname" name="firstname" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="lastname">Last Name</label>
+                                                                            <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                id="lastname" name="lastname" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="addresstitle">Address
+                                                                                1</label>
+                                                                            <input class="checkout__left__form-holder__form__input"
+                                                                                type="address1" id="address1" name="Input" placeholder=""
+                                                                                required>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="addresstitle">Address
+                                                                                2</label>
+                                                                            <input class="checkout__left__form-holder__form__input"
+                                                                                type="address2" id="address2" name="Input" placeholder=""
+                                                                                required>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="country">
+                                                                                Country
+                                                                            </label>
+                                                                            <select
+                                                                                class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                id="" name="" required="" aria-required="true"
+                                                                                autocomplete="shipping country"
+                                                                                aria-describedby="defaultCountry" placeholder="Country * ">
+                                                                                <option>United States</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="State">
+                                                                                State
+                                                                            </label>
+                                                                            <select
+                                                                                class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                id="" name="" required="" aria-required="true"
+                                                                                aria-describedby="defaultState" placeholder="State * ">
+                                                                                <option>Alaska</option>
+                                                                                <option>Arizona</option>
+                                                                                <option>New orleans</option>
+                                                                                <option>Missisippi</option>
+                                                                                <option>Alabama</option>
+                                                                                <option>Arizona</option>
+                                                                                <option>Arkansas</option>
+                                                                                <option>California</option>
+                                                                                <option>Colorado</option>
+                                                                                <option>Connecticut</option>
+                                                                                <option>Delaware</option>
+                                                                                <option>District of Columbia</option>
+                                                                                <option>Florida</option>
+                                                                                <option>Georgia</option>
+                                                                                <option>Idaho</option>
+                                                                                <option>Illinois</option>
+                                                                                <option>Indiana</option>
+                                                                                <option>Iowa</option>
+                                                                                <option>Kansas</option>
+                                                                                <option>Kentucky</option>
+                                                                                <option>Louisiana</option>
+                                                                                <option>Maine</option>
+                                                                                <option>Maryland</option>
+                                                                                <option>Massachusetts</option>
+                                                                                <option>Michigan</option>
+                                                                                <option>Minnesota</option>
+                                                                                <option>Mississippi</option>
+                                                                                <option>Missouri</option>
+                                                                                <option>Montana</option>
+                                                                                <option>Nebraska</option>
+                                                                                <option>Nevada</option>
+                                                                                <option>New Hampshire</option>
+                                                                                <option>New Jersey</option>
+                                                                                <option>New Mexico</option>
+                                                                                <option>New York</option>
+                                                                                <option>North Carolina</option>
+                                                                                <option>North Dakota</option>
+                                                                                <option>Ohio</option>
+                                                                                <option>Oklahoma</option>
+                                                                                <option>Oregon</option>
+                                                                                <option>Pennsylvania</option>
+                                                                                <option>Rhode Island</option>
+                                                                                <option>South Carolina</option>
+                                                                                <option>South Dakota</option>
+                                                                                <option>Tennessee</option>
+                                                                                <option>Texas</option>
+                                                                                <option>Utah</option>
+                                                                                <option>Vermont</option>
+                                                                                <option>Virginia</option>
+                                                                                <option>Washington</option>
+                                                                                <option>West Virginia</option>
+                                                                                <option>Wisconsin</option>
+                                                                                <option>Wyoming</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="city">
+                                                                                City
+                                                                            </label>
+                                                                            <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                id="city" name="city" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-12 col-lg-6">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="zipcode">
+                                                                                Zip Code
+                                                                            </label>
+                                                                            <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                id="zipcode" name="zipcode" placeholder="">
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                            <label class="checkout__left__form-holder__form__label"
+                                                                                for="phonenumber">Phone
+                                                                                Number</label>
+                                                                            <input class="checkout__left__form-holder__form__input"
+                                                                                type="phonenumber" id="phonenumber" name="phonenumber"
+                                                                                placeholder="" required>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal__footer">
+                                                            <a href="#" class="modal__footer__cancel" type="button"
+                                                                class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                                            <button type="button"
+                                                                class="modal__footer__subscribe btn-primary">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account__content__main__text-wrap d-none">
+                                                <p class="account__content__main__text">
+                                                    Need any Help? Contact our Customer Service:
+                                                    <span class="account__content__main__highlighted-text">
+                                                        800-522-0321
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content clearfix">
+                                            <div class="tab-pane active" id="1a">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="account__content__wrap__address-holder">
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-head">
+                                                                <h3
+                                                                    class="account__content__wrap__address-holder__address-heading">
+                                                                    Home
+                                                                </h3>
+                                                                <a
+                                                                    class="account__content__wrap__address-holder__address-label btn-secondary">Added</a>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-body">
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    40 East Fly Heights
+                                                                    Gregory Cartwright 022 Kiehn Route West Ned Alaska
+                                                                    00000
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    Newyork, 12121
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    1-888-255-1545
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    United States
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-button">
+                                                                <button type="button" class="account__content__wrap__address-holder__address-button__btn" data-toggle="modal"
+                                                                    data-target="#edit-Modal" data-whatever="@mdo">Edit</button>
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="edit-Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                                        <div class="modal-content text-left">
+                                                                            <div class="modal__header">
+                                                                                <h2 class="modal__header__heading">Edit Address</h2>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal__body">
+                                                                                <div class="checkout__left__form-holder">
+                                                                                    <form class="checkout__left__form-holder__form">
+                                                                                        <div class="row">
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    Title</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="addresstitle" id="addresstitle" name="Input"
+                                                                                                    placeholder="" maxlength="20" required>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="firstname">First Name</label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="firstname" name="firstname" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="lastname">Last Name</label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="lastname" name="lastname" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    1</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="address1" id="address1" name="Input" placeholder=""
+                                                                                                    required>
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    2</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="address2" id="address2" name="Input" placeholder=""
+                                                                                                    required>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="country">
+                                                                                                    Country
+                                                                                                </label>
+                                                                                                <select
+                                                                                                    class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                                    id="" name="" required="" aria-required="true"
+                                                                                                    autocomplete="shipping country"
+                                                                                                    aria-describedby="defaultCountry" placeholder="Country * ">
+                                                                                                    <option>United States</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="State">
+                                                                                                    State
+                                                                                                </label>
+                                                                                                <select
+                                                                                                    class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                                    id="" name="" required="" aria-required="true"
+                                                                                                    aria-describedby="defaultState" placeholder="State * ">
+                                                                                                    <option>Alaska</option>
+                                                                                                    <option>Arizona</option>
+                                                                                                    <option>New orleans</option>
+                                                                                                    <option>Missisippi</option>
+                                                                                                    <option>Alabama</option>
+                                                                                                    <option>Arizona</option>
+                                                                                                    <option>Arkansas</option>
+                                                                                                    <option>California</option>
+                                                                                                    <option>Colorado</option>
+                                                                                                    <option>Connecticut</option>
+                                                                                                    <option>Delaware</option>
+                                                                                                    <option>District of Columbia</option>
+                                                                                                    <option>Florida</option>
+                                                                                                    <option>Georgia</option>
+                                                                                                    <option>Idaho</option>
+                                                                                                    <option>Illinois</option>
+                                                                                                    <option>Indiana</option>
+                                                                                                    <option>Iowa</option>
+                                                                                                    <option>Kansas</option>
+                                                                                                    <option>Kentucky</option>
+                                                                                                    <option>Louisiana</option>
+                                                                                                    <option>Maine</option>
+                                                                                                    <option>Maryland</option>
+                                                                                                    <option>Massachusetts</option>
+                                                                                                    <option>Michigan</option>
+                                                                                                    <option>Minnesota</option>
+                                                                                                    <option>Mississippi</option>
+                                                                                                    <option>Missouri</option>
+                                                                                                    <option>Montana</option>
+                                                                                                    <option>Nebraska</option>
+                                                                                                    <option>Nevada</option>
+                                                                                                    <option>New Hampshire</option>
+                                                                                                    <option>New Jersey</option>
+                                                                                                    <option>New Mexico</option>
+                                                                                                    <option>New York</option>
+                                                                                                    <option>North Carolina</option>
+                                                                                                    <option>North Dakota</option>
+                                                                                                    <option>Ohio</option>
+                                                                                                    <option>Oklahoma</option>
+                                                                                                    <option>Oregon</option>
+                                                                                                    <option>Pennsylvania</option>
+                                                                                                    <option>Rhode Island</option>
+                                                                                                    <option>South Carolina</option>
+                                                                                                    <option>South Dakota</option>
+                                                                                                    <option>Tennessee</option>
+                                                                                                    <option>Texas</option>
+                                                                                                    <option>Utah</option>
+                                                                                                    <option>Vermont</option>
+                                                                                                    <option>Virginia</option>
+                                                                                                    <option>Washington</option>
+                                                                                                    <option>West Virginia</option>
+                                                                                                    <option>Wisconsin</option>
+                                                                                                    <option>Wyoming</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="city">
+                                                                                                    City
+                                                                                                </label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="city" name="city" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="zipcode">
+                                                                                                    Zip Code
+                                                                                                </label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="zipcode" name="zipcode" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="phonenumber">Phone
+                                                                                                    Number</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="phonenumber" id="phonenumber" name="phonenumber"
+                                                                                                    placeholder="" required>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal__footer">
+                                                                                <a href="#" class="modal__footer__cancel" type="button"
+                                                                                    class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                                                                <button type="button"
+                                                                                    class="modal__footer__subscribe btn-primary">Update Address</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="account__content__wrap__address-holder__address-button__btn" data-toggle="modal"
+                                                                        data-target="#delete-Modal" data-whatever="@mdo">Delete</button>
+                                                                <div class="modal fade" id="delete-Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                                        <div class="modal-content text-left">
+                                                                            <div class="modal__header">
+                                                                                <h2 class="modal__header__heading">Delete the address</h2>
+                                                                                <p class="modal__header__para">Are you sure you want to delete the address?</p>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal__footer">
+                                                                                <a href="#" class="modal__footer__cancel" type="button"
+                                                                                    class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                                                                <button type="button"
+                                                                                    class="modal__footer__subscribe btn-primary">Delete</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="account__content__wrap__address-holder">
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-head">
+                                                                <h3
+                                                                    class="account__content__wrap__address-holder__address-heading">
+                                                                    Office
+                                                                </h3>
+                                                                <a
+                                                                    class="account__content__wrap__address-holder__address-label btn-secondary">Added</a>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-body">
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    112 East Fly Heights
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    Alaska, 01241
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    1-888-255-1545
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    United States
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-button">
+                                                                <button type="button" class="account__content__wrap__address-holder__address-button__btn" data-toggle="modal"
+                                                                    data-target="#edit-Modal" data-whatever="@mdo">Edit</button>
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="edit-Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                                        <div class="modal-content text-left">
+                                                                            <div class="modal__header">
+                                                                                <h2 class="modal__header__heading">Edit Address</h2>
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal__body">
+                                                                                <div class="checkout__left__form-holder">
+                                                                                    <form class="checkout__left__form-holder__form">
+                                                                                        <div class="row">
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    Title</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="addresstitle" id="addresstitle" name="Input"
+                                                                                                    placeholder="" maxlength="20" required>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="firstname">First Name</label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="firstname" name="firstname" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="lastname">Last Name</label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="lastname" name="lastname" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    1</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="address1" id="address1" name="Input" placeholder=""
+                                                                                                    required>
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="addresstitle">Address
+                                                                                                    2</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="address2" id="address2" name="Input" placeholder=""
+                                                                                                    required>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="country">
+                                                                                                    Country
+                                                                                                </label>
+                                                                                                <select
+                                                                                                    class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                                    id="" name="" required="" aria-required="true"
+                                                                                                    autocomplete="shipping country"
+                                                                                                    aria-describedby="defaultCountry" placeholder="Country * ">
+                                                                                                    <option>United States</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="State">
+                                                                                                    State
+                                                                                                </label>
+                                                                                                <select
+                                                                                                    class="checkout__left__form-holder__form__input checkout__left__select-box__select"
+                                                                                                    id="" name="" required="" aria-required="true"
+                                                                                                    aria-describedby="defaultState" placeholder="State * ">
+                                                                                                    <option>Alaska</option>
+                                                                                                    <option>Arizona</option>
+                                                                                                    <option>New orleans</option>
+                                                                                                    <option>Missisippi</option>
+                                                                                                    <option>Alabama</option>
+                                                                                                    <option>Arizona</option>
+                                                                                                    <option>Arkansas</option>
+                                                                                                    <option>California</option>
+                                                                                                    <option>Colorado</option>
+                                                                                                    <option>Connecticut</option>
+                                                                                                    <option>Delaware</option>
+                                                                                                    <option>District of Columbia</option>
+                                                                                                    <option>Florida</option>
+                                                                                                    <option>Georgia</option>
+                                                                                                    <option>Idaho</option>
+                                                                                                    <option>Illinois</option>
+                                                                                                    <option>Indiana</option>
+                                                                                                    <option>Iowa</option>
+                                                                                                    <option>Kansas</option>
+                                                                                                    <option>Kentucky</option>
+                                                                                                    <option>Louisiana</option>
+                                                                                                    <option>Maine</option>
+                                                                                                    <option>Maryland</option>
+                                                                                                    <option>Massachusetts</option>
+                                                                                                    <option>Michigan</option>
+                                                                                                    <option>Minnesota</option>
+                                                                                                    <option>Mississippi</option>
+                                                                                                    <option>Missouri</option>
+                                                                                                    <option>Montana</option>
+                                                                                                    <option>Nebraska</option>
+                                                                                                    <option>Nevada</option>
+                                                                                                    <option>New Hampshire</option>
+                                                                                                    <option>New Jersey</option>
+                                                                                                    <option>New Mexico</option>
+                                                                                                    <option>New York</option>
+                                                                                                    <option>North Carolina</option>
+                                                                                                    <option>North Dakota</option>
+                                                                                                    <option>Ohio</option>
+                                                                                                    <option>Oklahoma</option>
+                                                                                                    <option>Oregon</option>
+                                                                                                    <option>Pennsylvania</option>
+                                                                                                    <option>Rhode Island</option>
+                                                                                                    <option>South Carolina</option>
+                                                                                                    <option>South Dakota</option>
+                                                                                                    <option>Tennessee</option>
+                                                                                                    <option>Texas</option>
+                                                                                                    <option>Utah</option>
+                                                                                                    <option>Vermont</option>
+                                                                                                    <option>Virginia</option>
+                                                                                                    <option>Washington</option>
+                                                                                                    <option>West Virginia</option>
+                                                                                                    <option>Wisconsin</option>
+                                                                                                    <option>Wyoming</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="city">
+                                                                                                    City
+                                                                                                </label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="city" name="city" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12 col-lg-6">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="zipcode">
+                                                                                                    Zip Code
+                                                                                                </label>
+                                                                                                <input class="checkout__left__form-holder__form__input" type="text"
+                                                                                                    id="zipcode" name="zipcode" placeholder="">
+                                                                                            </div>
+                                                                                            <div class="col-12">
+                                                                                                <label class="checkout__left__form-holder__form__label"
+                                                                                                    for="phonenumber">Phone
+                                                                                                    Number</label>
+                                                                                                <input class="checkout__left__form-holder__form__input"
+                                                                                                    type="phonenumber" id="phonenumber" name="phonenumber"
+                                                                                                    placeholder="" required>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal__footer">
+                                                                                <a href="#" class="modal__footer__cancel" type="button"
+                                                                                    class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                                                                <button type="button"
+                                                                                    class="modal__footer__subscribe btn-primary">Update Address</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                    <button type="button" class="account__content__wrap__address-holder__address-button__btn" data-toggle="modal"
+                                                                    data-target="#delete-Modal" data-whatever="@mdo">Delete</button>
+                                                            <div class="modal fade" id="delete-Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog modal__modal-wrap" role="document">
+                                                                    <div class="modal-content text-left">
+                                                                        <div class="modal__header">
+                                                                            <h2 class="modal__header__heading">Delete the address</h2>
+                                                                            <p class="modal__header__para">Are you sure you want to delete the address?</p>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal__footer">
+                                                                            <a href="#" class="modal__footer__cancel" type="button"
+                                                                                class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                                                            <button type="button"
+                                                                                class="modal__footer__subscribe btn-primary">Delete</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="account__content__wrap__address-holder">
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-head">
+                                                                <h3
+                                                                    class="account__content__wrap__address-holder__address-heading">
+                                                                    Home
+                                                                </h3>
+                                                                <a
+                                                                    class="account__content__wrap__address-holder__address-label account__content__wrap__address-holder__a-l-border btn-primary">On
+                                                                    File</a>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-body">
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    40 East Fly Heights
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    Newyork, 12121
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    1-888-255-1545
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    United States
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="2a">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6">
+                                                        <div class="account__content__wrap__address-holder">
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-head">
+                                                                <h3
+                                                                    class="account__content__wrap__address-holder__address-heading">
+                                                                    Home
+                                                                </h3>
+                                                            </div>
+                                                            <div
+                                                                class="account__content__wrap__address-holder__address-body">
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    40 East Fly Heights
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    Newyork, 12121
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    1-888-255-1545
+                                                                </p>
+                                                                <p
+                                                                    class="account__content__wrap__address-holder__address-body__text">
+                                                                    United States
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="cart__title-holder">
-                <h2 class="cart__title-holder__text">
-                    Your Cart (3 Items)
-                </h2>
-            </div>
-            <div class="cart__content">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <div class="cart__heading-wrap d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="cart__heading-holder">
-                                        <h3 class="cart__heading-holder__heading">Item
-
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="cart__heading-holder">
-                                        <h3 class="cart__heading-holder__heading">Quantity
-
-                                        </h3>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="cart__heading-holder  cart__product-wrap__price-wrap">
-                                        <h3 class="cart__heading-holder__heading">Price
-
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <p class="cart__product-wrap__text-holder__backorder-msg">On Backorder from
-                                                WAREHOUSE.
-                                                Est Ship Date August, 25th 2023</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1"
-                                                    oninput="this.value = Math.abs(this.value)">
-                                                <span class="plus">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox1" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox1">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox1">
-                                                <textarea id="commentBox1" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1"
-                                                    oninput="this.value = Math.abs(this.value)">
-                                                <span class="plus">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <p class="cart__product-wrap__text-holder__promo">NATIONAL PROMO 16% Off</p>
-                                        <p class="cart__product-wrap__text-holder__promo-end">Promo Ends 5/17/2023</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox3" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox3">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox3">
-                                                <textarea id="commentBox3" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__product-wrap">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <div class="cart__product-wrap__p-detail">
-                                        <div class="cart__product-wrap__img-wrap">
-                                            <figure class="cart__product-wrap__img-holder">
-                                                <img class="cart__product-wrap__img"
-                                                    src="./assets/images/ENDURO-flex.jpg">
-                                            </figure>
-                                        </div>
-                                        <div class="cart__product-wrap__text-holder">
-                                            <h4 class="cart__product-wrap__text-holder__p-name">Flap Disc Infographic
-                                            </h4>
-                                            <p class="cart__product-wrap__text-holder__sku">SKU: 123-425-222</p>
-                                            <a class="cart__product-wrap__text-holder__change" href="#">Change</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__qty-holder">
-                                        <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                            <div class="num-in">
-                                                <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1" min="1"
-                                                    oninput="this.value = Math.abs(this.value)">
-                                                <span class="plus">+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-12">
-                                    <div class="cart__product-wrap__price-holder cart__product-wrap__price-wrap">
-                                        <p class="cart__product-wrap__price-holder__unit-price">Unit Price: $469.99</p>
-                                        <p class="cart__product-wrap__text-holder__promo">TIERED DISCOUNT16% Off</p>
-                                        <span class="cart__product-wrap__price-holder__total">
-                                            Subtotal: $499.99
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart__p-bottom">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="cart__p-bottom__c-box">
-                                            <div class="cart__p-bottom__c-box__text-holder">
-                                                <a class="cart__p-bottom__c-box__text collapsed" data-toggle="collapse"
-                                                    href="#commentbox" role="button" aria-expanded="false"
-                                                    aria-controls="commentbox">
-                                                    Add Instructions:
-                                                </a>
-                                            </div>
-                                            <div class="collapse" id="commentbox">
-                                                <textarea id="commentBox" spellcheck="false"
-                                                    class="form-control cart__p-bottom__c-box__f-control" rows="2"
-                                                    cols="2"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cart__p-bottom__btn-holder">
-                                        <a class="cart__p-bottom__btn" href="#">Remove</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cart__left">
-                            <div class="cart__btn-holder">
-                                <button type="button" class="cart__btn-holder__add-more" data-toggle="modal"
-                                    data-target="#add-more" data-whatever="@mdo">Add More</button>
-                                <div class="modal fade" id="add-more" tabindex="-1" role="dialog"
-                                    aria-labelledby="ModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal__modal-wrap" role="document">
-                                        <div class="modal-content sku-modal">
-                                            <div class="modal__header sku-modal__header">
-                                                <h2 class="modal__header__heading sku-modal__header__heading">Search any
-                                                    SKU</h2>
-                                                <p class="modal__header__para sku-modal__para">Type SKU to search
-                                                    desired product.</p>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span class="modal__header__close-btn sku-modal__close-btn"
-                                                        aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal__body sku-modal__body">
-                                                <form action="" class="sku-modal__search">
-                                                    <input type="search" name="query" id="search-suggestions-input"
-                                                        class="sku-modal__search__input js-search-input"
-                                                        placeholder="Search..." autofocus>
-                                                    <a class="sku-modal__search__btn"><img
-                                                            class="s-result__search__popup-btn__img sku-modal__search__btn__img"
-                                                            src="./assets/images/search-white.png"></a>
-                                                </form>
-                                                <section class="sku-modal__body__content">
-                                                    <table class="table sku-modal__body__content__table">
-                                                        <thead>
-                                                            <tr
-                                                                class="product-search__card-body__table__item sku-modal__body__content__table-item">
-                                                                <th class="sku-modal__body__content__table-heading"
-                                                                    scope="col"></th>
-                                                                <th class="sku-modal__body__content__table-heading"
-                                                                    scope="col">Image</th>
-                                                                <th class="sku-modal__body__content__table-heading"
-                                                                    scope="col">Name</th>
-                                                                <th class="sku-modal__body__content__table-heading"
-                                                                    scope="col">Qty</th>
-                                                                <th class="sku-modal__body__content__table-heading"
-                                                                    scope="col">Price</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="sku-modal__body__content__table-row">
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <div
-                                                                        class="sku-modal__body__content__checkbox-holder">
-                                                                        <label><input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <img src="./assets/images/allsteel-flap-discs.jpg"
-                                                                        alt="p-image"
-                                                                        class="sku-modal__body__content__table-item__img">
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <span
-                                                                        class="sku-modal__body__content__table-item__p-name">Maxi
-                                                                        Grinder</span>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <div
-                                                                        class="sku-modal__body__content__table-item__qty-holder">
-                                                                        <div
-                                                                            class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                                                            <div class="num-in">
-                                                                                <span class="minus dis">-</span>
-                                                                                <input type="number" class="in-num"
-                                                                                    value="1" min="1"
-                                                                                    oninput="this.value = Math.abs(this.value)">
-                                                                                <span class="plus">+</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <p
-                                                                        class="sku-modal__body__content__table-item__price">
-                                                                        $4.99</p>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="sku-modal__body__content__table-row">
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <div
-                                                                        class="sku-modal__body__content__checkbox-holder">
-                                                                        <label><input type="checkbox">
-                                                                        </label>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <img src="./assets/images/allsteel-flap-discs.jpg"
-                                                                        alt="p-image"
-                                                                        class="sku-modal__body__content__table-item__img">
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <span
-                                                                        class="sku-modal__body__content__table-item__p-name">Maxi
-                                                                        Grinder Turbo</span>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <div
-                                                                        class="sku-modal__body__content__table-item__qty-holder">
-                                                                        <div
-                                                                            class="cart__product-wrap__qty-holder__qty num-block qty-selector">
-                                                                            <div class="num-in">
-                                                                                <span class="minus dis">-</span>
-                                                                                <input type="number" class="in-num"
-                                                                                    value="1" min="1"
-                                                                                    oninput="this.value = Math.abs(this.value)">
-                                                                                <span class="plus">+</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td class="sku-modal__body__content__table-item">
-                                                                    <p
-                                                                        class="sku-modal__body__content__table-item__price">
-                                                                        $4.99</p>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </section>
-                                            </div>
-                                            <div class="modal__footer">
-                                                <a href="#" class="modal__footer__cancel" type="button"
-                                                    class="btn btn-secondary" data-dismiss="modal">Cancel</a>
-                                                <button type="button"
-                                                    class="modal__footer__subscribe btn-primary">Add</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="cart__btn-holder__clear-cart">Clear Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="cart__right">
-                            <div class="order-summary">
-                                <div class="order-summary__cart-totals">
-                                    <div class="row">
-                                        <div class="col-8 p-0">
-                                            <p class="order-summary__cart-totals__text">Subtotal:</p>
-                                        </div>
-                                        <div class="col-4 p-0">
-                                            <p class="order-summary__cart-totals__subtotal text-right">$19.99</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-7 p-0">
-                                            <p class="order-summary__cart-totals__text">Coupon Code:</p>
-                                        </div>
-                                        <div class="col-5 p-0 text-right">
-                                            <a class="order-summary__cart-totals__btn collapsed" data-toggle="collapse"
-                                                href="#collapseExample" role="button" aria-expanded="false"
-                                                aria-controls="collapseExample">
-                                                Add coupon
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="order-summary__card">
-                                            <div class="order-summary__input-holder">
-                                                <input class="order-summary__input" type="text" id="coupon"
-                                                    name="coupon" placeholder="Add code">
-                                            </div>
-                                            <div class="order-summary__btn-holder">
-                                                <a href="#" class="order-summary__btn btn-primary">Apply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-9 p-0">
-                                            <p class="order-summary__cart-totals__promo-text">Manager's Special /
-                                                Coupon: Walter16</p>
-                                        </div>
-                                        <div class="col-3 p-0">
-                                            <p class="order-summary__cart-totals__promo-text text-right">-$530</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-8 p-0">
-                                            <p
-                                                class="order-summary__cart-totals__text order-summary__cart-totals__grand-total">
-                                                Estimated Total:</p>
-                                        </div>
-                                        <div class="col-4 p-0">
-                                            <p class="order-summary__cart-totals__grand-total text-right">$188.99</p>
-                                        </div>
-                                    </div>
-                                    <div class="order-summary__comment-box">
-                                        <div class="order-summary__comment-box__text-holder">
-                                            <a class="order-summary__comment-box__title collapsed"
-                                                data-toggle="collapse" href="#commentbox2" role="button"
-                                                aria-expanded="false" aria-controls="commentbox2">
-                                                Add Instructions:
-                                            </a>
-                                        </div>
-                                        <div class="collapse" id="commentbox2">
-                                            <textarea id="commentBox2" spellcheck="false" class="form-control" rows="2"
-                                                cols="2"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="order-summary__btn-wrap">
-                                    <a href="#" class="order-summary__c-shop-btn">Continue Shopping</a>
-                                    <a href="#" class="order-summary__checkout-btn btn-primary">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="slider-wrap container-fluid">
-            <div class="slider container">
-                <div class="slider__intro">
-                    <h2 class="slider__intro__text">Recommended Products</h2>
-                </div>
-                <div class="slider__wrapper">
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/XCAVATOR.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">XCAVATOR XX</h3>
-                            <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/icecut.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Icecut 200PM</h3>
-                            <p class="slider__wrap__heading-main">Drill unit with permanent magnet base for maximun
-                                safety
-                                on worksites </p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/e-weld pre coated.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">E-weld pre-coated nozzles</h3>
-                            <p class="slider__wrap__heading-main">Ultra-fast material removal and comfort</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
-                            <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate in
-                                the
-                                industry</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="slider__wrap">
-                        <figure class="slider__wrap__image-holder">
-                            <img class="slider__wrap__image" src="./assets/images/ENDURO-flex.jpg">
-                            <figcaption class="slider__wrap__badge badge">New</figcaption>
-                        </figure>
-                        <div class="slider__wrap__text-holder">
-                            <h3 class="slider__wrap__heading">Enduro-flex Turbo</h3>
-                            <p class="slider__wrap__heading-main">Blends welds faster with the fastest removal rate</p>
-                            <a href="#" class="slider__wrap__btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
+    </section>
     <!-- Footer Starts Here -->
     <footer class="c-site-footer">
         <div class="container c-site-footer__container">
@@ -1712,6 +1918,8 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>

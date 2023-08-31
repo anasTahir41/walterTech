@@ -1002,13 +1002,17 @@
                 <div class="col-lg-8">
                     <div class="checkout__progress-tab-wrap">
                         <ul class="checkout__progress-tab-wrap__progress-tab">
-                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">1</span><a href="#"
                                     class="checkout__progress-tab-wrap__progress-tab__link">Cart</a></li>
-                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">2</span><a href="#"
                                     class="checkout__progress-tab-wrap__progress-tab__link">Shipping</a></li>
-                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><a href="#"
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">3</span><a href="#"
                                     class="checkout__progress-tab-wrap__progress-tab__link">Billing</a></li>
-                            <li class="checkout__progress-tab-wrap__progress-tab__list"><a href="#"
+                            <li class="checkout__progress-tab-wrap__progress-tab__list"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">4</span><a href="#"
                                     class="checkout__progress-tab-wrap__progress-tab__link">Review</a></li>
                         </ul>
                     </div>
@@ -1045,12 +1049,27 @@
                                 <div class="checkout__left__billing__note-wrap">
                                     <ul class="checkout__left__billing__note-list">
                                         <li class="checkout__left__billing__note-text">Note:</li>
-                                        <li class="checkout__left__billing__note-text">Please send a copy of your invoice.</li>
-                                        <li class="checkout__left__billing__note-text">Please notify us if you are unable to process the order.
+                                        <li class="checkout__left__billing__note-text">Please send a copy of your
+                                            invoice.</li>
+                                        <li class="checkout__left__billing__note-text">Please notify us if you are
+                                            unable to process the order.
                                         </li>
-                                        <li class="checkout__left__billing__note-text">By accepting this order you accept our terms and conditions.</li>
+                                        <li class="checkout__left__billing__note-text">By accepting this order you
+                                            accept our terms and conditions.</li>
                                     </ul>
                                 </div>
+                                <form>
+                                    <h3 class="checkout__left__shipping__title">
+                                        Shipping Address
+                                    </h3>
+                                    <label class="checkout__left__label">
+                                        <input type="radio" name="delivery" value="standard" checked>
+                                        <div class="checkout__left__text-holder">
+                                            <p class="checkout__left__text-holder__text">321, Street, Main Fly Heights
+                                                building, North Arizona, xyz 000</p>
+                                        </div>
+                                    </label>
+                                </form>
                                 <form>
                                     <h3 class="checkout__left__billing__title">
                                         Billing Address
@@ -1073,102 +1092,162 @@
                         <div class="checkout__right">
                             <div class="order-summary">
                                 <h3 class="order-summary__title">Order Summary</h3>
-                                <div class="order-summary__product-wrap">
-                                    <figure class="order-summary__product-wrap__image-container">
-                                        <img class="order-summary__product-wrap__image-container__image"
-                                            src="./assets/images/ENDURO-flex.jpg">
-                                            <span class="order-summary__product-wrap__counter">
-                                                3
-                                            </span>
-                                    </figure>
-                                    <div class="order-summary__product-wrap__detail">
-                                        <div class="order-summary__product-wrap__text-holder">
-                                            <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
-                                                in 1
-                                            </h3>
-                                            <p class="order-summary__product-wrap__text-holder__disc">Surface
-                                                Finishing Discs
-                                            </p>
+                                <div class="order-summary__content-holder">
+                                    <div class="order-summary__product-wrap">
+                                        <figure class="order-summary__product-wrap__image-container">
+                                            <img class="order-summary__product-wrap__image-container__image"
+                                                src="./assets/images/allsteel-flap-discs.jpg">
+                                        </figure>
+                                        <div class="order-summary__product-wrap__detail">
+                                            <div class="order-summary__product-wrap__text-holder">
+                                                <div class="order-summary__product-wrap__text-holder__p-name">
+                                                    <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                        in 1 Turbo
+                                                    </h3>
+                                                    <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                        Finishing Discs
+                                                    </p>
+                                                    <p class="order-summary__product-wrap__text-holder__shipping">
+                                                        <span class="order-summary__product-wrap__text-holder__shipping-text">
+                                                            Shipping:
+                                                        </span>
+                                                        Gregory Cartwright	022 Kiehn Route	West Ned Alaska	00000
+                                                    </p>
+                                                </div>
+                                                <div class="order-summary__product-wrap__qty-holder">
+                                                    <p class="order-summary__product-wrap__qty">x 1</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-summary__product-wrap__price-holder">
+                                                <p class="order-summary__product-wrap__price">$2.99</p>
+                                            </div>
                                         </div>
-                                        <div class="order-summary__product-wrap__price-holder">
-                                            <p class="order-summary__product-wrap__price">$4.99</p>
+                                    </div>
+                                    <div class="order-summary__c-comment-wrap">
+                                        <div class="checkout__left__c-comments">
+                                            <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                                            <p class="checkout__left__c-comments__text">
+                                                Handle with care.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="order-summary__product-wrap">
-                                    <figure class="order-summary__product-wrap__image-container">
-                                        <img class="order-summary__product-wrap__image-container__image"
-                                            src="./assets/images/ENDURO-flex.jpg">
-                                            <span class="order-summary__product-wrap__counter">
-                                                1
-                                            </span>
-                                    </figure>
-                                    <div class="order-summary__product-wrap__detail">
-                                        <div class="order-summary__product-wrap__text-holder">
-                                            <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
-                                                in 1 Turbo
-                                            </h3>
-                                            <p class="order-summary__product-wrap__text-holder__disc">Surface
-                                                Finishing Discs
-                                            </p>
+                                <div class="order-summary__content-holder">
+                                    <div class="order-summary__product-wrap">
+                                        <figure class="order-summary__product-wrap__image-container">
+                                            <img class="order-summary__product-wrap__image-container__image"
+                                                src="./assets/images/ENDURO-flex.jpg">
+                                        </figure>
+                                        <div class="order-summary__product-wrap__detail">
+                                            <div class="order-summary__product-wrap__text-holder">
+                                                <div class="order-summary__product-wrap__text-holder__p-name">
+                                                    <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                        in 1
+                                                    </h3>
+                                                    <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                        Finishing Discs
+                                                    </p>
+                                                    <p class="order-summary__product-wrap__text-holder__shipping">
+                                                        <span class="order-summary__product-wrap__text-holder__shipping-text">
+                                                            Shipping:
+                                                        </span>
+                                                        Gregory Cartwright	936 Kiehn Route	West Ned	Tennessee	11230
+                                                    </p>
+                                                </div>
+                                                <div class="order-summary__product-wrap__qty-holder">
+                                                    <p class="order-summary__product-wrap__qty">x 1</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-summary__product-wrap__price-holder">
+                                                <p class="order-summary__product-wrap__price">$2.99</p>
+                                            </div>
                                         </div>
-                                        <div class="order-summary__product-wrap__price-holder">
-                                            <p class="order-summary__product-wrap__price">$2.99</p>
+                                    </div>
+                                    <div class="order-summary__c-comment-wrap">
+                                        <div class="checkout__left__c-comments">
+                                            <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                                            <p class="checkout__left__c-comments__text">
+                                                Handle with care.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="order-summary__product-wrap">
-                                    <figure class="order-summary__product-wrap__image-container">
-                                        <img class="order-summary__product-wrap__image-container__image"
-                                            src="./assets/images/ENDURO-flex.jpg">
-                                            <span class="order-summary__product-wrap__counter">
-                                                2
-                                            </span>
-                                    </figure>
-                                    <div class="order-summary__product-wrap__detail">
-                                        <div class="order-summary__product-wrap__text-holder">
-                                            <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
-                                                in 1 Turbo Plus
-                                            </h3>
-                                            <p class="order-summary__product-wrap__text-holder__disc">Surface
-                                                Finishing Discs
-                                            </p>
+                                <div class="order-summary__content-holder">
+                                    <div class="order-summary__product-wrap">
+                                        <figure class="order-summary__product-wrap__image-container">
+                                            <img class="order-summary__product-wrap__image-container__image"
+                                                src="./assets/images/ENDURO-flex.jpg">
+                                        </figure>
+                                        <div class="order-summary__product-wrap__detail">
+                                            <div class="order-summary__product-wrap__text-holder">
+                                                <div class="order-summary__product-wrap__text-holder__p-name">
+                                                    <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                        in 1
+                                                    </h3>
+                                                    <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                        Finishing Discs
+                                                    </p>
+                                                    <p class="order-summary__product-wrap__text-holder__shipping">
+                                                        <span class="order-summary__product-wrap__text-holder__shipping-text">
+                                                            Shipping:
+                                                        </span>
+                                                        Pickup
+                                                    </p>
+                                                </div>
+                                                <div class="order-summary__product-wrap__qty-holder">
+                                                    <p class="order-summary__product-wrap__qty">x 1</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-summary__product-wrap__price-holder">
+                                                <p class="order-summary__product-wrap__price">$2.99</p>
+                                            </div>
                                         </div>
-                                        <div class="order-summary__product-wrap__price-holder">
-                                            <p class="order-summary__product-wrap__price">$3.99</p>
+                                    </div>
+                                    <div class="order-summary__c-comment-wrap">
+                                        <div class="checkout__left__c-comments">
+                                            <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                                            <p class="checkout__left__c-comments__text">
+                                                Handle with care.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="order-summary__cart-totals">
                                     <div class="row">
-                                        <div class="col-8 p-0">
+                                        <div class="col-6 col-lg-8 p-0">
                                             <p class="order-summary__cart-totals__text">Subtotal:</p>
                                         </div>
-                                        <div class="col-4 p-0">
+                                        <div class="col-6 col-lg-4 p-0">
                                             <p class="order-summary__cart-totals__subtotal text-right">$19.99</p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-8 p-0">
+                                        <div class="col-6 col-lg-8 p-0">
                                             <p class="order-summary__cart-totals__coupon-code">Manager special / coupon:
                                                 Walter16</p>
                                         </div>
-                                        <div class="col-4 p-0">
+                                        <div class="col-6 col-lg-4 p-0">
                                             <p class="order-summary__cart-totals__amount text-right">-$530.00</p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-8 p-0">
+                                        <div class="col-6 col-lg-8 p-0">
                                             <p
                                                 class="order-summary__cart-totals__text order-summary__cart-totals__grand-total">
                                                 Estimated Total:</p>
                                         </div>
-                                        <div class="col-4 p-0">
+                                        <div class="col-6 col-lg-4 p-0">
                                             <p class="order-summary__cart-totals__grand-total text-right">$188.99</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="checkout__left__c-comments mt-4">
+                            <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                            <p class="checkout__left__c-comments__text">
+                                Handle with care.
+                            </p>
                         </div>
                     </div>
 

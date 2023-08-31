@@ -52,28 +52,49 @@ $ns: checkout;
     &__progress-tab-wrap {
         &__progress-tab {
             display: flex;
-            justify-content: space-between;
             list-style: none;
             padding: 0;
 
+            &__counter {
+                background-color: transparent;
+                border-radius: 40px;
+                border: 3px solid $primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 500;
+                height: 30px;
+                width: 30px;
+            }
+
             &__list {
-                width: 25%;
+                position: relative;
+                width: calc(33.33% - 15px);
 
                 @media only screen and (max-width: 767.98px) {
-                    margin-right: 5px;
+                    width: calc(33.33% - 13px);
                 }
 
                 &.active {
                     .checkout__progress-tab-wrap__progress-tab__link {
                         font-weight: $font700;
-
-                        &::before {
-                            background-color: $primary;
-                        }
                     }
 
                     &::after {
                         background-color: $primary;
+                    }
+
+                    .checkout__progress-tab-wrap__progress-tab__counter {
+                        background-color: $primary;
+                    }
+                }
+
+                &:last-child {
+                    width: 0;
+
+                    &::after {
+                        display: none;
                     }
                 }
 
@@ -83,39 +104,38 @@ $ns: checkout;
                     border: none;
                     content: '';
                     display: block;
-                    height: 2px;
+                    height: 3px;
                     position: absolute;
-                    bottom: 0;
-                    width: 25%;
+                    left: 17%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 75%;
+
+                    @media only screen and (max-width: 1198.98px) {
+                        left: 20%;
+                    }
 
                     @media only screen and (max-width: 767.98px) {
-                        width: 24%;
+                        left: 27%;
+                        width: 63%;
+                    }
+
+                    @media only screen and (max-width: 575.98px) {
+                        left: 36%;
+                        width: 55%;
                     }
                 }
             }
 
             &__link {
                 display: block;
-                padding-left: 35px;
-                position: relative;
+                position: absolute;
+                top: 34px;
+                left: 16px;
+                transform: translateX(-50%);
 
                 @media only screen and (max-width: 767.98px) {
                     font-size: 12px;
-                    padding-left: 30px;
-                }
-
-                &::before {
-                    background-color: transparent;
-                    border-radius: 40px;
-                    border: 3px solid $primary;
-                    content: '';
-                    display: block;
-                    height: 24px;
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 24px;
                 }
             }
         }
@@ -176,6 +196,28 @@ $ns: checkout;
             margin-bottom: 10px;
         }
 
+        &__c-comments {
+            &__title {
+                font-size: 20px;
+                font-weight: $font600;
+                word-break: break-word;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 18px;
+                }
+            }
+
+            &__text {
+                font-size: 16px;
+                font-weight: $font600;
+                word-break: break-word;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
         &__delivery-ops {
             margin-bottom: 30px;
         }
@@ -192,11 +234,13 @@ $ns: checkout;
                 font-size: 16px;
                 font-weight: $font600;
                 margin: 0;
+                word-break: break-word;
             }
 
             &__price {
                 font-size: 16px;
                 font-weight: $font600;
+                word-break: break-word;
             }
         }
 
@@ -213,12 +257,9 @@ $ns: checkout;
                 display: inline-block;
                 font-size: 18px;
                 padding: 6px 18px;
+                padding-right: 40px;
                 position: relative;
                 width: 100%;
-
-                @media only screen and (max-width: 767.98px) {
-                    padding-right: 40px;
-                }
 
                 &:focus-visible {
                     outline: none;
@@ -354,6 +395,8 @@ $ns: checkout;
         }
 
         &__form-btn-wrap {
+            margin-bottom: 16px;
+
             &__btn {
                 border: 2px solid $primary;
                 text-align: center;
@@ -362,6 +405,14 @@ $ns: checkout;
                 @media only screen and (max-width: 767.98px) {
                     font-size: 14px;
                 }
+            }
+        }
+
+        &__shipping {
+            &__title {
+                font-size: 20px;
+                font-weight: $font600;
+                margin-bottom: 15px;
             }
         }
 

@@ -7,6 +7,36 @@ $ns: order-summary;
         margin-bottom: 15px;
     }
 
+    &__content-holder {
+        background-color: $white;
+        border: 1px solid $grey16;
+        margin-bottom: 15px;
+
+        .order-summary__product-wrap {
+            border: 0;
+            border-bottom: 1px solid $grey16;
+            margin: 0;
+        }
+
+        .order-summary__c-comment-wrap {
+            padding: 15px;
+        }
+
+        .checkout__left__c-comments {
+            margin: 0;
+        }
+
+        .checkout__left__c-comments__title {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .checkout__left__c-comments__text {
+            color: $grey10;
+            font-size: 14px;
+        }
+    }
+
     &__product-wrap {
         background-color: $white;
         border: 1px solid $grey16;
@@ -14,6 +44,10 @@ $ns: order-summary;
             align-items: center;
         margin-bottom: 15px;
         padding: 15px;
+
+        @media only screen and (max-width: 767.98px) {
+            padding: 10px;
+        }
 
         &__detail {
             display: flex;
@@ -26,8 +60,24 @@ $ns: order-summary;
             margin: 0 20px 0 0;
             position: relative;
 
+            @media only screen and (max-width: 1199.98px) {
+                margin-right: 5px;
+            }
+
+            @media only screen and (max-width: 991.98px) {
+                margin-right: 15px;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                margin: 0 5px 0 0;
+            }
+
             &__image {
                 width: 70px;
+
+                @media only screen and (max-width: 1199.98px) {
+                    width: 65px;
+                }
             }
         }
 
@@ -43,16 +93,82 @@ $ns: order-summary;
         }
 
         &__text-holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            &__p-name {
+                margin-right: 20px;
+                max-width: 250px;
+                width: 100%;
+                word-break: break-word;
+
+                @media only screen and (max-width: 1199.98px) {
+                    margin-right: 13px;
+                }
+
+                @media only screen and (max-width: 767.98px) {
+                    margin-right: 8px;
+                }
+
+                @media only screen and (max-width: 575.98px) {
+                    max-width: 130px;
+                }
+            }
+
             &__text {
                 font-size: 16px;
                 font-weight: 600;
                 margin: 0;
+                word-break: break-word;
+
+                @media only screen and (max-width: 1199.98px) {
+                    font-size: 14px;
+                }
             }
 
             &__disc {
                 color: $grey10;
                 font-size: 16px;
                 margin: 0;
+
+                @media only screen and (max-width: 1199.98px) {
+                    font-size: 14px;
+                }
+            }
+
+            &__shipping {
+                color: $grey10;
+                font-size: 16px;
+                word-break: break-word;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+
+            &__shipping-text {
+                color: $secondary;
+                font-size: 16px;
+                font-weight: $font600;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__qty-holder {
+            margin-right: 20px;
+            max-width: 66px;
+            width: 100%;
+
+            @media only screen and (max-width: 1199.98px) {
+                margin-right: 13px;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                margin-right: 8px;
             }
         }
 
@@ -60,6 +176,28 @@ $ns: order-summary;
             font-size: 16px;
             font-weight: 600;
             margin: 0;
+
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 14px;
+            }
+
+            @media only screen and (max-width: 575.98px) {
+                font-size: 11px;
+            }
+        }
+
+        &__qty {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+
+            @media only screen and (max-width: 1199.98px) {
+                font-size: 14px;
+            }
+
+            @media only screen and (max-width: 575.98px) {
+                font-size: 11px;
+            }
         }
     }
 

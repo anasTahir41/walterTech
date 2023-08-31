@@ -77,6 +77,7 @@ $ns: modal;
         &__cancel {
             font-size: 16px;
             font-weight: $font700;
+            text-decoration: underline;
         }
 
         &__subscribe {

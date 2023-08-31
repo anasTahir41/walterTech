@@ -1,0 +1,204 @@
+$ns: sku-modal;
+
+.#{$ns} {
+    table {
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    &__header {
+        border: none;
+        display: block;
+        padding: 30px 20px 20px 25px;
+        position: relative;
+        text-align: center;
+
+        &__heading {
+            color: $secondary;
+            font-size: 32px;
+            font-weight: 700;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        &__input {
+        background: $grey1;
+        border: none;
+        color: $secondary;
+        font-size: 20px;
+        font-weight: $font500;
+        padding: 16px 16px 15px 24px;
+        width: 100%;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 16px;
+                padding: 15px 16px 15px 24px;
+            }
+
+            &::placeholder {
+                color: $secondary;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        &__btn {
+            background: $primary;
+            cursor: pointer;
+            padding: 16px 16px 15px;
+
+            @media only screen and (max-width: 767.98px) {
+                padding: 12px;
+            }
+        }
+    }
+
+    &__body {
+        &__content {
+            overflow-x: scroll;
+
+            table {
+                width: 100%;
+
+                @media only screen and (max-width: 767.98px) {
+                    width: 600px;
+                }
+            }
+
+            label {
+                margin: 0;
+            }
+
+            &__table-item {
+                color: $secondary;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 14px;
+                vertical-align: middle;
+
+                th {
+                    padding: 15px;
+                }
+
+                td {
+                    padding: 15px;
+                    vertical-align: middle;
+                    width: 33.33%;
+                }
+
+                &__img {
+                    width: 65px;
+                }
+
+                &__p-name {
+                    background: transparent;
+                    border: none;
+                    color: $secondary;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0;
+                }
+
+                &__qty-holder {
+                    &__qty {
+                        @media only screen and (max-width: 992.98px) {
+                            display: flex;
+                        }
+                    }
+
+                    .qty-selector input.in-num {
+                        background-color: $white;
+                        border: 2px solid $secondary;
+                        font-size: 14px;
+                        height: 32px;
+                        text-align: center;
+                        width: 83px;
+                    }
+
+                    .qty-selector .num-in {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .qty-selector .in-num {
+                        display: flex;
+                        align-items: center;
+                        height: 32px;
+                    }
+
+                    .qty-selector .num-in span {
+                        background-color: transparent;
+                        border: 2px solid $secondary;
+                        cursor: pointer;
+                        display: block;
+                        font-size: 17px;
+                        height: 32px;
+                        text-align: center;
+                        transition: all 0.3s;
+                        width: 40px;
+
+                        &.minus {
+                            border-bottom-left-radius: 7px;
+                            border-top-left-radius: 7px;
+                        }
+
+                        &.plus {
+                            border-bottom-right-radius: 7px;
+                            border-top-right-radius: 7px;
+                        }
+                    }
+
+                    .qty-selector .num-in span:hover {
+                        background-color: $grey16;
+                    }
+
+                    .qty-selector .num-in input {
+                        border: 2px solid $secondary;
+                        border-left: 0;
+                        border-right: 0;
+                        text-align: center;
+                        width: 60px;
+
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+                }
+
+                &__price {
+                    background: transparent;
+                    border: none;
+                    color: $secondary;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 0;
+                }
+            }
+
+            &__table-heading {
+                color: $secondary;
+                font-size: 14px;
+                font-weight: $font700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

@@ -71,7 +71,23 @@ $ns: news-detail;
         padding-bottom: 30px;
 
         &__image-holder {
-            margin-bottom: 30px;
+            margin-bottom: 23px;
+        }
+
+        &__tag-holder {
+            margin-bottom: 8px;
+
+            &__tag {
+                background-color: $primary;
+                border-radius: 0;
+                color: $white;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 500;
+                margin: 0 16px 8px 0;
+                padding: 4px 8px;
+                text-transform: uppercase;
+            }
         }
 
         &__image {
