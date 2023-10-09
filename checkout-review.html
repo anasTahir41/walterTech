@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>error msg Page</title>
+    <title>Checkout</title>
     <link rel="icon" type="image/x-icon" href="" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,7 +62,7 @@
                     <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
                     </div>
-                    <div class="dropdown c-site-header__top__right__dropdown">
+                    <!-- <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -74,7 +74,7 @@
                             <a class="dropdown-item" href="#">Addresses</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -988,32 +988,226 @@
         </div>
     </header>
     <!-- Header Ends Here -->
-
-    <div class="error-msg">
-        <section class="error-msg__banner">
-            <figure class="error-msg__banner__image-wrapper">
-                <img class="error-msg__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
+    <div class="checkout">
+        <section class="checkout__banner">
+            <figure class="checkout__banner__image">
+                <img class="checkout__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
             </figure>
-            <div class="error-msg__banner__wrap container">
-                <h2 class="error-msg__banner__wrap__heading-main">Sorry!</h2>
+            <div class="checkout__banner__wrap container">
+                <h2 class="checkout__banner__wrap__heading-main">Checkout</h2>
             </div>
         </section>
         <div class="container">
-            <div class="error-msg__content">
-                <h2 class="error-msg__content__title">Ooops! Page Not Found</h2>
-                <h3 class="error-msg__content__descrip">The page you’re looking for appears to have been moved, renamed or deleted.</h3>
-                <div class="error-msg__content__search-wrap">
-                    <form class="error-msg__content__search-wrap__search">
-                        <input class="error-msg__content__search-wrap__search-field" type="search" name="q" value=""
-                            autocomplete="off" placeholder="Search..." aria-label="search" />
-                    </form>
-                    <a class="btn-primary" href="#">Search</a>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="checkout__progress-tab-wrap">
+                        <ul class="checkout__progress-tab-wrap__progress-tab">
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">1</span><a href="#"
+                                    class="checkout__progress-tab-wrap__progress-tab__link">Cart</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">2</span><a href="#"
+                                    class="checkout__progress-tab-wrap__progress-tab__link">Shipping</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">3</span><a href="#"
+                                    class="checkout__progress-tab-wrap__progress-tab__link">Billing</a></li>
+                            <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                    class="checkout__progress-tab-wrap__progress-tab__counter">4</span><a href="#"
+                                    class="checkout__progress-tab-wrap__progress-tab__link">Review</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <a class="error-msg__link" href="#">Back to Home</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="checkout__content">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <div class="checkout__left-wrap">
+                            <div class="checkout__left">
+                                <div class="order-summary__product-holder checkout__left__product-holder">
+                                    <figure class="order-summary__product-wrap__image-container">
+                                        <img class="order-summary__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                    </figure>
+                                    <div class="order-summary__product-wrap__detail">
+                                        <div class="order-summary__product-wrap__text-holder">
+                                            <div class="order-summary__product-wrap__text-holder__p-name">
+                                                <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                    in 1
+                                                </h3>
+                                                <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                    Finishing Discs
+                                                </p>
+                                                <p class="order-summary__product-wrap__text-holder__disc">In Stock
+                                                </p>
+                                            </div>
+                                            <div class="order-summary__product-wrap__qty-holder">
+                                                <p class="order-summary__product-wrap__qty">x 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="order-summary__product-wrap__price-holder">
+                                            <p class="order-summary__product-wrap__price">$12.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__left__text-content">
+                                    <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                                    <p class="checkout__left__c-comments__text">
+                                        Handle with care.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="checkout__left">
+                                <div class="order-summary__product-holder checkout__left__product-holder">
+                                    <figure class="order-summary__product-wrap__image-container">
+                                        <img class="order-summary__product-wrap__image-container__image"
+                                            src="./assets/images/ENDURO-flex.jpg">
+                                    </figure>
+                                    <div class="order-summary__product-wrap__detail">
+                                        <div class="order-summary__product-wrap__text-holder">
+                                            <div class="order-summary__product-wrap__text-holder__p-name">
+                                                <h3 class="order-summary__product-wrap__text-holder__text">ENDURO-flex 2
+                                                    in 1
+                                                </h3>
+                                                <p class="order-summary__product-wrap__text-holder__disc">Surface
+                                                    Finishing Discs
+                                                </p>
+                                                <p class="order-summary__product-wrap__text-holder__disc">In Stock
+                                                </p>
+                                            </div>
+                                            <div class="order-summary__product-wrap__qty-holder">
+                                                <p class="order-summary__product-wrap__qty">x 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="order-summary__product-wrap__price-holder">
+                                            <p class="order-summary__product-wrap__price">$12.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout__left__text-content">
+                                    <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                                    <p class="checkout__left__c-comments__text">
+                                        Handle with care.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="checkout__left">
+                                <div class="checkout__left__text-content">
+                                    <div class="checkout__left__delivery-ops">
+                                        <h3 class="checkout__left__title">Delivery Options</h3>
+                                        <form>
+                                            <label class="checkout__left__label">
+                                                <input type="radio" name="delivery" value="standard" checked>
+                                                <div class="checkout__left__text-holder">
+                                                    <p class="checkout__left__text-holder__text">Ship</p>
+                                                    <span class="checkout__left__text-holder__price">$4.99</span>
+                                                </div>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="checkout__left__shipping mb-0">
+                                        <h3 class="checkout__left__title">Shipping to:</h3>
+                                        <form>
+                                            <label class="checkout__left__label">
+                                                <input type="radio" name="delivery" value="standard" checked>
+                                                <div class="checkout__left__text-holder">
+                                                    <p class="checkout__left__text-holder__text">321, Street, Main Fly Heights building, Columbia 111</p>
+                                                </div>
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__left">
+                                <div class="checkout__left__billing">
+                                    <h3 class="checkout__left__billing__title">
+                                        Payment
+                                    </h3>
+                                    <form>
+                                        <label class="checkout__left__label">
+                                            <input type="radio" name="delivery" value="standard" checked>
+                                            <div class="checkout__left__text-holder">
+                                                <p class="checkout__left__text-holder__text">Purchase Order</p>
+                                            </div>
+                                        </label>
+                                    </form>
+                                    <div class="checkout__left__billing__po-text-wrap">
+                                        <h5 class="checkout__left__billing__po-heading">
+                                            Purchase Order Number
+                                        </h5>
+                                        <p class="checkout__left__billing__po-num">
+                                            00012345
+                                        </p>
+                                    </div>
+                                    <form>
+                                        <h3 class="checkout__left__billing__title">
+                                            Billing Address
+                                        </h3>
+                                        <label class="checkout__left__label">
+                                            <input type="radio" name="delivery" value="standard" checked>
+                                            <div class="checkout__left__text-holder">
+                                                <p class="checkout__left__text-holder__text">321, Street, Main Fly Heights
+                                                    building, North Arizona, xyz 000</p>
+                                            </div>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="checkout__left-wrap__btn-holder d-none d-lg-block">
+                                <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="checkout__right">
+                            <div class="order-summary">
+                                <h3 class="order-summary__title">Order Summary</h3>
+                                <div class="order-summary__cart-totals">
+                                    <div class="row">
+                                        <div class="col-6 col-lg-8 p-0">
+                                            <p class="order-summary__cart-totals__text">Subtotal:</p>
+                                        </div>
+                                        <div class="col-6 col-lg-4 p-0">
+                                            <p class="order-summary__cart-totals__subtotal text-right">$19.99</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-lg-8 p-0">
+                                            <p class="order-summary__cart-totals__coupon-code">Manager special / coupon:
+                                                Walter16</p>
+                                        </div>
+                                        <div class="col-6 col-lg-4 p-0">
+                                            <p class="order-summary__cart-totals__amount text-right">-$530.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 col-lg-8 p-0">
+                                            <p
+                                                class="order-summary__cart-totals__text order-summary__cart-totals__grand-total">
+                                                Estimated Total:</p>
+                                        </div>
+                                        <div class="col-6 col-lg-4 p-0">
+                                            <p class="order-summary__cart-totals__grand-total text-right">$188.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__left__c-comments mt-4">
+                            <h3 class="checkout__left__c-comments__title">Instructions:</h3>
+                            <p class="checkout__left__c-comments__text">
+                                Handle with care.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="checkout__left-wrap__btn-holder d-block d-lg-none">
+                        <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <!-- Footer Starts Here -->
     <footer class="c-site-footer">
         <div class="container c-site-footer__container">

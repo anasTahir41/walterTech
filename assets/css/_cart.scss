@@ -2,7 +2,7 @@ $ns: cart;
 
 .#{$ns} {
     background-color: $white;
-    padding-bottom: 30px;
+    padding: 60px 0 30px;
 
     &__title-holder {
         padding: 60px 0;
@@ -184,11 +184,17 @@ $ns: cart;
                 border-left: 0;
                 border-right: 0;
                 text-align: center;
-                width: 40px;
+                width: 60px;
 
                 &:focus-visible {
                     outline: none;
                 }
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
             }
         }
 
@@ -309,6 +315,38 @@ $ns: cart;
         }
     }
 
+    &__btn-wrap {
+        margin: 10px 0 10px;
+        text-align: center;
+
+        &__view-more {
+            color: $primary;
+            font-size: 16px;
+            font-weight: $font500;
+            position: relative;
+            text-decoration: underline;
+
+            &::after {
+                background-image: url(../images/up-arrow.png);
+                background-repeat: no-repeat;
+                content: "";
+                height: 20px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                right: -26px;
+                top: 6px;
+                transform-origin: center;
+                transform: rotate(180deg);
+                width: 21px;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
     &__btn-holder {
         display: flex;
             align-items: center;
@@ -316,6 +354,8 @@ $ns: cart;
         margin-top: 10px;
 
         &__add-more {
+            background: transparent;
+            border: 0;
             color: $secondary;
             font-size: 16px;
             font-weight: $font500;

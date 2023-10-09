@@ -249,6 +249,14 @@ $ns: news-release;
                 text-transform: uppercase
             }
 
+            &__news-badge,
+            &__event-badge {
+                background-color: $primary;
+                display: block;
+                margin: 10px 0;
+                width: fit-content;
+            }
+
             &__text {
                 font-size: 18px;
                 font-weight: 700;

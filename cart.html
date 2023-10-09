@@ -62,7 +62,7 @@
                     <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
                     </div>
-                    <div class="dropdown c-site-header__top__right__dropdown">
+                    <!-- <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -74,7 +74,7 @@
                             <a class="dropdown-item" href="#">Addresses</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -990,6 +990,30 @@
     <!-- Header Ends Here -->
     <div class="cart">
         <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="checkout__progress-tab-wrap">
+                        <div class="checkout__progress-tab-wrap">
+                            <ul class="checkout__progress-tab-wrap__progress-tab">
+                                <li class="checkout__progress-tab-wrap__progress-tab__list active"><span
+                                        class="checkout__progress-tab-wrap__progress-tab__counter">1</span><a href="#"
+                                        class="checkout__progress-tab-wrap__progress-tab__link">Cart</a></li>
+                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
+                                        class="checkout__progress-tab-wrap__progress-tab__counter">2</span><a href="#"
+                                        class="checkout__progress-tab-wrap__progress-tab__link">Shipping</a></li>
+                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
+                                        class="checkout__progress-tab-wrap__progress-tab__counter">3</span><a href="#"
+                                        class="checkout__progress-tab-wrap__progress-tab__link">Billing</a></li>
+                                <li class="checkout__progress-tab-wrap__progress-tab__list"><span
+                                        class="checkout__progress-tab-wrap__progress-tab__counter">4</span><a href="#"
+                                        class="checkout__progress-tab-wrap__progress-tab__link">Review</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="cart__title-holder">
                 <h2 class="cart__title-holder__text">
                     Your Cart (3 Items)
@@ -1049,7 +1073,8 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1">
+                                                <input type="number" class="in-num" value="1" min="1"
+                                                    oninput="this.value = Math.abs(this.value)">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1111,7 +1136,8 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1">
+                                                <input type="number" class="in-num" value="1" min="1"
+                                                    oninput="this.value = Math.abs(this.value)">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1175,7 +1201,8 @@
                                         <div class="cart__product-wrap__qty-holder__qty num-block qty-selector">
                                             <div class="num-in">
                                                 <span class="minus dis">-</span>
-                                                <input type="number" class="in-num" value="1">
+                                                <input type="number" class="in-num" value="1" min="1"
+                                                    oninput="this.value = Math.abs(this.value)">
                                                 <span class="plus">+</span>
                                             </div>
                                         </div>
@@ -1215,9 +1242,146 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cart__btn-wrap">
+                            <a href="#" class="cart__btn-wrap__view-more">More</a>
+                        </div>
                         <div class="cart__left">
                             <div class="cart__btn-holder">
-                                <a href="#" class="cart__btn-holder__add-more">Add More</a>
+                                <button type="button" class="cart__btn-holder__add-more" data-toggle="modal"
+                                    data-target="#add-more" data-whatever="@mdo">Add More</button>
+                                <div class="modal fade" id="add-more" tabindex="-1" role="dialog"
+                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                        <div class="modal-content sku-modal">
+                                            <div class="modal__header sku-modal__header">
+                                                <h2 class="modal__header__heading sku-modal__header__heading">Search any
+                                                    SKU</h2>
+                                                <p class="modal__header__para sku-modal__para">Type SKU to search
+                                                    desired product.</p>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span class="modal__header__close-btn sku-modal__close-btn"
+                                                        aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal__body sku-modal__body">
+                                                <form action="" class="sku-modal__search">
+                                                    <input type="search" name="query" id="search-suggestions-input"
+                                                        class="sku-modal__search__input js-search-input"
+                                                        placeholder="Search..." autofocus>
+                                                    <a class="sku-modal__search__btn"><img
+                                                            class="s-result__search__popup-btn__img sku-modal__search__btn__img"
+                                                            src="./assets/images/search-white.png"></a>
+                                                </form>
+                                                <section class="sku-modal__body__content">
+                                                    <table class="table sku-modal__body__content__table">
+                                                        <thead>
+                                                            <tr
+                                                                class="product-search__card-body__table__item sku-modal__body__content__table-item">
+                                                                <th class="sku-modal__body__content__table-heading"
+                                                                    scope="col"></th>
+                                                                <th class="sku-modal__body__content__table-heading"
+                                                                    scope="col">Image</th>
+                                                                <th class="sku-modal__body__content__table-heading"
+                                                                    scope="col">Name</th>
+                                                                <th class="sku-modal__body__content__table-heading"
+                                                                    scope="col">Qty</th>
+                                                                <th class="sku-modal__body__content__table-heading"
+                                                                    scope="col">Price</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="sku-modal__body__content__table-row">
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <div
+                                                                        class="sku-modal__body__content__checkbox-holder">
+                                                                        <label><input type="checkbox">
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <img src="./assets/images/allsteel-flap-discs.jpg"
+                                                                        alt="p-image"
+                                                                        class="sku-modal__body__content__table-item__img">
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <span
+                                                                        class="sku-modal__body__content__table-item__p-name">Maxi
+                                                                        Grinder</span>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <div
+                                                                        class="sku-modal__body__content__table-item__qty-holder">
+                                                                        <div
+                                                                            class="cart__product-wrap__qty-holder__qty num-block qty-selector">
+                                                                            <div class="num-in">
+                                                                                <span class="minus dis">-</span>
+                                                                                <input type="number" class="in-num"
+                                                                                    value="1" min="1"
+                                                                                    oninput="this.value = Math.abs(this.value)">
+                                                                                <span class="plus">+</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <p
+                                                                        class="sku-modal__body__content__table-item__price">
+                                                                        $4.99</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="sku-modal__body__content__table-row">
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <div
+                                                                        class="sku-modal__body__content__checkbox-holder">
+                                                                        <label><input type="checkbox">
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <img src="./assets/images/allsteel-flap-discs.jpg"
+                                                                        alt="p-image"
+                                                                        class="sku-modal__body__content__table-item__img">
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <span
+                                                                        class="sku-modal__body__content__table-item__p-name">Maxi
+                                                                        Grinder Turbo</span>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <div
+                                                                        class="sku-modal__body__content__table-item__qty-holder">
+                                                                        <div
+                                                                            class="cart__product-wrap__qty-holder__qty num-block qty-selector">
+                                                                            <div class="num-in">
+                                                                                <span class="minus dis">-</span>
+                                                                                <input type="number" class="in-num"
+                                                                                    value="1" min="1"
+                                                                                    oninput="this.value = Math.abs(this.value)">
+                                                                                <span class="plus">+</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="sku-modal__body__content__table-item">
+                                                                    <p
+                                                                        class="sku-modal__body__content__table-item__price">
+                                                                        $4.99</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+                                            </div>
+                                            <div class="modal__footer">
+                                                <a href="#" class="modal__footer__cancel" type="button"
+                                                    data-dismiss="modal">Cancel</a>
+                                                <button type="button"
+                                                    class="modal__footer__subscribe btn-primary">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <a href="#" class="cart__btn-holder__clear-cart">Clear Cart</a>
                             </div>
                         </div>
@@ -1259,7 +1423,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-9 p-0">
-                                            <p class="order-summary__cart-totals__promo-text">Manager's Special / Coupon: Walter16</p>
+                                            <p class="order-summary__cart-totals__promo-text">Manager's Special /
+                                                Coupon: Walter16</p>
                                         </div>
                                         <div class="col-3 p-0">
                                             <p class="order-summary__cart-totals__promo-text text-right">-$530</p>
@@ -1512,7 +1677,7 @@
                                     </div>
                                     <div class="modal__footer">
                                         <a href="#" class="modal__footer__cancel" type="button"
-                                            class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                                             data-dismiss="modal">Cancel</a>
                                         <button type="button"
                                             class="modal__footer__subscribe btn-primary">Subscribe</button>
                                     </div>
@@ -1552,5 +1717,4 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
-
 </html>
