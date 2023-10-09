@@ -20,12 +20,20 @@
     flex-wrap: wrap;
     padding: 20px 0;
 
+    @media only screen and (max-width: 991.98px) {
+        padding-top: 0;
+    }
+
     &__right {
         display: flex;
         align-items: center;
 
         &__form {
             margin-right: 20px;
+
+            @media only screen and (max-width: 991.98px) {
+                margin-right: 0;
+            }
 
             &__search-field {
                 background: transparent url(../images/search-grey.png) no-repeat left/18px;
@@ -85,6 +93,10 @@
         display: flex;
         align-items: center;
         padding: 0 5px;
+
+        label {
+            margin-bottom: 0;
+        }
     }
 
     &__left {
@@ -101,21 +113,21 @@
 
     &__text-holder {
         margin-right: 50px;
+
+        @media only screen and (max-width: 1439.98px) {
+            margin: 0;
+        }
     }
 
     &__header {
-        display: flex;
-            align-items: center;
-        margin-left: 88px;
-
-        @media only screen and (max-width: 991.98px) {
+        @media only screen and (max-width: 1199.98px) {
             display: none;
         }
 
         &__content {
             display: flex;
                 align-items: center;
-            margin-right: 70px;
+            width: 100%;
 
             &__select {
                 appearance: none;
@@ -189,6 +201,29 @@ label {
 .grid-view {
     .products-head__header {
         display: none;
+    }
+
+    .content__wrap {
+        margin-bottom: 20px;
+    }
+
+    .block-item__tile-body__price-holder {
+        background-color: $grey1;
+        max-width: 100%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+
+        @media screen and (max-width: 1199.98px) {
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            padding-bottom: 15px;
+        }
+
+        &__promo-price {
+            margin-right: 15px;
+        }
     }
 
     &__head {
@@ -290,6 +325,29 @@ label {
             }
         }
 
+        &__price-holder {
+            @media screen and (max-width: 1199.98px) {
+                background-color: $grey1;
+                display: flex;
+                    align-items: center;
+                    justify-content: center;
+                padding-bottom: 15px;
+            }
+
+            &__promo-price {
+                font-size: 14px;
+                text-decoration: line-through;
+
+                @media screen and (max-width: 1199.98px) {
+                    margin-right: 15px;
+                }
+            }
+            &__price {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
         &__text {
             font-size: 16px;
             font-weight: $font700;
@@ -320,8 +378,8 @@ label {
         &__text-bottom {
             background-color: $grey1;
             display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
+                align-items: center;
+                justify-content: center;
                 flex: 1;
             max-width: 100%;
             padding: 0 20px 15px 20px;
@@ -335,17 +393,28 @@ label {
             label {
                 display: flex;
                     align-items: center;
+                margin-bottom: 0;
 
                 @media screen and (max-width: 1199.98px) {
                     font-size: 10px;
-                    margin-bottom: 5px;
                 }
 
                 @media screen and (max-width: 991.98px) {
                     display: flex;
                         align-items: flex-end;
-                    margin-bottom: 0;
                     margin-right: 20px;
+                }
+
+                @media screen and (max-width: 319.98px) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__button-wrap {
+                .block-item__tile-body__btn {
+                    @media screen and (max-width: 319.98px) {
+                        margin-bottom: 8px;
+                    }
                 }
             }
         }
@@ -361,9 +430,14 @@ label {
 
         &__btn {
             font-size: 14px;
+            border-radius: 4px;
+
+            @media screen and (max-width: 1319.98px) {
+                font-size: 11px;
+            }
 
             @media screen and (max-width: 1199.98px) {
-                font-size: 10px;
+                font-size: 14px;
                 font-weight: 500;
                 padding: 4px 10px;
             }
@@ -384,34 +458,10 @@ label {
     }
 }
 
-.content {
-    justify-content: center;
-
-    &__wrap {
-        margin-bottom: 20px;
-        max-width: 33.333333%;
-
-        @media screen and (max-width: 1440px) {
-            font-size: 10px;
-            max-width: fit-content;
-        }
-
-        @media screen and (max-width: 991.98px) {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-
-        @media screen and (max-width: 767.98px) {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
-}
-
 .list-view {
     display: block;
 
-    @media only screen and (max-width: 991.98px) {
+    @media only screen and (max-width: 1199.98px) {
         display: flex;
     }
 
@@ -419,13 +469,13 @@ label {
         max-width: 100%;
         margin-bottom: 0;
 
-        @media screen and (max-width: 991.98px) {
+        @media screen and (max-width: 1199.98px) {
             flex: 0 0 50%;
-            max-width: 50%;
             margin-bottom: 20px;
+            max-width: 75%;
         }
 
-        @media screen and (max-width: 767.98px) {
+        @media screen and (max-width: 991.98px) {
             flex: 0 0 100%;
             max-width: 100%;
         }
@@ -448,6 +498,10 @@ label {
         padding: 8px 0;
         width: 100%;
 
+        @media only screen and (max-width: 1199.98px) {
+            padding: 0;
+        }
+
         @media only screen and (max-width: 767.98px) {
             flex-direction: column;
         }
@@ -459,11 +513,7 @@ label {
 
             &__image {
                 height: auto;
-                width: 95px;
-
-                @media only screen and (max-width: 767.98px) {
-                    width: 85px;
-                }
+                width: 100%;
             }
         }
 
@@ -484,6 +534,10 @@ label {
                 display: flex;
                 align-items: center;
                 padding: 0;
+
+                @media only screen and (max-width: 1199.98px) {
+                    padding: 15px;
+                }
             }
 
             &__text {
@@ -492,17 +546,12 @@ label {
                 margin: 0;
                 margin-right: 8px;
                 text-align: left;
-                width: 62%;
+                width: 50%;
 
                 @media only screen and (max-width: 1199.98px) {
                     font-size: 12px;
-                    margin-right: 10px;
+                    margin: 0;
                     width: 42%;
-                }
-
-                @media only screen and (max-width: 767.98px) {
-                    font-size: 10px;
-                    width: 43%;
                 }
             }
 
@@ -525,17 +574,13 @@ label {
                 @media only screen and (max-width: 1199.98px) {
                     font-size: 12px;
                 }
-
-                @media only screen and (max-width: 767.98px) {
-                    font-size: 10px;
-                }
             }
 
             &__text-bottom {
-                align-items: center;
                 background-color: transparent;
                 display: flex;
-                justify-content: flex-end;
+                align-items: center;
+                justify-content: space-between;
                 max-width: 30%;
                 padding: 0;
 
@@ -546,22 +591,32 @@ label {
                 @media only screen and (max-width: 767.98px) {
                     font-size: 10px;
                 }
+
+                &__button-wrap {
+                    max-width: 100%;
+                }
             }
 
             &__btn {
                 border-radius: 4px;
                 font-size: 14px;
-                margin-left: 15px;
                 font-weight: $font700;
+                margin-left: 15px;
 
-                @media only screen and (max-width: 1199.98px) {
-                    font-size: 12px;
-                    margin-top: 0;
+                @media only screen and (max-width: 1338.98px) {
+                    margin: 0;
                 }
 
-                @media only screen and (max-width: 767.98px) {
-                    font-size: 10px;
-                    padding: 2px 9px;
+                @media only screen and (min-width: 1200px) {
+                    padding: 8px;
+                }
+
+                @media only screen and (min-width: 1440px) {
+                    padding: 8px 14px;
+                }
+
+                @media only screen and (max-width: 374.98px) {
+                    margin-bottom: 8px;
                 }
             }
 
@@ -581,7 +636,7 @@ label {
         }
     }
 
-    @media screen and (max-width: 991.98px) {
+    @media screen and (max-width: 1199.98px) {
         .block-item {
             border: 1px solid $grey2;
             text-align: center;
@@ -649,10 +704,6 @@ label {
                     font-size: 14px;
                     margin-bottom: 0;
                     text-align: center;
-
-                    @media screen and (max-width: 40rem) {
-                        font-size: 10px;
-                    }
                 }
 
                 &__text-bottom {
@@ -667,18 +718,6 @@ label {
                         label {
                             margin-right: 0;
                         }
-                    }
-                }
-
-                &__btn {
-                    @media only screen and (max-width: 1199.98px) {
-                        font-size: 10px;
-                    }
-
-                    @media screen and (max-width: 40rem) {
-                        font-size: 10px;
-                        font-weight: $font500;
-                        padding: 4px 10px;
                     }
                 }
 
@@ -701,6 +740,7 @@ label {
 }
 
 .bottom {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
@@ -713,6 +753,22 @@ label {
     }
 
     &__dropdown {
+        &.show {
+            .btn {
+                background-color: transparent;
+            border: none;
+            color: $black;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
         &__btn {
             background-color: transparent;
             border: none;
@@ -730,6 +786,7 @@ label {
             &:focus {
                 background-color: transparent;
                 border: none;
+                box-shadow: none;
                 color: $black;
             }
         }

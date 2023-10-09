@@ -154,6 +154,11 @@ $ns: account;
                 }
 
                 &__address-label {
+                    background: none;
+                    border: 2px solid $primary;
+                    color: $primary;
+                    font-size: 18px;
+                    font-weight: 600;
                     flex: 0 0 115px;
                     font-size: 16px;
                     padding: 4px;
@@ -166,11 +171,18 @@ $ns: account;
                 }
 
                 &__a-l-border {
+                    background: $primary;
                     border: 2px solid $primary;
+                    color: $secondary;
                     cursor: unset;
+                    flex: 0 0 115px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 4px;
+                    text-align: center;
 
-                    &:active {
-                        border: 2px solid $primary;
+                    @media only screen and (max-width: 575.98px) {
+                        font-size: 14px;
                     }
                 }
 

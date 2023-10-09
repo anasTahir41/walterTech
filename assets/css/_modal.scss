@@ -86,3 +86,9 @@ $ns: modal;
         }
     }
 }
+
+.modal-open {
+    header {
+        z-index: 1;
+    }
+}

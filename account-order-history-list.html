@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>error msg Page</title>
+    <title>Account order list</title>
     <link rel="icon" type="image/x-icon" href="" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,9 +59,9 @@
                             </form>
                         </div>
                     </div>
-                    <div class="c-site-header__top__user">
+                    <!-- <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
-                    </div>
+                    </div> -->
                     <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
@@ -988,32 +988,405 @@
         </div>
     </header>
     <!-- Header Ends Here -->
-
-    <div class="error-msg">
-        <section class="error-msg__banner">
-            <figure class="error-msg__banner__image-wrapper">
-                <img class="error-msg__banner__img" src="./assets/images/banner1.jpg" alt="banner-image">
-            </figure>
-            <div class="error-msg__banner__wrap container">
-                <h2 class="error-msg__banner__wrap__heading-main">Sorry!</h2>
-            </div>
-        </section>
+    <section class="account">
         <div class="container">
-            <div class="error-msg__content">
-                <h2 class="error-msg__content__title">Ooops! Page Not Found</h2>
-                <h3 class="error-msg__content__descrip">The page you’re looking for appears to have been moved, renamed or deleted.</h3>
-                <div class="error-msg__content__search-wrap">
-                    <form class="error-msg__content__search-wrap__search">
-                        <input class="error-msg__content__search-wrap__search-field" type="search" name="q" value=""
-                            autocomplete="off" placeholder="Search..." aria-label="search" />
-                    </form>
-                    <a class="btn-primary" href="#">Search</a>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-12">
+                    <div class="account__side-bar">
+                        <ul class="account__side-bar__wrap">
+                            <h3 class="account__side-bar__wrap__title">Your Account</h3>
+                            <li class="account__side-bar__wrap__list"><a class="account__side-bar__wrap__link">My
+                                    Profile</a></li>
+                            <li class="account__side-bar__wrap__list active"><a
+                                    class="account__side-bar__wrap__link">Order
+                                    History</a></li>
+                            <li class="account__side-bar__wrap__list"><a
+                                    class="account__side-bar__wrap__link">Addresses</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <a class="error-msg__link" href="#">Back to Home</a>
+                <div class="col-xl-9 col-lg-8 col-12">
+                    <div class="account__o-history">
+                        <h3 class="account__o-history__title">
+                            Order History
+                        </h3>
+                        <div class="account__o-history__desc">
+                            <div class="row">
+                                <div class="col-12 col-lg-7 col-xl-9">
+                                    <p class="account__o-history__desc__text">
+                                        View the details of recent purchase order. You can also track the most recent order,
+                                        to
+                                        see when the orders are expected to be delivered, track the shipment with the
+                                        carrier,
+                                        and view the invoice details. to maximize your search experience, click the advance
+                                        search link.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-5 col-xl-3">
+                                    <div class="account__o-history__desc__btn-holder">
+                                        <a class="account__o-history__desc__btn btn-primary">Download Orders</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__o-history__filter-row">
+                            <div class="row">
+                                <div class="col-12 col-xl-8">
+                                    <div class="account__o-history__filter-wrap">
+                                        <h3 class="account__o-history__filter-wrap__text">Filter By Date</h3>
+                                        <div class="account__o-history__filter-wrap__filter">
+                                            <label class="account__o-history__filter-wrap__filter__label"
+                                                for="startDate">Start Date</label>
+                                            <input class="account__o-history__filter-wrap__filter__input" id="startDate"
+                                                type="date" />
+                                        </div>
+                                        <div class="account__o-history__filter-wrap__filter">
+                                            <label class="account__o-history__filter-wrap__filter__label"
+                                                for="endDate">End Date</label>
+                                            <input class="account__o-history__filter-wrap__filter__input" id="endDate"
+                                                type="date" />
+                                        </div>
+                                        <div class="account__o-history__filter-wrap__btn-holder">
+                                            <button class="account__o-history__filter-wrap__btn-holder__btn btn-primary"
+                                                id="create">Apply</button>
+                                            <button
+                                                class="account__o-history__filter-wrap__btn-holder__reset-btn">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-4 align-self-end">
+                                    <div class="account__o-history__sort-filter">
+                                        <h3 class="account__o-history__sort-filter__text">Sort Items by</h3>
+                                        <div class="account__o-history__sort-filter__select-box">
+                                            <label class="account__o-history__sort-filter__label">
+                                                <select class="account__o-history__sort-filter__select">
+                                                    <option selected>Recent orders </option>
+                                                    <option>older orders</option>
+                                                    <option>new orders</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="error-msg__content__search-wrap mt-4">
+                                        <form class="error-msg__content__search-wrap__search">
+                                            <input class="error-msg__content__search-wrap__search-field" type="search" name="q" value=""
+                                                autocomplete="off" placeholder="Search..." aria-label="search" />
+                                        </form>
+                                        <a class="" href="#">Advanced</a>
+                                        <a class="" href="#">Clear</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents">
+                            <div class="row">
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">customer PO#</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Order#:</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">Invoice#:</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Order Date:</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Order Status:</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Total:</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">detail</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">123456</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">WVX-CVF-BGFT-XXY</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">142547</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">13-07-2023, 2:30pm</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Shipped 9-09-2023</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">$241,12.99</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">145451</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">DRF-CVF-KHGG-XXY</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">588654</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">28-01-2023, 2:30pm</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Shipped 9-09-2023</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">$2,12.99</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">014512</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">BNM-CVF-OHTG-XXY</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">888535</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">28-01-2023, 2:30pm</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">Shipped 11-09-2023</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="account__o-history__content__table__heading">$9,12.99</h3>
+                                </div>
+                                <div class="col-1">
+                                    <h3 class="account__o-history__content__table__heading">></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="account__o-history__p-conter">
+                                        3 Items
+                                    </p>
+                                    <div class="account__o-history__content">
+                                        <table class="careers__content__table table account__o-history__content__table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        customer PO#</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        Order#:</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        Invoice#:</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        Order Date:</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        Order Status:</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        Total:</th>
+                                                    <th class="account__o-history__content__table__heading" scope="col">
+                                                        </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td class="account__o-history__content__table__text">
+                                                        123456</td>
+                                                    <td
+                                                        class="account__o-history__content__table__order-text account__o-history__content__table__text">
+                                                        WVX-CVF-BGFT-XXY</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        01012022</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        13-07-2023, 2:30pm</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        In transit 5-08-2023</td>
+                                                    <!-- <td class="account__o-history__content__table__text">
+                                                        321, Street, Main Fly Heights
+                                                        building, North Arizona, xyz 000</td> -->
+                                                    <td class="account__o-history__content__table__text">
+                                                        $4,254.99</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text account__o-history__content__table__link">
+                                                        ></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="account__o-history__content__table__text">
+                                                        445754</td>
+                                                    <td
+                                                        class="account__o-history__content__table__order-text account__o-history__content__table__text">
+                                                        WVX-CVF-123T-XXY</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        01012022</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        13-09-2023, 2:30pm</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        Shipped 9-09-2023</td>
+                                                    <!-- <td class="account__o-history__content__table__text">
+                                                        123456</td> -->
+                                                    <td class="account__o-history__content__table__text">
+                                                        $9,299.99</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text account__o-history__content__table__link">
+                                                        ></td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td class="account__o-history__content__table__text">
+                                                        123456</td>
+                                                    <td
+                                                        class="account__o-history__content__table__order-text account__o-history__content__table__text">
+                                                        XXXVF-BGFT-XXY</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        01012022</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        20-07-2023</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        Partialy Shipped 2-09-2023</td>
+                                                    <td class="account__o-history__content__table__text">
+                                                        444576</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text account__o-history__content__table__link">
+                                                        ></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- <div class="account__o-history__content">
+                                        <table class="careers__content__table table account__o-history__content__table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Order Number:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Order Date:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Status:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Total:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                    scope="col"></th> -->
+                                    <!-- <th class="account__o-history__content__table__heading account__o-history__content__table__btn-hoder"
+                                                        scope="col"><a href="#"
+                                                            class="account__o-history__content__table__btn btn-primary">Start
+                                                            Reorder</a></th> -->
+                                    <!-- </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td
+                                                        class="account__o-history__content__table__order-text account__o-history__content__table__text">
+                                                        WVX-CVF-123T-XXY</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        13-09-2023, 2:30pm</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        Created</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        $9,299.99</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text account__o-history__content__table__link">
+                                                        View Details</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="account__o-history__content">
+                                        <table class="careers__content__table table account__o-history__content__table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Order Number:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Order Date:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Status:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                        scope="col">Total:</th>
+                                                    <th class="account__o-history__content__table__heading"
+                                                    scope="col"></th>
+                                                     <th class="account__o-history__content__table__heading account__o-history__content__table__btn-hoder"
+                                                        scope="col"><a href="#"
+                                                            class="account__o-history__content__table__btn btn-primary">Start
+                                                            Reorder</a></th> -->
+                                    <!-- </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td
+                                                        class="account__o-history__content__table__order-text account__o-history__content__table__text">
+                                                        XXXVF-BGFT-XXY</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        20-07-2023, 2:30pm</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        Created</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text">
+                                                        $7,111.99</td>
+                                                    <td
+                                                        class="account__o-history__content__table__text account__o-history__content__table__link">
+                                                        View Details</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div> -->
+                                    <div class="bottom d-none d-md-flex">
+                                        <div class="bottom__left">
+                                            <div class="dropdown bottom__dropdown">
+                                                <button class="bottom__dropdown__btn btn btn-secondary dropdown-toggle"
+                                                    type="button" data-toggle="dropdown" aria-expanded="false">
+                                                    Show 25 items
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a href="#" class="dropdown-item" href="#">Show 10 items</a>
+                                                    <a href="#" class="dropdown-item" href="#">Show 20 items</a>
+                                                    <a href="#" class="dropdown-item" href="#">Show 30 items</a>
+                                                </div>
+                                            </div>
+                                            <p class="bottom__para">
+                                                Showing 1 - 10 from 95 entries
+                                            </p>
+                                        </div>
+                                        <div class="bottom__right">
+                                            <div class="pagination bottom__right__num">
+                                                <a href="#" class="bottom__right__link">
+                                                    < </a>
+                                                        <a href="#" class="bottom__right__link">1</a>
+                                                        <a href="#" class="bottom__right__link active">2</a>
+                                                        <a href="#" class="bottom__right__link">3</a>
+                                                        <a href="#" class="bottom__right__link">4</a>
+                                                        <a class="bottom__right__link">...</a>
+                                                        <a href="#" class="bottom__right__link">9</a>
+                                                        <a href="#" class="bottom__right__link">></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
     <!-- Footer Starts Here -->
     <footer class="c-site-footer">
         <div class="container c-site-footer__container">
@@ -1157,7 +1530,7 @@
                                     </div>
                                     <div class="modal__footer">
                                         <a href="#" class="modal__footer__cancel" type="button"
-                                             data-dismiss="modal">Cancel</a>
+                                            data-dismiss="modal">Cancel</a>
                                         <button type="button"
                                             class="modal__footer__subscribe btn-primary">Subscribe</button>
                                     </div>
@@ -1195,7 +1568,9 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    -,
 </body>
 
 </html>

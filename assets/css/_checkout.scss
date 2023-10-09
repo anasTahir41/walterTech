@@ -290,6 +290,11 @@ $ns: checkout;
                 align-items: center;
             padding: 30px 20px;
 
+            @media only screen and (max-width: 374.98px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             &__detail {
                 display: flex;
                     align-items: center;

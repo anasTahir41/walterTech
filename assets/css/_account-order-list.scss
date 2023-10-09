@@ -1,0 +1,290 @@
+$ns: account;
+
+.#{$ns} {
+    &__o-history {
+        background-color: $grey1;
+        border: 2px solid $grey2;
+        margin-bottom: 30px;
+        padding: 50px 60px 0;
+
+        @media only screen and (max-width: 1439.98px) {
+            padding: 30px 20px;
+        }
+
+        &__p-conter {
+            font-size: 16px;
+            font-weight: $font600;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+
+        &__filter-row {
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 28px;
+            font-weight: $font600;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        &__desc {
+            margin-bottom: 15px;
+
+            &__text {
+                color: $secondary;
+                font-size: 16px;
+                font-weight: $font400;
+                word-break: break-word;
+
+                @media only screen and (max-width: 991.98px) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__btn-holder {
+                text-align: end;
+            }
+        }
+
+        &__filter-wrap {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 1199.98px) {
+                display: block;
+            }
+
+            &__text {
+                font-size: 16px;
+                font-weight: $font600;
+                margin-right: 15px;
+                word-break: break-word;
+
+                @media only screen and (max-width: 1199.98px) {
+                    margin: 0 0 8px 0;
+                }
+            }
+
+            &__btn-holder {
+                display: flex;
+                align-items: center;
+
+                @media only screen and (max-width: 1199.98px) {
+                    margin: 20px 0;
+                }
+
+                &__btn {
+                    font-size: 16px;
+                    font-weight: $font500;
+                    margin-right: 25px;
+                    padding: 6px 10px;
+                    text-align: center;
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+
+                &__reset-btn {
+                    background-color: transparent;
+                    border: 0;
+                    color: $primary;
+                    font-weight: $font600;
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &__filter {
+                margin-right: 15px;
+
+                @media only screen and (max-width: 1199.98px) {
+                    margin: 0 0 10px 0;
+                }
+
+                &__label {
+                    color: $secondary;
+                    display: block;
+                    font-size: 14px;
+                    font-weight: $font600;
+                    margin: 0;
+                    word-break: break-word;
+
+                    @media only screen and (max-width: 1199.98px) {
+                        margin: 0 0 4px 0;
+                    }
+                }
+
+                &__input {
+                    font-size: 14px;
+                    font-weight: $font600;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__sort-filter {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 5px;
+
+            &__text {
+                color: $secondary;
+                font-size: 16px;
+                margin: 0;
+                word-break: break-word;
+
+                @media only screen and (max-width: 1199.98px) {
+                    font-size: 16px;
+                }
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+
+            &__select-box {
+                padding-left: 5px;
+            }
+
+            &__label {
+                margin: 0;
+            }
+
+            &__select {
+                appearance: none;
+                background: $search-bg-color url(../images/down-arrow.png) no-repeat right 0px center/18px;
+                border: none;
+                color: $primary;
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: $font500;
+                padding-right: 24px;
+                vertical-align: middle;
+                width: auto;
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                @media only screen and (max-width: 1199.98px) {
+                    font-size: 16px;
+                }
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__content {
+            background-color: $white;
+
+            @media only screen and (max-width: 1199.98px) {
+                overflow-x: scroll;
+            }
+
+            table {
+                border: 2px solid $grey2;
+
+                thead {
+
+                    th,
+                    td {
+                        border: 0;
+                        vertical-align: top;
+                    }
+                }
+
+                tbody {
+                    td {
+                        border: 0;
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            &__table {
+                margin-bottom: 0;
+                table-layout: fixed;
+
+                @media only screen and (max-width: 1199.98px) {
+                    width: 780px;
+                }
+
+                &__heading {
+                    color: $secondary;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    word-break: break-word;
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 12px;
+                    }
+                }
+
+                &__text {
+                    color: $secondary;
+                    font-size: 16px;
+                    font-weight: $font500;
+                    word-break: break-word;
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+
+                &__link {
+                    color: $primary;
+                    word-break: break-word;
+
+                    @media only screen and (max-width: 991.98px) {
+                        font-size: 16px;
+                    }
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+
+                &__order-text {
+                    color: $primary;
+                    text-transform: uppercase;
+                    word-break: break-word;
+
+                    @media only screen and (max-width: 991.98px) {
+                        font-size: 16px;
+                    }
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+
+                &__btn {
+                    font-size: 16px;
+                    font-weight: $font700;
+
+                    @media only screen and (max-width: 767.98px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contents {
+    background-color: $white;
+    border: 1px solid $grey2;
+    padding: 15px;
+}
