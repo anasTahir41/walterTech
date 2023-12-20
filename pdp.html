@@ -59,6 +59,22 @@
                             </form>
                         </div>
                     </div>
+                    <!-- <div class="c-site-header__top__user">
+                        <a href="#" class="c-site-header__top__user__link">Login</a>
+                    </div> -->
+                    <div class="dropdown c-site-header__top__right__dropdown">
+                        <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
+                            id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="c-site-header__top__right__img" src="./assets/images/user.png"> User
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="accountDropdownButton">
+                            <a class="dropdown-item" href="#">My Account</a>
+                            <a class="dropdown-item" href="#">Orders</a>
+                            <a class="dropdown-item" href="#">Addresses</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,7 +92,16 @@
                     <img src="./assets/images/logo-mobile.svg" alt="logo" class="c-site-header__logo d-lg-none">
                     <img src="./assets/images/logo.svg" alt="logo" class="c-site-header__logo d-none d-lg-block">
                 </a>
+
                 <div class="c-site-header__search d-lg-none">
+                    <div class="c-site-header__cart d-lg-none">
+                        <a href="#" class="c-site-header__cart__link">
+                            <img src="./assets/images/cart-icon.png" alt="cart-icon" class="c-site-header__cart-icon">
+                        </a>
+                        <span class="c-site-header__cart__counter">
+                            0
+                        </span>
+                    </div>
                     <a href="#" class="c-site-header__search--wrapper js-search-suggestions-field">
                         <svg xmlns="http://www.w3.org/2000/svg" class="c-site-header__search__icon d-lg-none"
                             xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px"
@@ -842,11 +867,24 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">SDS Search</a>
                             </li>
+                            <li class="nav-item">
+                                <div class="user-btn">
+                                    <a href="#" class="c-site-header__top__user__link">Login</a>
+                                </div>
+                            </li>
                             <li class="nav-item btn-buy">
                                 <a href="#" class="btn-primary">Where to Buy</a>
                             </li>
                         </div>
                     </ul>
+                </div>
+                <div class="c-site-header__cart d-none d-lg-block">
+                    <a href="#" class="c-site-header__cart__link">
+                        <img src="./assets/images/cart-icon.png" alt="cart-icon" class="c-site-header__cart-icon">
+                    </a>
+                    <span class="c-site-header__cart__counter">
+                        0
+                    </span>
                 </div>
                 <a href="#" class="btn-primary mt-4 mt-lg-0 d-none d-lg-block">Where to Buy</a>
             </div>
@@ -962,7 +1000,7 @@
         </nav>
         <section class="product-detail__top">
             <div class="container">
-                <div class="product-detail__wrap">
+                <div class="product-detail__wrap container">
                     <div class="row">
                         <div class="col-lg-6 col-md-12 p-0">
                             <div class="product-detail__wrap__slider-wrap">
@@ -1046,7 +1084,8 @@
                                             overall material removal flap disc in the industry
                                         </p>
                                     </div>
-                                    <p class="product-detail__wrap__mid-content__msg">Out Of Stock! Next available Date: 20 August 2023</p>
+                                    <p class="product-detail__wrap__mid-content__msg">Out Of Stock! Next available Date:
+                                        20 August 2023</p>
                                     <div class="product-detail__wrap__mid-content">
                                         <div class="product-detail__wrap__mid-content__price-holder">
                                             <h3 class="product-detail__wrap__mid-content__text">
@@ -1082,7 +1121,8 @@
                                                     <option value="abc">abc</option>
                                                 </select>
                                             </div>
-                                            <p class="product-detail__wrap__mid-content__msg"> Est Ship Date August, 25th 2023</p>
+                                            <p class="product-detail__wrap__mid-content__msg"> Est Ship Date August,
+                                                25th 2023</p>
                                         </div>
                                         <a href="#" class="product-detail__wrap__mid-content__btn btn-primary">
                                             Add To Cart
@@ -1278,9 +1318,75 @@
                                                 <td
                                                     class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">
                                                     13.00</td>
-                                                <td class="c-card__card-body__table__detail"><a href="#"
-                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</a>
+                                                <td class="c-card__card-body__table__detail"><button type="button"
+                                                        data-toggle="modal" data-target="#Modal-order"
+                                                        data-whatever="@mdo"
+                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</button>
                                                 </td>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="Modal-order" tabindex="-1" role="dialog"
+                                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal__header">
+                                                                <h2 class="modal__header__heading">Choose a distributor
+                                                                </h2>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span class="modal__header__close-btn"
+                                                                        aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal__body text-center">
+                                                                <div class="product-detail__bottom__dis-wrap">
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/EMI_logo.png">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/fastenal-logo-blue-white.png">
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/KAMAN.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/msc.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/THD_logo.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/desk-logo_03.png">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/WeldingOutfitter.jpg">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images//logo_zoro.png">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </tr>
                                             <tr class="c-card__card-body__table__item">
                                                 <td class="c-card__card-body__table__detail">4-1/2"</td>
@@ -1292,9 +1398,70 @@
                                                 <td
                                                     class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">
                                                     13.00</td>
-                                                <td class="c-card__card-body__table__detail"><a href="#"
-                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</a>
+                                                <td class="c-card__card-body__table__detail"><button type="button"
+                                                        data-toggle="modal" data-target="#Modal-order1"
+                                                        data-whatever="@mdo"
+                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</button>
                                                 </td>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="Modal-order1" tabindex="-1" role="dialog"
+                                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal__header">
+                                                                <h2 class="modal__header__heading">Choose a distributor
+                                                                </h2>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span class="modal__header__close-btn"
+                                                                        aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal__body text-center">
+                                                                <div class="product-detail__bottom__dis-wrap">
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/EMI_logo.png">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/fastenal-logo-blue-white.png">
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/KAMAN.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/msc.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/THD_logo.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/desk-logo_03.png">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/WeldingOutfitter.jpg">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </tr>
                                             <tr class="c-card__card-body__table__item">
                                                 <td class="c-card__card-body__table__detail">4-1/2"</td>
@@ -1306,9 +1473,59 @@
                                                 <td
                                                     class="c-card__card-body__table__detail c-card__card-body__table__item__list-price">
                                                     13.00</td>
-                                                <td class="c-card__card-body__table__detail"><a href="#"
-                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</a>
+                                                    <td class="c-card__card-body__table__detail"><button type="button"
+                                                        data-toggle="modal" data-target="#Modal-order2"
+                                                        data-whatever="@mdo"
+                                                        class="c-card__card-body__table__detail__btn btn-primary">Order</button>
                                                 </td>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="Modal-order2" tabindex="-1" role="dialog"
+                                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal__header">
+                                                                <h2 class="modal__header__heading">Choose a distributor
+                                                                </h2>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span class="modal__header__close-btn"
+                                                                        aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal__body text-center">
+                                                                <div class="product-detail__bottom__dis-wrap">
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/EMI_logo.png">
+                                                                    </a>
+                                                                    <a class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/fastenal-logo-blue-white.png">
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/KAMAN.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/msc.png">
+                                                                    </a>
+                                                                    </a><a
+                                                                        class="product-detail__bottom__dis-wrap__link"
+                                                                        href="#">
+                                                                        <img class="product-detail__bottom__dis-wrap__logo"
+                                                                            src="./assets/images/THD_logo.png">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1403,6 +1620,108 @@
                                                 <td class="c-card__card-body__table__detail"><a href="#"
                                                         class="c-card__card-body__table__detail__btn btn-primary">Order</a>
                                                 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-card__card-header" id="headingNine">
+                            <h2 class="mb-0">
+                                <button class="c-card__card-header__btn btn" type="button" data-toggle="collapse"
+                                    data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                    The Kit Includes
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNine" class="collapse show" aria-labelledby="headingNine">
+                            <div class="c-card__card-body c-table">
+                                <div class="c-table__wrap">
+                                    <table class="table c-card__card-body__table">
+                                        <thead>
+                                            <tr class="c-card__card-body__table__item">
+                                                <th class="c-card__card-body__table__item__heading" scope="col">
+                                                    ORDER NO
+                                                </th>
+                                                <th class="c-card__card-body__table__item__heading" scope="col">NAME
+                                                </th>
+                                                <th class="c-card__card-body__table__item__heading" scope="col">
+                                                    DESCRIPTION
+                                                </th>
+                                                <th class="c-card__card-body__table__item__heading" scope="col">QUANTITY
+                                                </th>
+                                                <th class="c-card__card-body__table__item__heading" scope="col">METRIC
+                                                </th>
+                                                <th class="c-card__card-body__table__item__heading" scope="col">IMPERIAL
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail order-color"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-B
+                                                        082</a></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail">Marking & Etching Wand</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                            </tr>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-B
+                                                        063</a></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail">Black cable</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                            </tr>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-B
+                                                        083</a></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail">Marking pads (20 per
+                                                    package)</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                            </tr>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-B
+                                                        089</a></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail">O-Rings for marking
+                                                    kits/Pack of 5</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                                <td class="c-card__card-body__table__detail"></td>
+                                            </tr>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-A
+                                                        031</a></td>
+                                                <td class="c-card__card-body__table__detail">SURFOX-M™</td>
+                                                <td class="c-card__card-body__table__detail">Stainless Steel Marking
+                                                    Electrolyte (black)</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail">100 ml</td>
+                                                <td class="c-card__card-body__table__detail">3.4 oz.</td>
+                                            </tr>
+                                            <tr class="c-card__card-body__table__item">
+                                                <td class="c-card__card-body__table__detail"><a
+                                                        class="c-card__card-body__table__detail__link" href="#">54-A
+                                                        041</a></td>
+                                                <td class="c-card__card-body__table__detail">SURFOX-E™</td>
+                                                <td class="c-card__card-body__table__detail">Stainless Steel Etching
+                                                    Electrolyte (white)</td>
+                                                <td class="c-card__card-body__table__detail">1</td>
+                                                <td class="c-card__card-body__table__detail">100 ml</td>
+                                                <td class="c-card__card-body__table__detail">3.4 oz.</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1752,7 +2071,7 @@
                                     </div>
                                     <div class="modal__footer">
                                         <a href="#" class="modal__footer__cancel" type="button"
-                                         data-dismiss="modal">Cancel</a>
+                                            data-dismiss="modal">Cancel</a>
                                         <button type="button"
                                             class="modal__footer__subscribe btn-primary">Subscribe</button>
                                     </div>
@@ -1792,7 +2111,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/pdp.js"></script>
-
 </body>
 
 </html>

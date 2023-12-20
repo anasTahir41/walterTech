@@ -49,6 +49,10 @@ $ns: order-summary;
             padding: 10px;
         }
 
+        @media only screen and (max-width: 575.98px) {
+            display: block;
+        }
+
         &__detail {
             display: flex;
                 align-items: center;
@@ -78,6 +82,7 @@ $ns: order-summary;
             }
 
             &__image {
+                max-width: 100%;
                 width: 70px;
 
                 @media only screen and (max-width: 1199.98px) {

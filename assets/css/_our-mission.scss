@@ -1,0 +1,95 @@
+$ns: o-mission;
+
+.#{$ns} {
+    background-color: $white;
+
+    .row {
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+
+        @media only screen and (max-width: 767.98px) {
+            padding: 30px;
+        }
+
+        &__head {
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 60px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__text-wrap {
+            &__heading {
+                font-size: 22px;
+                font-weight: $font500;
+                margin-bottom: 50px;
+                position: relative;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                &::after {
+                    content: '';
+                    width: 80px;
+                    height: 2px;
+                    background-color: $primary;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    margin-bottom: -15px;
+                }
+            }
+
+            &__list {
+                list-style: none;
+                padding-left: 20px;
+            }
+        }
+
+        &__list-item {
+            font-size: 16px;
+            font-weight: $font400;
+            color: $secondary;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+
+            &::before {
+                display: block;
+                background-color:  transparent;
+                color: $primary;
+                content: "/";
+                font-weight: $font700;
+                position: absolute;
+                left: 15px;
+            }
+        }
+
+        &__colored-text {
+            color: $primary;
+            font-weight: $font700;
+        }
+    }
+}

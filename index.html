@@ -995,16 +995,184 @@
 
     <div class="cookie-alert">
         <div class="cookie-alert__body">
-            <h5 class="card-title cookie-alert__title">Do you like cookies?</h5>
-            <p class="card-text cookie-alert__text">We use cookies to ensure you get the best experience on our website.</p>
+            <h5 class="card-title cookie-alert__title">We value your privacy</h5>
+            <p class="card-text cookie-alert__text">We use cookies to ensure you get the best experience on our website.
+            </p>
             <div class="cookie-alert__btn-holder">
-                <a href="#" class="btn-primary cookie-alert__accept-cookies accept-cookies">Accept</a>
-                <a href="#" class="btn-primary cookie-alert__reject-cookies">Reject</a>
+                <a href="#" class="btn-primary cookie-alert__accept-cookies accept-cookies">Accept All</a>
+                <a href="#" class="btn-primary cookie-alert__reject-cookies">Reject All</a>
             </div>
             <div class="cookie-alert__link-wrap">
-                <a href="#" class="cookie-alert__link">
-                    Manage Settings
-                </a>
+                <button type="button" class="cookie-alert__link" data-toggle="modal" data-target="#Modal"
+                    data-whatever="@mdo">Manage Settings</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal__modal-wrap" role="document">
+            <div class="modal-content">
+                <div class="modal__header">
+                    <h2 class="modal__header__heading">Cookie Preferences</h2>
+                    <p class="modal__header__para">Personalize your choices</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="modal__header__close-btn" aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal__body cookie-alert__pref">
+                    <div id="accordion">
+                        <div class="card cookie-alert__pref__card">
+                            <div class="card-header cookie-alert__pref__header" id="headingOne">
+                                <button class="cookie-alert__pref__btn" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Your Privacy
+                                </button>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body cookie-alert__pref__body">
+                                    <div class="cookie-alert__pref__body__head">
+                                        <h3 class="cookie-alert__pref__body__heading"> Your Privacy</h3>
+                                        <div class="cookie-alert__pref__body__c-holder">
+                                            <input type="checkbox">
+                                        </div>
+                                    </div>
+                                    <p class="cookie-alert__pref__body__descrip">
+                                        When you visit our site, it will store or retrieve information on your browser,
+                                        using cookies and similar technologies (“cookies”). We use necessary cookies to
+                                        make this site work. We and our partners also would like to set optional
+                                        functionality, analytics and advertising cookies to improve the functionality of
+                                        the site and personalise its content, to understand how you use this site, and
+                                        to show personalised ads on other sites. These optional cookies won’t be set
+                                        unless you enable them. You can choose not to enable some of them, but this may
+                                        impact your experience of the site. Using this tool will set a cookie to
+                                        remember your preferences. We will keep your preferences for 6 months. You can
+                                        change your cookie preferences at any time by clicking “Cookie Settings” in our
+                                        cookie notice. To learn more on the individual cookies used on our site and the
+                                        third parties setting the cookies, click on the different category headings on
+                                        the left.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cookie-alert__pref__card">
+                            <div class="card-header cookie-alert__pref__header" id="headingTwo">
+                                <button class="cookie-alert__pref__btn collapsed" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Necessary Cookies
+                                </button>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body cookie-alert__pref__body">
+                                    <div class="cookie-alert__pref__body__head">
+                                        <h3 class="cookie-alert__pref__body__heading">Necessary Cookies</h3>
+                                        <div class="cookie-alert__pref__body__c-holder">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                    <p class="cookie-alert__pref__body__descrip">
+                                        These cookies are necessary for the site to function and cannot be switched off
+                                        in our systems. They are usually only set in response to actions made by you
+                                        which amount to a request for services, such as setting your privacy or language
+                                        preferences, storing your shopping cart items, logging in or filling in forms,
+                                        enabling you to log into secure areas of our website. You may disable these by
+                                        changing your browser settings, but this may affect how the website functions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cookie-alert__pref__card">
+                            <div class="card-header cookie-alert__pref__header" id="headingThree">
+                                <button class="cookie-alert__pref__btn collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Analytics Cookies
+                                </button>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body cookie-alert__pref__body">
+                                    <div class="cookie-alert__pref__body__head">
+                                        <h3 class="cookie-alert__pref__body__heading">Necessary Cookies</h3>
+                                        <div class="cookie-alert__pref__body__c-holder">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                    <p class="cookie-alert__pref__body__descrip">
+                                        These cookies are necessary for the site to function and cannot be switched off
+                                        in our systems. They are usually only set in response to actions made by you
+                                        which amount to a request for services, such as setting your privacy or language
+                                        preferences, storing your shopping cart items, logging in or filling in forms,
+                                        enabling you to log into secure areas of our website. You may disable these by
+                                        changing your browser settings, but this may affect how the website functions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cookie-alert__pref__card">
+                            <div class="card-header cookie-alert__pref__header" id="headingFour">
+                                <button class="cookie-alert__pref__btn collapsed" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Functionality Cookies
+                                </button>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body cookie-alert__pref__body">
+                                    <div class="cookie-alert__pref__body__head">
+                                        <h3 class="cookie-alert__pref__body__heading">Functionality Cookies</h3>
+                                        <div class="cookie-alert__pref__body__c-holder">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                    <p class="cookie-alert__pref__body__descrip">
+                                        These cookies enable the website to provide enhanced functionality, such as
+                                        product size recommendations, and help us personalize content based on your use
+                                        of the site. They may be set by us or by third party providers whose services we
+                                        have added to our pages. If you do not allow these cookies, then some or all of
+                                        these services may not function properly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card cookie-alert__pref__card">
+                            <div class="card-header cookie-alert__pref__header" id="headingFive">
+                                <button class="cookie-alert__pref__btn collapsed" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Personalised Advertising Cookies
+                                </button>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordion">
+                                <div class="card-body cookie-alert__pref__body">
+                                    <div class="cookie-alert__pref__body__head">
+                                        <h3 class="cookie-alert__pref__body__heading">Personalised Advertising Cookies</h3>
+                                        <div class="cookie-alert__pref__body__c-holder">
+                                            <input type="checkbox" checked>
+                                        </div>
+                                    </div>
+                                    <p class="cookie-alert__pref__body__descrip">
+                                        These cookies are set through our site by our advertising partners. They may be
+                                        used by those companies to build a profile of your interests and show you
+                                        relevant adverts on other sites based on your profile. Third-party cookies used
+                                        in online advertising include cookies used for various technical operations such
+                                        as frequency capping, ad affiliation, click fraud detection, market research,
+                                        product improvement, debugging and any other related purposes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer cookie-alert__pref__footer">
+                    <a href="#" class="btn-primary cookie-alert__accept-my-choice">Confirm selection</a>
+                    <div class="">
+                        <a href="#" class="btn-primary cookie-alert__accept-cookies">Accept All</a>
+                        <a href="#" class="btn-primary cookie-alert__reject-cookies">Reject All</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1025,7 +1193,9 @@
             </div>
             <div class="main-banner__wrap">
                 <video class="main-banner__wrap__video-wrap js-main-banner__video-wrap" autoplay playsinline loop>
-                    <source src="https://videos.ctfassets.net/13qx3u8dx69n/4PGBkgmV807dFbgLbY10Pl/b3886272ab30f0ff8e1691ddbd2af7a9/FF.mp4" type=video/mp4>
+                    <source
+                        src="https://videos.ctfassets.net/13qx3u8dx69n/4PGBkgmV807dFbgLbY10Pl/b3886272ab30f0ff8e1691ddbd2af7a9/FF.mp4"
+                        type=video/mp4>
                 </video>
             </div>
             <div class="main-banner__wrap">
@@ -1407,7 +1577,7 @@
                                     </div>
                                     <div class="modal__footer">
                                         <a href="#" class="modal__footer__cancel" type="button"
-                                         data-dismiss="modal">Cancel</a>
+                                            data-dismiss="modal">Cancel</a>
                                         <button type="button"
                                             class="modal__footer__subscribe btn-primary">Subscribe</button>
                                     </div>

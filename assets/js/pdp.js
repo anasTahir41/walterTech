@@ -44,7 +44,7 @@ $(document).ready(function () {
         asNavFor: '.slider-thumb'
     });
     $('.slider-thumb').slick({
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.slider-content',
         dots: false,

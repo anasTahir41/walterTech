@@ -157,7 +157,6 @@ $ns: s-result;
         }
 
         &__heading {
-            border: 0 !important;
             color: $grey10;
             padding: 15px;
 
@@ -206,8 +205,15 @@ $ns: s-result;
             font-weight: 500;
         }
     }
+
     &__table {
         margin: 0;
+
+        thead {
+            th {
+                border: 0;
+            }
+        }
     }
 
     .tab-content {

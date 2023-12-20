@@ -1,0 +1,74 @@
+$ns: promotion;
+
+.#{$ns} {
+    background-color: $white;
+    padding-bottom: 60px;
+
+    @media only screen and (max-width: 767.98px) {
+        padding-bottom: 30px;
+    }
+
+    &__content {
+        padding: 60px 0;
+
+        @media only screen and (max-width: 767.98px) {
+            padding: 30px 0;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__text-holder {
+            padding: 15px;
+            text-align: center;
+        }
+
+        &__main-heading {
+            color: $secondary;
+            font-size: 36px;
+            font-weight: $font600;
+            line-height: 50px;
+            margin-bottom: 20px;
+            padding: 0 30px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 24px;
+            }
+        }
+
+        &__heading {
+            color: $grey6;
+            font-size: 18px;
+            font-weight: $font400;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+
+        &__descrip {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 30px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+
+        &__btn {
+            border: 2px solid $primary;
+            color: $primary;
+            font-weight: $font600;
+            padding: 8px 45px;
+
+            &:hover {
+                color: $primary;
+                text-decoration: none;
+            }
+        }
+    }
+}
