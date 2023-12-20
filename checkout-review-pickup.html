@@ -59,10 +59,10 @@
                             </form>
                         </div>
                     </div>
-                    <div class="c-site-header__top__user">
+                    <!-- <div class="c-site-header__top__user">
                         <a href="#" class="c-site-header__top__user__link">Login</a>
-                    </div>
-                    <!-- <div class="dropdown c-site-header__top__right__dropdown">
+                    </div> -->
+                    <div class="dropdown c-site-header__top__right__dropdown">
                         <button class="dropdown-toggle c-site-header__top__right__btn" type="button"
                             id="accountDropdownButton" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -74,7 +74,7 @@
                             <a class="dropdown-item" href="#">Addresses</a>
                             <a class="dropdown-item" href="#">Logout</a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -1134,6 +1134,62 @@
                             </div>
                             <div class="checkout__left-wrap__btn-holder d-none d-lg-block">
                                 <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
+                                <button type="button" class="checkout__left-wrap__btn-holder__btn btn-primary"
+                                    data-toggle="modal" data-target="#RequestModal" data-whatever="@mdo">Send Order For
+                                    Approval</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="RequestModal" tabindex="-1" role="dialog"
+                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal__header">
+                                                <h2 class="modal__header__heading">Order Approval Request</h2>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span class="modal__header__close-btn"
+                                                        aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal__body">
+                                                <p class="">
+                                                    The request for order approval will be forwarded to the
+                                                    administrator for their authorization.
+                                                </p>
+                                            </div>
+                                            <div class="modal__footer">
+                                                <a href="#" class="modal__footer__cancel" type="button"
+                                                    data-dismiss="modal">Cancel</a>
+                                                <button type="button" class="modal__footer__subscribe btn-primary"
+                                                    data-toggle="modal" data-target="#successmodal">Ok</button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="successmodal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="ModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal__modal-wrap" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal__header">
+                                                                <h2 class="modal__header__heading">Success!</h2>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span class="modal__header__close-btn"
+                                                                        aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal__body">
+                                                                <p class="">
+                                                                    Order approval request has been sent successfuly
+                                                                </p>
+                                                            </div>
+                                                            <div class="modal__footer">
+                                                                <a href="#" class="modal__footer__cancel btn-primary" type="button"
+                                                                    data-dismiss="modal">Cancel</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1181,6 +1237,7 @@
                     </div>
                     <div class="checkout__left-wrap__btn-holder d-block d-lg-none">
                         <a class="checkout__left-wrap__btn-holder__btn btn-primary">Place Order</a>
+                        <a class="checkout__left-wrap__btn-holder__btn btn-primary">Send Order For Approval</a>
                     </div>
                 </div>
             </div>

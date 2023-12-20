@@ -1,0 +1,114 @@
+$ns: c-terms;
+
+.#{$ns} {
+    &__heading {
+        &__text {
+            color: $secondary;
+            font-size: 36px;
+            font-weight: $font600;
+            margin-bottom: 30px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__content {
+        padding: 60px 0;
+
+        @media only screen and (max-width: 767.98px) {
+            padding: 30px 0;
+        }
+
+        &__heading {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__text-wrap {
+            &__heading {
+                font-size: 22px;
+                font-weight: $font500;
+                margin-bottom: 40px;
+                position: relative;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                &::after {
+                    content: '';
+                    background-color: $primary;
+                    display: block;
+                    height: 2px;
+                    margin-bottom: -15px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 80px;
+                }
+            }
+
+            &__list {
+                list-style: none;
+                margin-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            &__text {
+                color: $secondary;
+                font-size: 18px;
+                font-weight: $font400;
+                margin-bottom: 30px;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 14px;
+                }
+            }
+
+            &__sub-heading {
+                color: $secondary;
+                font-size: 22px;
+                font-weight: $font600;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+
+                @media only screen and (max-width: 767.98px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__list-item {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 15px;
+            position: relative;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+
+            &::before {
+                background-color:  transparent;
+                color: $primary;
+                content: "/";
+                display: block;
+                font-weight: $font700;
+                position: absolute;
+                    left: -25px;
+            }
+        }
+    }
+}

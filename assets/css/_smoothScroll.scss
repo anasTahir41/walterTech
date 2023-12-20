@@ -1,0 +1,55 @@
+$ns: navbar-tabs;
+
+.#{$ns} {
+    background-color: $white;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    text-align: center;
+
+    &--sticky {
+        position: sticky;
+        top: 134px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    &--header {
+        display: none;
+
+        @media only screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__list {
+        margin-bottom: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        text-align: center;
+
+        &:not(:first-child) {
+            margin-left: 2.7972%;
+        }
+
+        a {
+            color: $secondary;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 40px;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 14px;
+                line-height: 70px;
+            }
+
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+}

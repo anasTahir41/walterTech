@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Order confirmation</title>
+    <link rel="icon" type="image/x-icon" href="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .container {
+            max-width: 1450px;
+        }
+
+        .row {
+            display: flex;
+            /* justify-content: center; */
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .col-lg-8 {
+            flex: 0 0 66.666667%;
+            max-width: 66.666667%;
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .col-12 {
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1b1b1b;
+        }
+
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .order-email {
+            padding: 24px;
+            border: 2px solid #d7d7d7;
+        }
+
+        .main-heading {
+            color: #1b1b1b;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+
+        .main-descrip {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .order-d-wrap {
+            display: block;
+        }
+
+        .order-text {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+
+        .product-wrap {
+            background-color: #fff;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 20px;
+        }
+
+        .product-content {
+            display: flex;
+            align-items: center;
+            border: 0;
+            padding: 20px;
+            padding-bottom: 0;
+        }
+
+        .image-holder {
+            margin: 0 20px 0 0;
+        }
+
+        .image {
+            width: 70px;
+        }
+
+        .p-detail {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .p-text-holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .p-name {
+            margin-right: 20px;
+            max-width: 250px;
+            width: 100%;
+            word-break: break-word;
+        }
+
+        .p-heading {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .p-disc {
+            color: #757575;
+            font-size: 16px;
+            margin-bottom: 8px;
+            margin: 0;
+        }
+
+        .qty-holder {
+            margin-right: 20px;
+            max-width: 76px;
+            width: 100%;
+        }
+
+        .qty {
+            color: #1b1b1b;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .price {
+            color: #1b1b1b;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .shipping-text {
+            color: #1b1b1b;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .comment-wrap {
+            padding: 20px;
+        }
+
+        .comment-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .comment-descs {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            word-break: break-word;
+        }
+
+        .address-holder {
+            margin-bottom: 16px;
+        }
+
+        .addr__heading {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+
+        .addr-text {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .order-summary-wrap {
+            background-color: #fff;
+            border: 1px solid #d7d7d7;
+            margin-bottom: 30px;
+            padding: 30px 20px 20px 20px;
+        }
+
+        .order-summary-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .cart-totals-row {
+            border-bottom: 2px solid #d7d7d7;
+            justify-content: space-between;
+            line-height: 20px;
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 5px 0;
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        .cart-totals-text {
+            border-bottom: 2px solid #d7d7d7;
+            color: #1b1b1b;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .cart-subtotal {
+            border-bottom: 2px solid #d7d7d7;
+            color: #727272;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .cart-coupon-code {
+            border-bottom: 2px solid #d7d7d7;
+            color: #f9a13b;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .cart-coupon-amount {
+            border-bottom: 2px solid #d7d7d7;
+            color: #f9a13b;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .cart-grand-total {
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .btn-wrap {
+            text-align: end;
+        }
+
+        .view-more {
+            color: orange;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="order-email">
+                    <div class="text-center mb-5">
+                        <img class="" src="./assets/images/logo-mobile.svg" width="200px">
+                    </div>
+                    <h3 class="main-heading">
+                        Order acknowledgement
+                    </h3>
+                    <p class="main-descrip">We’ve received your online
+                        order. We are currently
+                        processing the order. Once processed a confirmation email will be sent.</p>
+                    <div>
+                        <div class="row order-d-wrap">
+                            <div class="col-12">
+                                <div>
+                                    <p class="order-text" style="color:#1b1b1b;font-size:18px; font-weight: 500;">Order
+                                        No: #1234567
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div>
+                                    <p class="order-text" style="color:#1b1b1b;font-size:18px; font-weight: 500;">Email:
+                                        orderdesk.us@walter.com</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div>
+                                    <p class="order-text" style="color:#1b1b1b;font-size:18px; font-weight: 500;">
+                                        Payment:
+                                        Purchase
+                                        Order</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div>
+                                    <p class="order-text" style="color:#1b1b1b;font-size:18px; font-weight: 500;">PO
+                                        Number: 123456789
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-holder">
+                            <div class="product-wrap">
+                                <div class="product-content">
+                                    <figure class="image-holder">
+                                        <img class="image" src="./assets/images/ENDURO-flex.jpg">
+                                    </figure>
+                                    <div class="p-detail">
+                                        <div class="p-text-holder">
+                                            <div class="p-name">
+                                                <h3 class="p-heading">
+                                                    ENDURO-flex 2
+                                                    in 1
+                                                </h3>
+                                                <p class="p-disc">Surface
+                                                    Finishing Discs
+                                                </p>
+                                                <p class="p-disc">In Stock
+                                                </p>
+                                            </div>
+                                            <div class="qty-holder">
+                                                <p class="qty">x 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="price-holder">
+                                            <p class="price">$12.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <h3 class="comment-title">Instructions:</h3>
+                                    <p class="comment-descs">
+                                        Handle with care.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-wrap">
+                                <div class="product-content">
+                                    <figure class="image-holder">
+                                        <img class="image" src="./assets/images/ENDURO-flex.jpg">
+                                    </figure>
+                                    <div class="p-detail">
+                                        <div class="p-text-holder">
+                                            <div class="p-name">
+                                                <h3 class="p-heading">
+                                                    ENDURO-flex 2
+                                                    in 1
+                                                </h3>
+                                                <p class="p-disc">Surface
+                                                    Finishing Discs
+                                                </p>
+                                                <p class="p-disc">
+                                                    <span class="shipping-text">
+                                                        Shipping:
+                                                    </span>
+                                                    Gregory Cartwright 022 Kiehn Route West Ned Alaska 00000
+                                                </p>
+                                                <p class="p-disc">In Stock
+                                                </p>
+                                            </div>
+                                            <div class="qty-holder">
+                                                <p class="qty">x 2</p>
+                                            </div>
+                                        </div>
+                                        <div class="price-holder">
+                                            <p class="price">$12.99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-wrap">
+                                    <h3 class="comment-title">Instructions:</h3>
+                                    <p class="comment-descs">
+                                        Handle with care.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <a href="#" class="view-more">More</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="address-holder">
+                            <p class="addr__heading">
+                                Shipping Address
+                            </p>
+                            <p class="addr-text">
+                                James daivid 810 Day Hill street City Country 00000
+                            </p>
+                            <p class="addr__heading">
+                                Billing Address
+                            </p>
+                            <p class="addr-text">
+                                James daivid 810 Day Hill street City Country 00000
+                            </p>
+                            <p class="addr__heading">
+                                Delivery Instructions
+                            </p>
+                            <p class="addr-text">
+                                Handle with care.
+                            </p>
+                        </div>
+                        <div class="order-summary-wrap">
+                            <h3 class="order-summary-title">Order Summary</h3>
+                            <table width="100%">
+                                <tr class="s-holder">
+                                    <td class="cart-totals-text">Subtotal:</td>
+                                    <td class="cart-subtotal text-right">$19.99</td>
+                                </tr>
+                                <tr class="s-holder">
+                                    <td class="cart-coupon-code">Manager special /
+                                        coupon:
+                                        Walter16</td>
+                                    <td class="cart-coupon-amount text-right">-$530.00</td>
+                                </tr>
+                                <tr class="s-holder">
+                                    <td class="cart-grand-total">Estimated Total:</td>
+                                    <td class="cart-grand-total text-right">$19.99</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

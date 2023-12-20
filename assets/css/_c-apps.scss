@@ -1,0 +1,75 @@
+$ns: c-apps;
+
+.#{$ns} {
+    background-color: $white;
+    padding: 60px 0;
+
+    @media only screen and (max-width: 767.98px) {
+        padding: 30px 0;
+    }
+
+    &__content {
+        border-bottom: 2px solid $grey2;
+        margin-bottom: 60px;
+        padding: 40px 0;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text-holder {
+        &__heading {
+            color: $secondary;
+            font-size: 24px;
+            font-weight: $font600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 16px;
+            }
+        }
+
+        &__descrip {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 30px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__img {
+        width: 180px;
+        max-width: 100%;
+    }
+
+    &__link-holder {
+        &__text {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 15px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+
+        &__link {
+            color: $primary;
+            display: block;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 8px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

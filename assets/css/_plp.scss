@@ -326,6 +326,8 @@ label {
         }
 
         &__price-holder {
+            text-align: left;
+
             @media screen and (max-width: 1199.98px) {
                 background-color: $grey1;
                 display: flex;

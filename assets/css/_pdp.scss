@@ -311,6 +311,11 @@ $ns: product-detail;
                 justify-content: center;
             }
 
+            .slick-next,
+            .slick-prev {
+                display: none !important;
+            }
+
             .product-detail__wrap__image {
                 padding: 0;
             }
@@ -381,6 +386,31 @@ $ns: product-detail;
     &__bottom {
         background-color: $white;
         padding: 25px 0 60px 0;
+
+        &__dis-wrap {
+            margin-bottom: 20px;
+
+            &__link {
+                display: inline-block;
+                margin: 20px;
+                max-height: 90px;
+                text-align: center;
+                border: 1px solid $white;
+
+                &:hover {
+                    background-color: #ededed;
+                    border: 1px solid #d0d0d0;
+                }
+            }
+
+            &__logo {
+                border: 1px solid $white;
+                max-width: 200px;
+                max-height: 90px;
+                vertical-align: middle;
+                padding: 10px;
+            }
+        }
     }
 }
 
@@ -563,10 +593,6 @@ $ns: product-detail;
                     padding: 15px;
                 }
 
-                &__list-price {
-                    text-align: center;
-                }
-
                 td {
                     vertical-align: middle;
                 }
@@ -596,6 +622,13 @@ $ns: product-detail;
                     font-weight: 700;
                     text-align: center;
                     width: 85%;
+                }
+
+                &__link {
+                    color: $primary;
+                    &:hover {
+                        color: $primary;
+                    }
                 }
             }
         }

@@ -1,0 +1,88 @@
+$ns: site-map;
+
+.#{$ns} {
+    background-color: $white;
+    padding: 60px 0;
+
+    @media only screen and (max-width: 767.98px) {
+        padding: 30px 0;
+    }
+
+    &__heading {
+        margin-bottom: 8px;
+    }
+
+    &__sublist {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 40px;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__sublink {
+        color: $secondary;
+        font-size: 18px;
+        font-weight: $font600;
+        margin-bottom: 20px;
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 14px;
+        }
+
+        &__link {
+            color: $secondary;
+            font-size: 16px;
+            font-weight: $font400;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 767.98px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__link {
+        color: $primary;
+        font-size: 18px;
+        font-weight: $font600;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 14px;
+        }
+    }
+
+    &__subitem {
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        border-bottom: 2px solid $grey2;
+        margin-bottom: 60px;
+        padding: 40px 0;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__bottom-content {
+        margin-top: 30px;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-bottom: 15px;
+        }
+
+        &__heading-wrap {
+            margin-bottom: 10px;
+
+            @media only screen and (max-width: 767.98px) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
