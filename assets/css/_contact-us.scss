@@ -115,8 +115,8 @@ $ns: contact-us;
     }
 
     &__left {
-        background-color: #ffffffed;
-        border: 1px solid #d0d0d0;
+        background-color: $grey19;
+        border: 1px solid $grey20;
         padding: 30px;
 
         @media only screen and (max-width: 767.98px) {

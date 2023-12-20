@@ -24,16 +24,16 @@ $ns: history;
             width: 100%;
 
             &__title {
-                color: $white;
-                font-size: 22px;
-                font-weight: $font600;
-                margin-bottom: 25px;
+                color: $primary;
+                font-size: 16px;
+                font-weight: $font700;
+                margin-bottom: 8px;
                 position: relative;
+                text-transform: uppercase;
 
                 @media only screen and (max-width: 767.98px) {
-                    display: none;
-                    font-size: 14px;
-                    margin-bottom: 15px;
+                    font-size: 12px;
+                    margin-bottom: 8px;
                 }
 
                 &::after {
@@ -55,26 +55,22 @@ $ns: history;
                 margin-bottom: 25px;
 
                 @media only screen and (max-width: 992.98px) {
-                    font-size: 32px;
+                    font-size: 28px;
                 }
 
                 @media only screen and (max-width: 767.98px) {
-                    font-size: 24px;
+                    font-size: 18px;
                     margin-bottom: 15px;
                 }
             }
 
             &__heading-main {
-                color: $white;
-                font-size: 32px;
+                color: $grey13;
+                font-size: 14px;
                 font-weight: $font600;
 
-                @media only screen and (max-width: 992.98px) {
-                    font-size: 24px;
-                }
-
-                @media only screen and (max-width: 767.98px) {
-                    font-size: 14px;
+                @media only screen and (max-width: 575.98px) {
+                    display: none;
                 }
             }
         }
@@ -82,8 +78,9 @@ $ns: history;
 
     &__content {
         background-color: $secondary;
-        text-align: center;
         padding-bottom: 240px;
+        scroll-behavior: smooth;
+        text-align: center;
 
         &__wrapper {
             background-color: $white;
