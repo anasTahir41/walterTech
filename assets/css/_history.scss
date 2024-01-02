@@ -16,7 +16,7 @@ $ns: history;
         }
 
         &__wrap {
-            text-align: center;
+            text-align: left;
             position: absolute;
                 top: 50%;
                 left: 50%;
@@ -36,22 +36,22 @@ $ns: history;
                     margin-bottom: 8px;
                 }
 
-                &::after {
-                    background: $primary;
-                    bottom: -8px;
-                    content: '';
-                    height: 1px;
-                    left: 50%;
-                    margin-left: -38px;
-                    position: absolute;
-                    width: 76px;
-                }
+                // &::after {
+                //     background: $primary;
+                //     bottom: -8px;
+                //     content: '';
+                //     height: 1px;
+                //     left: 50%;
+                //     margin-left: -38px;
+                //     position: absolute;
+                //     width: 76px;
+                // }
             }
 
             &__heading {
                 color: $white;
-                font-size: 56px;
-                font-weight: $font600;
+                font-size: 32px;
+                font-weight: $font700;
                 margin-bottom: 25px;
 
                 @media only screen and (max-width: 992.98px) {

@@ -43,23 +43,6 @@ $ns: news-release;
                     font-size: 12px;
                     margin-bottom: 10px;
                 }
-
-                &::after {
-                    background-color: $primary;
-                    content: '';
-                    display: block;
-                    height: 2px;
-                    margin-bottom: -8px;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 80px;
-
-                    .text-center & {
-                        left: 50%;
-                        transform: translateX(-50%);
-                    }
-                }
             }
 
             &__heading-main {

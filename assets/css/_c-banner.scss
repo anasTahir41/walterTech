@@ -19,6 +19,10 @@ $ns: c-banner;
         transform: translate(-50%, -50%);
         width: 100%;
 
+        &__title {
+            
+        }
+
         &__heading {
             color: $primary;
             font-size: 16px;
@@ -31,23 +35,6 @@ $ns: c-banner;
             @media only screen and (max-width: 767.98px) {
                 font-size: 12px;
                 margin-bottom: 8px;
-            }
-
-            &::after {
-                background-color: $primary;
-                content: '';
-                display: block;
-                height: 2px;
-                margin-bottom: -8px;
-                position: absolute;
-                    bottom: 0;
-                    left: 0;
-                width: 80px;
-
-                .text-center & {
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
             }
         }
 
@@ -63,15 +50,17 @@ $ns: c-banner;
         }
 
         &__text {
-            color: $white;
-            font-size: 34px;
-            font-weight: $font700;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+            color: $grey13;
+            font-size: 14px;
+            font-weight: $font600;
 
-            @media only screen and (max-width: 767.98px) {
-                font-size: 24px;
+            @media only screen and (max-width: 575.98px) {
+                display: none;
             }
+        }
+
+        button {
+            text-transform: uppercase;
         }
     }
 }
